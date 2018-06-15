@@ -1,0 +1,15 @@
+block globals
+
+doctype html
+html(lang="en")
+  head
+    include _head.pug
+
+  body(id=(body_id || 'default-page'), class=(body_class || 'theme-default'))
+      block content
+        p Hola mundo
+
+      include _footer.pug
+                              
+      block scripts
+          script(src='dist/scripts/vendor.js')

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="#{meta_descript}">
+    <title>Inicio - AGRO RURAL MDL WebApps</title>
+    <!-- Favicons-->
+    <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+    <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <!--  Android 5 Chrome Color-->
+    <meta name="theme-color" content="#EE6E73">
+    <!-- CSS-->
+    <link href="dist/styles/app.css" type="text/css" rel="stylesheet" media="screen,projection">
+  </head>
+  <body class="theme-default" id="index">
+    <nav class="primary" role="navigation">
+      <div class="nav-wrapper container"><a class="brand-logo" id="logo-container" href="#">Logo</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">Navbar Link</a></li>
+        </ul>
+        <ul class="sidenav" id="nav-mobile">
+          <li><a href="#">Navbar Link</a></li>
+        </ul><a class="sidenav-trigger" href="#" data-target="nav-mobile"><i class="fas fa-bars"></i></a>
+      </div>
+    </nav>
+    <div class="section no-pad-bot" id="index-banner">
+      <div class="container"><br><br>
+        <h1 class="header center secondary-text">Starter Template</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+        <div class="row center"><a class="btn-large waves-effect waves-light secondary" id="download-button" href="#">Get Started</a></div>
+      </div>
+    </div>
+    <div class="fixed-action-btn"><a class="btn-floating btn-large red"><i class="far fa-edit"></i></a>
+      <ul>
+        <li><a class="btn-floating red"><i class="fas fa-archive"></i></a></li>
+        <li><a class="btn-floating yellow darken-1"><i class="fas fa-bell"></i></a></li>
+        <li><a class="btn-floating green"><i class="fas fa-book-open"></i></a></li>
+        <li><a class="btn-floating blue"><i class="fas fa-bullhorn"></i></a></li>
+      </ul>
+    </div>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Footer Content</h5>
+            <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">© 2014 Copyright Text<a class="grey-text text-lighten-4 right" href="#!">More Links</a></div>
+      </div>
+    </footer>
+    <script src="dist/scripts/vendor.js"></script>
+    <script>
+      const $ = require('jquery');
+      require('materialize-css');
+      
+      var toastHTML = '<span>I am toast content</span><button class="btn-flat toast-action">Undo</button>';
+      M.toast({html: toastHTML});
+      console.log($);
+      
+      $(document).ready(function(){
+        $('.fixed-action-btn').floatingActionButton();
+      });
+    </script>
+  </body>
+</html>
