@@ -23,6 +23,12 @@ block content
 
   #index-banner.section.no-pad-bot
       .container
+        form
+          .row
+            div(class="input-field col s12")
+              input(type="text", id="phoneNumber")
+              label(for="phoneNumber") Phone Number
+
         table.ejemplito(style="width:100%")
           thead
             tr
@@ -460,6 +466,7 @@ block content
 block append scripts
     script.
       const $ = require('jquery');
+      let inputmask = require('inputmask');
       //require('materialize-css');
 
       var toastHTML = '<span>I am toast content</span><button class="btn-flat toast-action">Undo</button>';
@@ -468,6 +475,8 @@ block append scripts
 
       $(document).ready(function(){
         $('.fixed-action-btn').floatingActionButton();
+
+        $("#phoneNumber").inputmask({"mask": "(999) 999-9999", showMaskOnHover: false,}); 
 
         $('.ejemplito').DataTable({
           responsive: true,

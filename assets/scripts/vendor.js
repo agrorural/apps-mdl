@@ -37,6 +37,12 @@ require( 'datatables.net-rowreorder' )( window, $ );
 require( 'datatables.net-scroller' )( window, $ );
 require( 'datatables.net-select' )( window, $ );
 
+import "inputmask/dist/inputmask/jquery.inputmask";
+
+// require('inputmask');
+
+// import Inputmask from "inputmask";
+
 $(function(){
 
   $('.sidenav').sidenav();

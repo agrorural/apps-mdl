@@ -54,6 +54,7 @@
     "datatables.net-rowreorder-dt": "^1.2.5",
     "datatables.net-scroller-dt": "^1.5.1",
     "datatables.net-select-dt": "^1.2.7",
+    "inputmask": "^4.0.0",
     "jquery": "^3.3.1",
     "jquery.redirect": "^1.1.4",
     "jszip": "^3.1.5",

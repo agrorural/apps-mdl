@@ -30,6 +30,14 @@
     </nav>
     <div class="section no-pad-bot" id="index-banner">
       <div class="container">
+        <form>
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="text" id="phoneNumber">
+              <label for="phoneNumber">Phone Number</label>
+            </div>
+          </div>
+        </form>
         <table class="ejemplito" style="width:100%">
           <thead>
             <tr>
@@ -545,6 +553,7 @@
     <script src="dist/scripts/vendor.js"></script>
     <script>
       const $ = require('jquery');
+      let inputmask = require('inputmask');
       //require('materialize-css');
       
       var toastHTML = '<span>I am toast content</span><button class="btn-flat toast-action">Undo</button>';
@@ -553,6 +562,8 @@
       
       $(document).ready(function(){
         $('.fixed-action-btn').floatingActionButton();
+      
+        $("#phoneNumber").inputmask({"mask": "(999) 999-9999", showMaskOnHover: false,}); 
       
         $('.ejemplito').DataTable({
           responsive: true,
