@@ -9,7 +9,8 @@ html(lang="en")
       block content
         p Hola mundo
 
-      include _footer.pug
+      block footer
+        include _footer.pug
                               
       block scripts
           script(src='dist/scripts/vendor.js')

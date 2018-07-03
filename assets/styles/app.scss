@@ -1,3 +1,21 @@
 @import "common/variables";
 
 @import "../../node_modules/materialize-css/sass/materialize";
+
+@import "components/login";
+@import "components/datatables";
+
+body {
+  font-size: 12px;
+}
+
+nav a.sidenav-trigger {
+  display: block;
+}
+
+@media #{$large-and-up} {
+  // styles for medium screens and larger
+  nav .brand-logo {
+    left: 64px;
+  }
+}

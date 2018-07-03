@@ -10,12 +10,13 @@ const plumber = require('gulp-plumber');
 const plumberNotifier = require('gulp-plumber-notifier');
 const babelify = require('babelify');
 const jshint = require('gulp-jshint');
-const uglify = require('gulp-uglify');
+const uglify = require('gulp-uglify-es').default;
 const rename = require('gulp-rename');
 const cleanCSS = require('gulp-clean-css');
 const del = require('del');
 const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
+const gutil = require('gulp-util');
 
 let paths = {
   dest: 'dist/',
@@ -35,7 +36,7 @@ let paths = {
   },
   scripts: {
       // require: ['jquery', 'chartkick', 'datatables.net-responsive-bs4', 'jquery-confirm', 'jquery.redirect', 'js-cookie', 'typeahead.js-browserify', 'flatpickr', 'swiper', 'toastr', 'simplebar', 'inputmask'],
-      require: ['jquery', 'materialize-css'],
+      require: ['jquery', 'materialize-css', 'datatables.net', 'jquery.redirect'],
       src: './assets/scripts/vendor.js',
       dest: './dist/scripts',
       fileName: 'vendor.js',
@@ -51,6 +52,10 @@ let paths = {
       src: './assets/fonts/*',
       dest: './dist/fonts'
   },
+  json: {
+    src: './assets/scripts/datatables-es_ES.json',
+    dest: './dist/scripts'
+},
   sync: {
       server: true
   }
@@ -100,6 +105,12 @@ function scripts() {
 function fonts() {
   return gulp.src(paths.fonts.src)
     .pipe(gulp.dest(paths.fonts.dest));
+}
+
+// JSon files
+function json() {
+  return gulp.src(paths.json.src)
+    .pipe(gulp.dest(paths.json.dest));
 }
 
 // Image minification
@@ -152,6 +163,7 @@ exports.styles = styles;
 exports.scripts = scripts;
 exports.jslint = jslint;
 exports.fonts = fonts;
+exports.json = json;
 exports.images = images;
 exports.html = html;
 exports.watch = watch;
@@ -159,7 +171,7 @@ exports.watch = watch;
 /*
  * Specify if tasks run in series or parallel using `gulp.series` and `gulp.parallel`
  */
-var start = gulp.series(clean, gulp.parallel(styles, scripts, fonts, images, html, watch));
+var start = gulp.series(clean, gulp.parallel(styles, scripts, fonts, json, images, html, watch));
 
 /*
  * You can still use `gulp.task` to expose tasks
@@ -169,11 +181,12 @@ gulp.task('styles', styles);
 gulp.task('scripts', scripts);
 gulp.task('start', start);
 gulp.task('fonts', fonts);
+gulp.task('json', json);
 gulp.task('images', images);
 gulp.task('jslint', jslint);
 gulp.task('html', html);
 
-gulp.task('build', gulp.series('clean', 'styles', 'scripts', 'fonts', 'images', 'html', function(done) {
+gulp.task('build', gulp.series('clean', 'styles', 'scripts', 'fonts', 'json', 'images', 'html', function(done) {
   gulp.src(paths.styles.dest + '/' + paths.styles.fileName)
     .pipe(cleanCSS())
     .pipe(rename(paths.styles.minifiedFileName))
