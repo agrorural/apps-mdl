@@ -46,6 +46,7 @@ import "inputmask/dist/inputmask/jquery.inputmask";
 $(function(){
 
   $('.sidenav').sidenav();
+  $('.collapsible').collapsible();
   $('.datagrid').DataTable({
     responsive: true,
     "language": {
@@ -53,4 +54,10 @@ $(function(){
     },
   });
 
+  $('.collapsible-header').on('click', function () {
+    $(this)
+        .find('[data-fa-i2svg]')
+        .toggleClass('fa-angle-left')
+        .toggleClass('fa-angle-down');
+    });
 });
