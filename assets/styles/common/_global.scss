@@ -10,4 +10,16 @@
       padding-left: 1rem;
     }
   }
+
+  .bold {
+    .collapsible-header svg {
+      transition: all 0.3s ease-in;
+    }
+
+    &.active {
+      .collapsible-header svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
 }

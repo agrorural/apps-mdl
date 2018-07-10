@@ -53,11 +53,4 @@ $(function(){
       "url": "dist/scripts/datatables-es_ES.json"
     },
   });
-
-  $('.collapsible-header').on('click', function () {
-    $(this)
-        .find('[data-fa-i2svg]')
-        .toggleClass('fa-angle-left')
-        .toggleClass('fa-angle-down');
-    });
 });
