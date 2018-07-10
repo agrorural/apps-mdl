@@ -1,7 +1,7 @@
 extends includes/base
 block globals
     - var body_id= "index"
-    - var body_class= "theme-default"
+    - var body_class= "theme-teal"
     - var page = "Inicio"
     - var meta_descript = "Inicio de la aplicación"
 
@@ -28,7 +28,7 @@ block content
         li.no-padding
           ul.collapsible.collapsible-accordion
             li.bold
-              a.collapsible-header.waves-effect.waves-teal(tabindex="0") 
+              a.collapsible-header.waves-effect.waves-primary(tabindex="0") 
                 span CSS 
                 i(class="fas fa-angle-down")
               .collapsible-body
@@ -74,7 +74,7 @@ block content
                       i(class="fas fa-download fa-fw") 
                       <span>Typography</span>
             li.bold
-              a.collapsible-header.waves-effect.waves-teal(tabindex="0")
+              a.collapsible-header.waves-effect.waves-primary(tabindex="0")
                 span Components 
                 i(class="fas fa-angle-down")
               .collapsible-body(style="")
@@ -102,7 +102,7 @@ block content
                   li
                     a(href="preloader.html") Preloader
             li.bold
-              a.collapsible-header.waves-effect.waves-teal(tabindex="0")
+              a.collapsible-header.waves-effect.waves-primary(tabindex="0")
                 span JavaScript 
                 i(class="fas fa-angle-down")
               .collapsible-body(style="")
@@ -138,7 +138,7 @@ block content
                   li
                     a(href="waves.html") Waves
             li.bold
-              a.collapsible-header.waves-effect.waves-teal(tabindex="0")
+              a.collapsible-header.waves-effect.waves-primary(tabindex="0")
                 span Forms 
                 i(class="fas fa-angle-down")
               .collapsible-body
@@ -584,7 +584,7 @@ block content
               td $112,000
 
   div(class="fixed-action-btn")
-    a(class="btn-floating btn-large red")
+    a(class="btn-floating btn-large secondary")
       i(class="far fa-edit")
     ul
       li

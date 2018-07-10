@@ -6,6 +6,9 @@
 @import "components/login";
 @import "components/datatables";
 
+@include theme(theme-default, #303F9F, #FF4081);
+@include theme(theme-teal, #009688, #FFC107);
+
 body {
   font-size: 12px;
 }
