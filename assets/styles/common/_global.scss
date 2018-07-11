@@ -108,7 +108,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
   font-size: 13px;
 }
 
-.input-field.col label:not(.active) {
+.input-field label:not(.active) {
   top: -7px;
 }
 .select-wrapper + label {
