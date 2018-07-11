@@ -44,7 +44,6 @@ import "inputmask/dist/inputmask/jquery.inputmask";
 // import Inputmask from "inputmask";
 
 $(function(){
-
   $('.sidenav').sidenav();
   $('.collapsible').collapsible();
   $('.datagrid').DataTable({
