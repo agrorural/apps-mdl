@@ -6,11 +6,99 @@ html(lang="en")
     include _head.pug
 
   body(id=(body_id || 'default-page'), class=(body_class || 'theme-default'))
-      block content
-        p Hola mundo
+    block navigation
+      nav(class="primary" role="navigation")
+        div(class="nav-wrapper container")
+          a(id="logo-container" href="#" class="brand-logo") Logo
+          
+          ul(class="right")
+            li
+              a(href="#") Navbar Link
+          
+          ul(id="nav-mobile" class="sidenav")
+            li
+              .user-view
+                .background
+                  img(src="dist/images/user__bg.jpg", alt="")
+                a(href="#user")
+                  img(src="dist/images/user.jpg", alt="", class="circle")
+                a(href="#name")
+                  span(class="white-text name") Julio Leonardo
+                a(href="#email")
+                  span(class="white-text email") jleonardo@gmail.com
+              
+              mixin mainmenu(activeItem, activeItemChild)
+                -var menuItems = [{name: 'Inicio', href: './dashboard.html', isActive: false, child: null}, {name: 'Formularios', href :'formularios', isActive: false, child: [{name: 'Text Inputs', href: './inputs.html', isActive: false, child: null, icon: 'fab fa-wpforms'}, {name: 'Autocomplete', href: './autocomplete.html', isActive: false, child: null, icon: 'far fa-keyboard'}, {name: 'Checkboxes', href: './checkboxes.html', isActive: false, child: null,  icon: 'far fa-check-square'}, {name: 'Date Picker', href: './datepicker.html', isActive: false, child: null, icon: 'fas fa-calendar-alt'}, {name: 'Radio Buttons', href: './radio.html', isActive: false, child: null, icon: 'fas fa-check-circle'}]}, {name: 'Sistemas', href: '#', icon: 'fab fa-app-store', isActive: false, child: null}]
 
-      block footer
-        include _footer.pug
-                              
-      block scripts
-          script(src='dist/scripts/vendor.js')
+                each val, index in menuItems
+                  if val.child == null
+                    if menuItems[index].name === activeItem
+                      li.bold.active
+                        a.waves-effect.waves-primary(href=val.href, title=val.name)
+                            span= val.name
+                    else
+                      li.bold
+                        a.waves-effect.waves-primary(href=val.href, title=val.name)
+                          span= val.name
+                  else
+                    li.no-padding
+                      ul.collapsible.collapsible-accordion
+                        if menuItems[index].name === activeItem
+                          li.bold.active
+                            a.collapsible-header.waves-effect.waves-primary(tabindex="0") 
+                              span= val.name
+                              i(class="fas fa-angle-down")
+                            .collapsible-body
+                              ul
+                                each value, index in val.child
+                                  if value.name === activeItemChild
+                                    li.active
+                                      a(href=value.href, title=value.name)
+                                        i(class=value.icon)
+                                        span= value.name
+                                  else
+                                    li
+                                      a(href=value.href, title=value.name)
+                                        i(class=value.icon)
+                                        span= value.name
+
+                        else
+                          li.bold
+                            a.collapsible-header.waves-effect.waves-primary(tabindex="0") 
+                              span= val.name
+                              i(class="fas fa-angle-down")
+                            .collapsible-body
+                              ul
+                                each value, index in val.child
+                                  if value.name === activeItemChild
+                                    li.active
+                                  else
+                                    li
+                                      a(href=value.href, title=value.name)
+                                        i(class=value.icon)
+                                        span= value.name
+
+              block mainmenu
+                +mainmenu('Inicio','')
+
+          a(href="#" data-target="nav-mobile" class="sidenav-trigger")
+            i(class="fas fa-bars")
+
+    block main
+      main
+        .container
+          .page-header
+            section.page-action
+              h2 #{title}
+          
+          section.row
+            block content
+              p Hola mundo
+
+    
+
+    block footer
+      include _footer.pug
+                            
+    block scripts
+        script(src='dist/scripts/vendor.js')

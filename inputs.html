@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="#{meta_descript}">
+    <title>Text Inputs - AGRO RURAL MDL WebApps</title>
+    <!-- Favicons-->
+    <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+    <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <!--  Android 5 Chrome Color-->
+    <meta name="theme-color" content="#EE6E73">
+    <!-- CSS-->
+    <link href="dist/styles/app.css" type="text/css" rel="stylesheet" media="screen,projection">
+  </head>
+  <body class="theme-teal" id="page">
+    <nav class="primary" role="navigation">
+      <div class="nav-wrapper container"><a class="brand-logo" id="logo-container" href="#">Logo</a>
+        <ul class="right">
+          <li><a href="#">Navbar Link</a></li>
+        </ul>
+        <ul class="sidenav" id="nav-mobile">
+          <li>
+            <div class="user-view">
+              <div class="background"><img src="dist/images/user__bg.jpg" alt=""></div><a href="#user"><img class="circle" src="dist/images/user.jpg" alt=""></a><a href="#name"><span class="white-text name">Julio Leonardo</span></a><a href="#email"><span class="white-text email">jleonardo@gmail.com</span></a>
+            </div>
+                        <li class="bold"><a class="waves-effect waves-primary" href="./dashboard.html" title="Inicio"><span>Inicio</span></a></li>
+                        <li class="no-padding">
+                          <ul class="collapsible collapsible-accordion">
+                            <li class="bold active"><a class="collapsible-header waves-effect waves-primary" tabindex="0"> <span>Formularios</span><i class="fas fa-angle-down"></i></a>
+                              <div class="collapsible-body">
+                                <ul>
+                                  <li class="active"><a href="./inputs.html" title="Text Inputs"><i class="fab fa-wpforms"></i><span>Text Inputs</span></a></li>
+                                  <li><a href="./autocomplete.html" title="Autocomplete"><i class="far fa-keyboard"></i><span>Autocomplete</span></a></li>
+                                  <li><a href="./checkboxes.html" title="Checkboxes"><i class="far fa-check-square"></i><span>Checkboxes</span></a></li>
+                                  <li><a href="./datepicker.html" title="Date Picker"><i class="fas fa-calendar-alt"></i><span>Date Picker</span></a></li>
+                                  <li><a href="./radio.html" title="Radio Buttons"><i class="fas fa-check-circle"></i><span>Radio Buttons</span></a></li>
+                                </ul>
+                              </div>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="bold"><a class="waves-effect waves-primary" href="#" title="Sistemas"><span>Sistemas</span></a></li>
+          </li>
+        </ul><a class="sidenav-trigger" href="#" data-target="nav-mobile"><i class="fas fa-bars"></i></a>
+      </div>
+    </nav>
+    <main>
+      <div class="container">
+        <div class="page-header">
+          <section class="page-action">
+            <h2>Text Inputs</h2>
+          </section>
+        </div>
+        <section class="row">
+          <form>
+            <div class="row">
+              <div class="input-field col s6">
+                <input class="validate" id="first_name" placeholder="Placeholder" type="text">
+                <label class="active" for="first_name">First Name</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="last_name" type="text">
+                <label for="last_name">Last Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input class="validate" id="disabled" disabled="" value="I am not editable" type="text">
+                <label class="active" for="disabled">Disabled</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input class="validate" id="password" type="password">
+                <label for="password">Password</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input class="validate" id="email" type="email">
+                <label for="email">Email</label><span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12">This is an inline input field:
+                <div class="input-field inline">
+                  <input class="validate" id="email_inline" type="email">
+                  <label for="email_inline">Email</label><span class="helper-text" data-error="wrong" data-success="right"></span>
+                </div>
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Footer Content</h5>
+            <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">© 2014 Copyright Text<a class="grey-text text-lighten-4 right" href="#!">More Links</a></div>
+      </div>
+    </footer>
+    <script src="dist/scripts/vendor.js"></script>
+  </body>
+</html>

@@ -1,3 +1,6 @@
+$cdn-prefix: "http://cdn.agrorural.gob.pe/?u=";
+$cdn-dist-path: "http://cdn.agrorural.gob.pe/apps-mdl/dist";
+
 //
 // Colors
 //
@@ -38,6 +41,14 @@ $gray-100: #f5f5f5;
 
     input:not([type]):focus:not([readonly]) + label, input[type=text]:not(.browser-default):focus:not([readonly]) + label, input[type=password]:not(.browser-default):focus:not([readonly]) + label, input[type=email]:not(.browser-default):focus:not([readonly]) + label, input[type=url]:not(.browser-default):focus:not([readonly]) + label, input[type=time]:not(.browser-default):focus:not([readonly]) + label, input[type=date]:not(.browser-default):focus:not([readonly]) + label, input[type=datetime]:not(.browser-default):focus:not([readonly]) + label, input[type=datetime-local]:not(.browser-default):focus:not([readonly]) + label, input[type=tel]:not(.browser-default):focus:not([readonly]) + label, input[type=number]:not(.browser-default):focus:not([readonly]) + label, input[type=search]:not(.browser-default):focus:not([readonly]) + label, textarea.materialize-textarea:focus:not([readonly]) + label {
       color: $secondary-color;
+    }
+
+    .page-header {
+      color: $primary-color;
+    }
+
+    .sidenav .collapsible-body > ul:not(.collapsible) > li.active, .sidenav.sidenav-fixed .collapsible-body > ul:not(.collapsible) > li.active {
+      background-color: $secondary-color;
     }
 
     @each $color_name, $color in $colors {

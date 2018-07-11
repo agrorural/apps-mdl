@@ -1,3 +1,83 @@
+//
+// Fonts
+//
+@font-face {
+    font-family: 'vigaregular';
+    src: url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Viga-Regular.woff2') format('woff2'), url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Viga-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ubuntulight';
+    src: url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Ubuntu-Light.woff2') format('woff2'), url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Ubuntu-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ubunturegular';
+    src: url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Ubuntu-Regular.woff2') format('woff2'), url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Ubuntu-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ubuntumedium';
+    src: url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Ubuntu-Medium.woff2') format('woff2'), url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Ubuntu-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ubuntubold';
+    src: url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Ubuntu-Bold.woff2') format('woff2'), url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Ubuntu-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ubuntumono';
+    src: url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Ubuntu-Mono.woff2') format('woff2'), url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Ubuntu-Mono.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'libre_franklinlight';
+    src: url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Libre_Franklin-Light.woff2') format('woff2'), url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Libre_Franklin-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html{
+  @media only screen and (min-width: 0) {
+    font-size: 13px;
+  }
+
+  @media only screen and (min-width: $medium-screen) {
+    font-size: 13px;
+  }
+
+  @media only screen and (min-width: $large-screen) {
+    font-size: 13px;
+  }
+}
+
+body {
+  @include font-family();
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include font-family('ubuntu',
+    'light');
+}
+
 .sidenav {
   .collapsible-header {
     display: flex;
@@ -22,4 +102,8 @@
       }
     }
   }
+}
+
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+  font-size: 13px;
 }
