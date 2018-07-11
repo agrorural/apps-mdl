@@ -16,6 +16,8 @@ $gray-100: #f5f5f5;
 // $secondary-color: #FF4081;
 // $link-color: $primary-color;
 
+$input-height: 2.25rem;
+
 @mixin theme($name, $primary-color: $primary-color, $secondary-color: $secondary-color) {
   $primary: (
     "base": $primary-color
