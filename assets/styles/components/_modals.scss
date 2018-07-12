@@ -1,0 +1,36 @@
+.modal {
+  .modal-header {
+    padding: 16px 24px;
+    
+    h4 {
+      font-size: 24px;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &.modal-fixed-header{
+    .modal-header {
+      z-index: 1004;
+      height: 60px;
+    }
+
+    .modal-content {
+      top: 60px;
+    }
+  }
+
+  &.modal-fixed-footer{
+    .modal-footer {
+      z-index: 1004;
+    }
+  }
+}
+
+.modal.modal-fixed-header .modal-header {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: absolute;
+  top: 0;
+  border-radius: 0 0 2px 2px;
+  width: 100%;
+}

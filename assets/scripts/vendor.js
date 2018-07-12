@@ -4,12 +4,12 @@ window.jQuery = require('jquery');
 
 require('materialize-css');
 
-FontAwesomeConfig = { searchPseudoElements: true };
-
 import { library, dom } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
+
+console.log(FontAwesomeConfig);
 
 library.add(fas, far, fab)
 // Replace any existing <i> tags with <svg> and set up a MutationObserver to

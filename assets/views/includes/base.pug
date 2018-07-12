@@ -28,7 +28,7 @@ html(lang="en")
                   span(class="white-text email") jleonardo@gmail.com
               
               mixin mainmenu(activeItem, activeItemChild)
-                -var menuItems = [{name: 'Inicio', href: './dashboard.html', isActive: false, child: null}, {name: 'Formularios', href :'formularios', isActive: false, child: [{name: 'Text Inputs', href: './inputs.html', isActive: false, child: null, icon: 'fab fa-wpforms'}, {name: 'Autocomplete', href: './autocomplete.html', isActive: false, child: null, icon: 'far fa-keyboard'}, {name: 'Checkboxes', href: './checkboxes.html', isActive: false, child: null,  icon: 'far fa-check-square'}, {name: 'Date Picker', href: './datepicker.html', isActive: false, child: null, icon: 'fas fa-calendar-alt'}, {name: 'Radio Buttons', href: './radio.html', isActive: false, child: null, icon: 'fas fa-check-circle'}]}, {name: 'Sistemas', href: '#', icon: 'fab fa-app-store', isActive: false, child: null}]
+                -var menuItems = [{name: 'Inicio', href: './dashboard.html', isActive: false, child: null}, {name: 'Formularios', href :'formularios', isActive: false, child: [{name: 'Text Inputs', href: './inputs.html', isActive: false, child: null, icon: 'fab fa-wpforms'}, {name: 'Autocomplete', href: './autocomplete.html', isActive: false, child: null, icon: 'far fa-keyboard'}, {name: 'Checkboxes', href: './checkboxes.html', isActive: false, child: null,  icon: 'far fa-check-square'}, {name: 'Date Picker', href: './datepicker.html', isActive: false, child: null, icon: 'fas fa-calendar-alt'}, {name: 'Radio Buttons', href: './radio.html', isActive: false, child: null, icon: 'fas fa-check-circle'}]}, {name: 'JavaScript', href :null, isActive: false, child: [{name: 'Modals', href: './modals.html', isActive: false, child: null, icon: 'fas fa-window-restore'}]}]
 
                 each val, index in menuItems
                   if val.child == null
@@ -47,7 +47,6 @@ html(lang="en")
                           li.bold.active
                             a.collapsible-header.waves-effect.waves-primary(tabindex="0") 
                               span= val.name
-                              i(class="fas fa-angle-down")
                             .collapsible-body
                               ul
                                 each value, index in val.child
@@ -66,7 +65,6 @@ html(lang="en")
                           li.bold
                             a.collapsible-header.waves-effect.waves-primary(tabindex="0") 
                               span= val.name
-                              i(class="fas fa-angle-down")
                             .collapsible-body
                               ul
                                 each value, index in val.child

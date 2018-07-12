@@ -1,0 +1,119 @@
+extends includes/base
+block globals
+    - var title= 'Modals'
+    - var body_id= "index"
+    - var body_class= "theme-teal"
+    - var page = "Inicio"
+    - var meta_descript = "Uso de Modales"
+
+block mainmenu
+    +mainmenu('JavaScript','Modals')
+
+block content
+  a.waves-effect.waves-light.btn.modal-trigger(href="#modal1") Modal
+
+  #modal1.modal
+    .modal-header
+      h4 Modal Header
+    .modal-content
+      //- form
+      //-   .row
+      //-     .input-field.col.s6
+      //-       input#first_name.validate(placeholder="Placeholder" type="text")
+      //-       label.active(for="first_name") First Name
+      //-     .input-field.col.s6
+      //-       input#last_name(type="text")
+      //-       label(for="last_name") Last Name
+      //-   .row
+      //-     .input-field.col.s12
+      //-       input#disabled.validate(disabled="" value="I am not editable" type="text")
+      //-       label.active(for="disabled") Disabled
+      //-   .row
+      //-     .input-field.col.s12
+      //-       input#password.validate(type="password")
+      //-       label(for="password") Password
+      //-   .row
+      //-     .input-field.col.s12
+      //-       select
+      //-         option(value="" disabled="" selected="") Choose your option
+      //-         option(value="1") Option 1
+      //-         option(value="2") Option 2
+      //-         option(value="3") Option 3
+      //-       label Materialize Select
+      //-   .row
+      //-     .input-field.col.s12
+      //-       input#email.validate(type="email")
+      //-       label(for="email") Email
+      //-       span.helper-text(data-error="wrong" data-success="right") Helper text
+      //-   .row
+      //-     .col.s12
+      //-       | This is an inline input field:
+      //-       .input-field.inline
+      //-         input#email_inline.validate(type="email")
+      //-         label(for="email_inline") Email
+      //-         span.helper-text(data-error="wrong" data-success="right")
+    .modal-footer
+      a.modal-close.waves-effect.waves-green.btn-flat(href="#!") Agree
+
+  a.waves-effect.waves-light.btn.modal-trigger(href="#modal2") Modal 2
+
+  #modal2.modal.modal-fixed-footer.modal-fixed-header
+    .modal-header
+      h4 Modal Fixed Header
+    .modal-content
+      form
+        .row
+          .input-field.col.s6
+            input#first_name.validate(placeholder="Placeholder" type="text")
+            label.active(for="first_name") First Name
+          .input-field.col.s6
+            input#last_name(type="text")
+            label(for="last_name") Last Name
+        .row
+          .input-field.col.s12
+            input#disabled.validate(disabled="" value="I am not editable" type="text")
+            label.active(for="disabled") Disabled
+        .row
+          .input-field.col.s12
+            input#password.validate(type="password")
+            label(for="password") Password
+        .row
+          .input-field.col.s12
+            select
+              option(value="" disabled="" selected="") Choose your option
+              option(value="1") Option 1
+              option(value="2") Option 2
+              option(value="3") Option 3
+              option(value="3") Option 4
+              option(value="3") Option 5
+              option(value="3") Option 6
+              option(value="3") Option 7
+              option(value="3") Option 8
+              option(value="3") Option 9
+              option(value="3") Option 10
+            label Materialize Select
+        .row
+          .input-field.col.s12
+            input#email.validate(type="email")
+            label(for="email") Email
+            span.helper-text(data-error="wrong" data-success="right") Helper text
+        .row
+          .col.s12
+            | This is an inline input field:
+            .input-field.inline
+              input#email_inline.validate(type="email")
+              label(for="email_inline") Email
+              span.helper-text(data-error="wrong" data-success="right")
+
+    .modal-footer
+      a.modal-close.waves-effect.waves-green.btn-flat(href="#!") Agree
+
+block append scripts
+    script.
+      const $ = require('jquery');
+
+      $(document).ready(function(){
+        $('#modal1').modal();
+        $('#modal2').modal();
+        $('select').formSelect();
+      });
