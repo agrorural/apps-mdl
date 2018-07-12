@@ -6,12 +6,15 @@ require('materialize-css');
 
 FontAwesomeConfig = { searchPseudoElements: true };
 
-import fontawesome from '@fortawesome/fontawesome';
-import brands from '@fortawesome/fontawesome-free-brands';
-import solid from '@fortawesome/fontawesome-free-solid';
-import regular from '@fortawesome/fontawesome-free-regular';
+import { library, dom } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { far } from '@fortawesome/free-regular-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
 
-fontawesome.library.add(brands, solid, regular);
+library.add(fas, far, fab)
+// Replace any existing <i> tags with <svg> and set up a MutationObserver to
+// continue doing this as the DOM changes.
+dom.watch()
 
 require( 'jszip' );
 
@@ -42,6 +45,10 @@ import "inputmask/dist/inputmask/jquery.inputmask";
 // require('inputmask');
 
 // import Inputmask from "inputmask";
+
+
+const Chart = require('chart.js');
+
 
 $(function(){
   $('.sidenav').sidenav();

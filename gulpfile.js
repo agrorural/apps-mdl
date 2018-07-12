@@ -36,7 +36,7 @@ let paths = {
   },
   scripts: {
       // require: ['jquery', 'chartkick', 'datatables.net-responsive-bs4', 'jquery-confirm', 'jquery.redirect', 'js-cookie', 'typeahead.js-browserify', 'flatpickr', 'swiper', 'toastr', 'simplebar', 'inputmask'],
-      require: ['jquery', 'materialize-css', 'datatables.net', 'jquery.redirect', 'inputmask'],
+      require: ['jquery', 'chart.js', 'chartkick', 'materialize-css', 'datatables.net', 'jquery.redirect', 'simplebar', 'inputmask'],
       src: './assets/scripts/vendor.js',
       dest: './dist/scripts',
       fileName: 'vendor.js',
