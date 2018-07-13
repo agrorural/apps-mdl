@@ -8623,12 +8623,12 @@ table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorti
   color: #FF4081 !important; }
 
 .theme-teal input:not([type]):focus:not([readonly]), .theme-teal input[type=text]:not(.browser-default):focus:not([readonly]), .theme-teal input[type=password]:not(.browser-default):focus:not([readonly]), .theme-teal input[type=email]:not(.browser-default):focus:not([readonly]), .theme-teal input[type=url]:not(.browser-default):focus:not([readonly]), .theme-teal input[type=time]:not(.browser-default):focus:not([readonly]), .theme-teal input[type=date]:not(.browser-default):focus:not([readonly]), .theme-teal input[type=datetime]:not(.browser-default):focus:not([readonly]), .theme-teal input[type=datetime-local]:not(.browser-default):focus:not([readonly]), .theme-teal input[type=tel]:not(.browser-default):focus:not([readonly]), .theme-teal input[type=number]:not(.browser-default):focus:not([readonly]), .theme-teal input[type=search]:not(.browser-default):focus:not([readonly]), .theme-teal textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #FFC107;
-  -webkit-box-shadow: 0 1px 0 0 #FFC107;
-  box-shadow: 0 1px 0 0 #FFC107; }
+  border-bottom: 1px solid #CDDC39;
+  -webkit-box-shadow: 0 1px 0 0 #CDDC39;
+  box-shadow: 0 1px 0 0 #CDDC39; }
 
 .theme-teal input:not([type]):focus:not([readonly]) + label, .theme-teal input[type=text]:not(.browser-default):focus:not([readonly]) + label, .theme-teal input[type=password]:not(.browser-default):focus:not([readonly]) + label, .theme-teal input[type=email]:not(.browser-default):focus:not([readonly]) + label, .theme-teal input[type=url]:not(.browser-default):focus:not([readonly]) + label, .theme-teal input[type=time]:not(.browser-default):focus:not([readonly]) + label, .theme-teal input[type=date]:not(.browser-default):focus:not([readonly]) + label, .theme-teal input[type=datetime]:not(.browser-default):focus:not([readonly]) + label, .theme-teal input[type=datetime-local]:not(.browser-default):focus:not([readonly]) + label, .theme-teal input[type=tel]:not(.browser-default):focus:not([readonly]) + label, .theme-teal input[type=number]:not(.browser-default):focus:not([readonly]) + label, .theme-teal input[type=search]:not(.browser-default):focus:not([readonly]) + label, .theme-teal textarea.materialize-textarea:focus:not([readonly]) + label {
-  color: #FFC107; }
+  color: #CDDC39; }
 
 .theme-teal .page-header {
   color: #009688; }
@@ -8638,7 +8638,7 @@ table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorti
 
 .theme-teal .sidenav .collapsible-body > ul:not(.collapsible) > li.active,
 .theme-teal .sidenav.sidenav-fixed .collapsible-body > ul:not(.collapsible) > li.active {
-  background-color: #FFC107; }
+  background-color: #CDDC39; }
 
 .theme-teal .primary {
   background-color: #009688 !important; }
@@ -8647,10 +8647,10 @@ table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorti
   color: #009688 !important; }
 
 .theme-teal .secondary {
-  background-color: #FFC107 !important; }
+  background-color: #CDDC39 !important; }
 
 .theme-teal .secondary-text {
-  color: #FFC107 !important; }
+  color: #CDDC39 !important; }
 
 nav a.sidenav-trigger {
   display: block; }

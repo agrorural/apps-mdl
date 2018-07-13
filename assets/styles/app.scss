@@ -10,7 +10,7 @@
 @import "components/modals";
 
 @include theme(theme-default, #303F9F, #FF4081);
-@include theme(theme-teal, #009688, #FFC107);
+@include theme(theme-teal, #009688, #CDDC39);
 
 nav a.sidenav-trigger {
   display: block;
