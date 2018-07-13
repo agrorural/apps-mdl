@@ -1,0 +1,123 @@
+block globals
+
+doctype html
+html(lang="en")
+  head
+    include _head.pug
+
+  body(id=(body_id || 'default-page'), class=(body_class || 'theme-blue'))
+
+  block navigation
+    header
+      ul#sidenav-left.sidenav.sidenav-fixed(style="transform: translateX(0%);")
+        li
+          a.logo-container(href="/pages/admin-dashboard")
+            | Admin
+            i.fas.fa-user
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li.bold.waves-effect
+              a.collapsible-header(tabindex="0")
+                | Pages
+              .collapsible-body
+                ul
+                  li
+                    a.waves-effect(href="/pages/admin-dashboard")
+                      | Dashboard
+                      i.fas.fa-cogs
+                  li
+                    a.waves-effect(href="/pages/admin-fixed-chart")
+                      | Fixed Chart
+                      i.fas.fa-cogs
+                  li
+                    a.waves-effect(href="/pages/admin-grid")
+                      | Grid
+                      i.fas.fa-cogs
+                  li
+                    a.waves-effect(href="/pages/admin-chat")
+                      | Chat
+                      i.fas.fa-cogs
+            li.bold.waves-effect
+              a.collapsible-header(tabindex="0")
+                | Charts
+              .collapsible-body
+                ul
+                  li
+                    a.waves-effect(href="/pages/admin-line-charts")
+                      | Line Charts
+                      i.fas.fa-cogs
+                  li
+                    a.waves-effect(href="/pages/admin-bar-charts")
+                      | Bar Charts
+                      i.fas.fa-cogs
+                  li
+                    a.waves-effect(href="/pages/admin-area-charts")
+                      | Area Charts
+                      i.fas.fa-cogs
+                  li
+                    a.waves-effect(href="/pages/admin-doughnut-charts")
+                      | Doughnut Charts
+                      i.fas.fa-cogs
+                  li
+                    a.waves-effect(href="/pages/admin-financial-charts")
+                      | Financial Charts
+                      i.fas.fa-cogs
+                  li
+                    a.waves-effect(href="/pages/admin-interactive-charts")
+                      | Interactive Charts
+                      i.fas.fa-cogs
+            li.bold.waves-effect
+              a.collapsible-header(tabindex="0")
+                | Tables
+              .collapsible-body
+                ul
+                  li
+                    a.waves-effect(href="/pages/admin-fullscreen-table")
+                      | Fullscreen with Chart
+                      i.fas.fa-cogs
+                  li
+                    a.waves-effect(href="/pages/admin-table-custom-elements")
+                      | Table with Custom Elements
+                      i.fas.fa-cogs
+            li.bold.waves-effect
+              a.collapsible-header(tabindex="0")
+                | Calendar
+              .collapsible-body
+                ul
+                  li
+                    a.waves-effect(href="/pages/admin-calendar")
+                      | Calendar
+                      i.fas.fa-cogs
+            li.bold.waves-effect.active
+              a.collapsible-header(tabindex="0")
+                | Headers
+              .collapsible-body(style="display: block;")
+                ul
+                  li
+                    a.waves-effect.active(href="/pages/admin-header-tabbed")
+                      | Tabbed
+                      i.fas.fa-cogs
+                  li
+                    a.waves-effect(href="/pages/admin-header-metrics")
+                      | Metrics
+                      i.fas.fa-cogs
+                  li
+                    a.waves-effect(href="/pages/admin-header-search")
+                      | Search
+                      i.fas.fa-cogs
+            li.bold.waves-effect
+              a.collapsible-header(tabindex="0")
+                | Account
+              .collapsible-body
+                ul
+                  li
+                    a.waves-effect(href="/pages/admin-log-in")
+                      | Log In
+                      i.fas.fa-cogs
+                  li
+                    a.waves-effect(href="/pages/admin-settings")
+                      | Settings
+                      i.fas.fa-cogs
+    
+  block scripts
+    script(src='dist/scripts/vendor.js')
