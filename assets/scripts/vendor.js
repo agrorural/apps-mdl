@@ -9,7 +9,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 
-console.log(FontAwesomeConfig);
+//console.log(FontAwesomeConfig);
 
 library.add(fas, far, fab)
 // Replace any existing <i> tags with <svg> and set up a MutationObserver to
