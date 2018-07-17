@@ -1,0 +1,21 @@
+extends includes/theme
+
+block globals
+    - var title = "Bienvenido"
+    - var body_id = "index"
+    - var body_class= "theme-teal theme-admin has-fixed-sidenav"
+    - var page = "Panel de Control"
+    - var meta_descript = "Bienvenido"
+    //- - var extended = true
+
+block main
+  main
+    .container
+      h2 #{page}
+      .card.card-horizontal
+        .card-content
+          span.card-title Card Title 1
+          p test1
+
+
+    

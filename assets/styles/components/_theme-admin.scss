@@ -1,0 +1,109 @@
+html {
+  height: 100%;
+}
+
+.theme-admin {
+  background-color: #F4F4F4;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (min-width: 993px) {
+    &.has-fixed-sidenav {
+        padding-left: 300px;
+    }
+  }
+
+  header {
+    display: block;
+  }
+
+  .sidenav {
+    @media #{$medium-and-down} {
+      transform: translateX(-105%);
+    }
+
+    .logo-container {
+      padding: 0 16px;
+      height: 64px;
+      line-height: 64px;
+      font-size: 24px;
+      border-bottom: 1px solid rgba(0,0,0,0.2);
+      box-sizing: content-box;
+    }
+
+    li.bold > a {
+      @include font-family('ubuntu', 'bold');
+      
+      color: rgba(0,0,0,0.87);
+      text-transform: uppercase;
+    }
+    li.active a,
+    li:hover a {
+      background-color: transparent;
+    }
+
+    .collapsible > li {
+      border-bottom: 1px solid rgba(0,0,0,0.2);
+      transition: background-color .2s;
+    }
+
+    // .collapsible-header {
+      
+    // }
+
+    .collapsible-body {
+      @include font-family('ubuntu');
+
+      padding-bottom: 16px;
+      background-color: transparent;
+
+      li > a {
+        padding: 0 16px;
+        transition: background-color .2s ease-out;
+
+        &.active,
+        &:hover {
+          background-color: rgba(0,0,0,0.07);
+        }
+      }
+    }
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+  footer {
+    background-color: #ffffff;
+    color: #666666;
+
+    a {
+      color: #999999;
+    }
+
+    h5 {
+      color: #444444;
+    }
+  }
+
+  main > .container,
+  footer > .container {
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+
+  .footer-copyright .container {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .card {
+    .card-title {
+      @include font-family('ubuntu', 'medium');
+
+      font-size: 16px;
+    }
+  }
+}

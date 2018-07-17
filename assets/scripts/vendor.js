@@ -52,6 +52,7 @@ const Chart = require('chart.js');
 
 $(function(){
   $('.sidenav').sidenav();
+  $('.tabs').tabs();
   $('.collapsible').collapsible();
   $('.datagrid').DataTable({
     responsive: true,

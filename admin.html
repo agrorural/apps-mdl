@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="description" content="#{meta_descript}">
-    <title>Inicio - AGRO RURAL MDL WebApps</title>
+    <title>Panel de Control - AGRO RURAL MDL WebApps</title>
     <!-- Favicons-->
     <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
     <meta name="msapplication-TileColor" content="#FFFFFF">
@@ -17,69 +17,80 @@
     <!-- CSS-->
     <link href="dist/styles/app.css" type="text/css" rel="stylesheet" media="screen,projection">
   </head>
-  <body class="theme-blue has-fixed-sidenav theme" id="index"></body>
+  <body class="theme-teal theme-admin has-fixed-sidenav" id="index"></body>
   <header>
+    <div class="navbar-fixed">
+      <nav class="navbar white">
+        <div class="nav-wrapper"><a class="brand-logo grey-text text-darken-4" href="#">Bienvenido</a>
+          <ul class="right" id="nav-mobile">
+            <li class="hide-on-med-and-down"><a href="#">Enlace</a></li>
+            <li class="hide-on-med-and-down"><a href="#"><i class="fas fa-bell"></i></a></li>
+            <li><a href="#"><i class="fas fa-cog"></i></a></li>
+          </ul><a class="sidenav-trigger left show-on-small" href="#!" data-target="sidenav-left"><i class="fas fa-bars"></i></a>
+        </div>
+      </nav>
+    </div>
     <ul class="sidenav sidenav-fixed" id="sidenav-left" style="transform: translateX(0%);">
-      <li><a class="logo-container" href="/pages/admin-dashboard">Admin<i class="fas fa-user"></i></a></li>
-      <li class="no-padding">
-        <ul class="collapsible collapsible-accordion">
-          <li class="bold waves-effect"><a class="collapsible-header" tabindex="0">Pages</a>
-            <div class="collapsible-body">
-              <ul>
-                <li><a class="waves-effect" href="/pages/admin-dashboard">Dashboard<i class="fas fa-cogs"></i></a></li>
-                <li><a class="waves-effect" href="/pages/admin-fixed-chart">Fixed Chart<i class="fas fa-cogs"></i></a></li>
-                <li><a class="waves-effect" href="/pages/admin-grid">Grid<i class="fas fa-cogs"></i></a></li>
-                <li><a class="waves-effect" href="/pages/admin-chat">Chat<i class="fas fa-cogs"></i></a></li>
+      <li><a class="logo-container" href="/admin.html">SISGEP</a></li>
+            <li class="bold active"><a class="waves-effect waves-primary" href="./admin.html" title="Inicio"><span>Inicio</span></a></li>
+            <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                <li class="bold waves-effect"><a class="collapsible-header waves-effect waves-primary" tabindex="0"> <span>Recursos Naturales</span></a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a href="./listado-formularios.html" title="Listado Formularios"><i class="fab fa-wpforms"></i><span>Listado Formularios</span></a></li>
+                    </ul>
+                  </div>
+                </li>
               </ul>
-            </div>
-          </li>
-          <li class="bold waves-effect"><a class="collapsible-header" tabindex="0">Charts</a>
-            <div class="collapsible-body">
-              <ul>
-                <li><a class="waves-effect" href="/pages/admin-line-charts">Line Charts<i class="fas fa-cogs"></i></a></li>
-                <li><a class="waves-effect" href="/pages/admin-bar-charts">Bar Charts<i class="fas fa-cogs"></i></a></li>
-                <li><a class="waves-effect" href="/pages/admin-area-charts">Area Charts<i class="fas fa-cogs"></i></a></li>
-                <li><a class="waves-effect" href="/pages/admin-doughnut-charts">Doughnut Charts<i class="fas fa-cogs"></i></a></li>
-                <li><a class="waves-effect" href="/pages/admin-financial-charts">Financial Charts<i class="fas fa-cogs"></i></a></li>
-                <li><a class="waves-effect" href="/pages/admin-interactive-charts">Interactive Charts<i class="fas fa-cogs"></i></a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="bold waves-effect"><a class="collapsible-header" tabindex="0">Tables</a>
-            <div class="collapsible-body">
-              <ul>
-                <li><a class="waves-effect" href="/pages/admin-fullscreen-table">Fullscreen with Chart<i class="fas fa-cogs"></i></a></li>
-                <li><a class="waves-effect" href="/pages/admin-table-custom-elements">Table with Custom Elements<i class="fas fa-cogs"></i></a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="bold waves-effect"><a class="collapsible-header" tabindex="0">Calendar</a>
-            <div class="collapsible-body">
-              <ul>
-                <li><a class="waves-effect" href="/pages/admin-calendar">Calendar<i class="fas fa-cogs"></i></a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="bold waves-effect active"><a class="collapsible-header" tabindex="0">Headers</a>
-            <div class="collapsible-body" style="display: block;">
-              <ul>
-                <li><a class="waves-effect active" href="/pages/admin-header-tabbed">Tabbed<i class="fas fa-cogs"></i></a></li>
-                <li><a class="waves-effect" href="/pages/admin-header-metrics">Metrics<i class="fas fa-cogs"></i></a></li>
-                <li><a class="waves-effect" href="/pages/admin-header-search">Search<i class="fas fa-cogs"></i></a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="bold waves-effect"><a class="collapsible-header" tabindex="0">Account</a>
-            <div class="collapsible-body">
-              <ul>
-                <li><a class="waves-effect" href="/pages/admin-log-in">Log In<i class="fas fa-cogs"></i></a></li>
-                <li><a class="waves-effect" href="/pages/admin-settings">Settings<i class="fas fa-cogs"></i></a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </li>
+            </li>
     </ul>
   </header>
+  <main>
+    <div class="container">
+      <h2>Panel de Control</h2>
+      <div class="card card-horizontal">
+        <div class="card-content"><span class="card-title">Card Title 1</span>
+          <p>test1</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col s6 m3"><img class="materialize-logo" src="dist/images/agro_rural__logo.svg" alt="AGRO RURAL" style="width:130px">
+          <p>Desarrollado por la OA/UTI <br>de AGRO RURAL.</p>
+        </div>
+        <div class="col s6 m3">
+          <h5>Links</h5>
+          <ul>
+            <li><a href="#!">Link 1</a></li>
+            <li><a href="#!">Link 2</a></li>
+            <li><a href="#!">Link 3</a></li>
+            <li><a href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col s6 m3">
+          <h5>Links 2</h5>
+          <ul>
+            <li><a href="#!">Link 1</a></li>
+            <li><a href="#!">Link 2</a></li>
+            <li><a href="#!">Link 3</a></li>
+            <li><a href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col s6 m3">
+          <h5>Links</h5>
+          <ul>
+            <li><a href="#!">Link 1</a></li>
+            <li><a href="#!">Link 2</a></li>
+            <li><a href="#!">Link 3</a></li>
+            <li><a href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
   <script src="dist/scripts/vendor.js"></script>
 </html>

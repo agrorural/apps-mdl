@@ -60,6 +60,45 @@ $input-font-size: 13px;
       background-color: $secondary-color;
     }
 
+    &.theme-admin {
+      .tabs {
+        .tab {
+          a {
+            color: rgba($primary-color, 0.7);
+
+            &:focus,
+            &:focus.active {
+              background-color: rgba($primary-color, 0.2);
+            }
+
+            &:hover,
+            &.active {
+              background-color: transparent;
+              color: $primary-color;
+            }
+          }
+        }
+
+        .indicator {
+          background-color: $primary-color;
+        }
+      }
+      
+      .sidenav {
+        background-color: $primary-color;
+
+        li.active {
+          background-color: rgba(0,0,0,0.05);
+        }
+      }
+
+      .page-footer {
+        a:hover {
+          color: $primary-color;
+        }
+      }
+    }
+
     @each $color_name, $color in $colors {
       @each $color_type, $color_value in $color {
         @if $color_type == "base" {
