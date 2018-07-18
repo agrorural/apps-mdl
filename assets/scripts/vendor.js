@@ -16,7 +16,7 @@ library.add(fas, far, fab)
 // continue doing this as the DOM changes.
 dom.watch()
 
-require( 'jszip' );
+//require( 'jszip' );
 
 import pdfMake from "pdfmake/build/pdfmake";
 import pdfFonts from "pdfmake/build/vfs_fonts";
@@ -60,4 +60,26 @@ $(function(){
       "url": "dist/scripts/datatables-es_ES.json"
     },
   });
+
+  if (matchMedia) {
+    const mq = window.matchMedia("(min-width: 992px)");
+    mq.addListener(WidthChange);
+    WidthChange(mq);
+  }
+  // media query change
+  function WidthChange(mq) {
+      if (mq.matches) {
+          $('body').addClass('sidebar-expand');
+          $('body').removeClass('sidebar-collapse');
+          console.log("window width is at least 992px");
+      } else {
+          $('body').removeClass('sidebar-expand');
+          $('body').addClass('sidebar-collapse');
+          console.log("window width is less than 992px");
+      }
+  }
+
+  $('.sidenav-trigger').click(function() {
+    $('body').toggleClass('sidebar-expand sidebar-collapse');
+});
 });

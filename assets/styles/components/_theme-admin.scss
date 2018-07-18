@@ -35,7 +35,6 @@ html {
     li.bold > a {
       @include font-family('ubuntu', 'bold');
       
-      color: rgba(0,0,0,0.87);
       text-transform: uppercase;
     }
     li.active a,

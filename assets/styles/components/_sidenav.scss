@@ -18,3 +18,16 @@
     }
   }
 }
+
+
+nav a.sidenav-trigger {
+  display: block;
+  position: relative;
+  margin-left: 0;
+}
+
+nav .brand-logo {
+  @media #{$large-and-up} {
+    position: relative;
+  }
+}

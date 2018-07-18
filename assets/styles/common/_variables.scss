@@ -7,6 +7,9 @@ $cdn-dist-path: "http://cdn.agrorural.gob.pe/apps-mdl/dist";
 $footer-bg-color: gray;
 $gray-100: #f5f5f5;
 
+$white: #FFFFFF;
+$black: #000000;
+
 // 1. Colors
 // ==========================================================================
 
@@ -19,6 +22,7 @@ $gray-100: #f5f5f5;
 $input-height: 2.25rem;
 $dropdown-item-height: 36px;
 $input-font-size: 13px;
+
 
 @mixin theme($name, $primary-color: $primary-color, $secondary-color: $secondary-color) {
   $primary: (
@@ -36,6 +40,7 @@ $input-font-size: 13px;
 
   $primary: map-get($colors, primary);
   $secondary: map-get($colors, secondary);
+  $sidenav-bg-color: $primary-color;
 
   .#{$name} {
     input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]){
@@ -55,10 +60,10 @@ $input-font-size: 13px;
       background-color: $primary-color;
     }
 
-    .sidenav .collapsible-body > ul:not(.collapsible) > li.active,
+    /*.sidenav .collapsible-body > ul:not(.collapsible) > li.active,
     .sidenav.sidenav-fixed .collapsible-body > ul:not(.collapsible) > li.active {
       background-color: $secondary-color;
-    }
+    }*/
 
     &.theme-admin {
       .tabs {
@@ -85,10 +90,20 @@ $input-font-size: 13px;
       }
       
       .sidenav {
-        background-color: $primary-color;
+        background-color: $sidenav-bg-color;
+
+        .logo-container {
+          @include color-yiq($primary-color);
+        }
+
+        li {
+          > a {
+            @include color-yiq($primary-color);
+          }
+        }
 
         li.active {
-          background-color: rgba(0,0,0,0.05);
+          background-color: rgba(0,0,0,0.05) !important;
         }
       }
 
@@ -121,3 +136,4 @@ $input-font-size: 13px;
     }
   }
 }
+
