@@ -8,13 +8,6 @@
       // transition: box-shadow .3s, background-color .3s;
       padding: 0 20px;
 
-      @media #{$large-and-up} {
-        .has-fixed-sidenav & {
-          width: calc(100% - 300px);
-          left: 300px;
-        }
-      }
-
       .brand-logo {
         @include font-family('ubuntu', 'medium');
 
@@ -50,6 +43,17 @@
       
         @media #{$large-and-up} {
           height: 64px;
+        }
+      }
+    }
+  }
+
+  &.has-fixed-sidenav {
+    .navbar-fixed {
+      @media #{$large-and-up} {
+        .navbar {
+          width: calc(100% - 300px);
+          left: 300px;
         }
       }
     }

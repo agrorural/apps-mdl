@@ -155,6 +155,16 @@ h6 {
   }
 }
 
+.btn-link {
+  background-color: transparent;
+  box-shadow: none;
+
+  &:hover {
+    background-color: rgba(158,158,158,.2);
+    box-shadow: none;
+  }
+}
+
 
 table nav {
   background-color: transparent;

@@ -71,6 +71,14 @@ $(function(){
       if (mq.matches) {
           $('body').addClass('sidebar-expand');
           $('body').removeClass('sidebar-collapse');
+          // $(".has-fixed-sidenav .sidenav-trigger").click(function(){
+          //   console.log("Clicked bitach");
+          // });
+          $(document).on('click', '.sidenav-trigger', function(){
+            $(".sidenav-overlay").css("display", "none");
+            $(".sidenav-overlay").css("opacity", "0");
+          });
+
           console.log("window width is at least 992px");
       } else {
           $('body').removeClass('sidebar-expand');
@@ -82,5 +90,5 @@ $(function(){
 
   $('.sidenav-trigger').click(function() {
     $('body').toggleClass('sidebar-expand sidebar-collapse');
-});
+  });
 });

@@ -82,6 +82,10 @@ $button-small-height: $button-height * .9;
     }*/
 
     &.theme-admin {
+      .btn-link {
+        color: $primary-color;
+      }
+      
       header .navbar-fixed > .navbar{
         background-color: $primary-color;
         
@@ -89,6 +93,7 @@ $button-small-height: $button-height * .9;
           @include color-yiq($primary-color);
         }
       }
+
       .tabs {
         .tab {
           a {

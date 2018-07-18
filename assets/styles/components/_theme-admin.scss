@@ -100,7 +100,7 @@ html {
         transform: translateX(0);
 
         .sidenav {
-          transform: translateX(0);
+          transform: translateX(0) !important;
         }
     }
   }
@@ -124,9 +124,9 @@ html {
         }
       }
 
-      // .sidenav {
-      //   transform: translateX(-105%) !important;
-      // }
+      .sidenav {
+        transform: translateX(-105%) !important;
+      }
     }
   }
 }
