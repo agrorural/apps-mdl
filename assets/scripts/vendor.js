@@ -71,10 +71,7 @@ $(function(){
       if (mq.matches) {
           $('body').addClass('sidebar-expand');
           $('body').removeClass('sidebar-collapse');
-          // $(".has-fixed-sidenav .sidenav-trigger").click(function(){
-          //   console.log("Clicked bitach");
-          // });
-          $(document).on('click', '.sidenav-trigger', function(){
+          $(document).on('click', '.has-fixed-sidenav .sidenav-trigger', function(){
             $(".sidenav-overlay").css("display", "none");
             $(".sidenav-overlay").css("opacity", "0");
           });
