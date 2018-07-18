@@ -183,3 +183,9 @@ table nav {
 .no-margin-bottom {
   margin-bottom: 0 !important;
 }
+
+.btn-floating {
+  &.btn-large  {
+    line-height: 56px;
+  }
+}

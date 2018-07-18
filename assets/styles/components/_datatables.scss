@@ -65,10 +65,10 @@ table.dataTable thead .sorting, table.dataTable thead .sorting_asc, table.dataTa
 
   table.dataTable thead .sorting:before, table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:before, table.dataTable thead .sorting_desc_disabled:after {
       position: absolute;
-      bottom: 11px;
+      bottom: 14px;
       display: block;
       opacity: 0.3;
-      font-size: 1.3em
+      font-size: 1em
   }
 
   table.dataTable thead .sorting:before, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_desc_disabled:before {
