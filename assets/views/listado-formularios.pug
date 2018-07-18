@@ -13,12 +13,81 @@ block mainmenu
 
 block main
   main
-    .container
-      h2 #{page}
-      .card.card-horizontal
-        .card-content
-          span.card-title Card Title 1
-          p test1
+    .row
+      .col.s12
+        h2 #{page}
+        .card.card-horizontal
+          .card-content
+            span.card-title Card Title 1
+            .row
+              div(class="input-field col s12 m6 l3")
+                select
+                  option(value="" disabled selected) Seleccione
+                  option(value="1") Option 1
+                  option(value="2") Option 2
+                  option(value="3") Option 3
+                label Programa Presupuestal
+              div(class="input-field col s12 m6 l3")
+                select
+                  option(value="" disabled selected) Seleccione
+                  option(value="1") Option 1
+                  option(value="2") Option 2
+                  option(value="3") Option 3
+                label Producto
+              div(class="input-field col s12 m6 l3")
+                select
+                  option(value="" disabled selected) Seleccione
+                  option(value="1") Option 1
+                  option(value="2") Option 2
+                  option(value="3") Option 3
+                label Actividad
+              div(class="input-field col s12 m6 l3")
+                select
+                  option(value="" disabled selected) Seleccione
+                  option(value="1") Option 1
+                  option(value="2") Option 2
+                  option(value="3") Option 3
+                label Sub actividad
+              div(class="input-field col s12 m6 l3")
+                select
+                  option(value="" disabled selected) Seleccione
+                  option(value="1") Option 1
+                  option(value="2") Option 2
+                  option(value="3") Option 3
+                label Departamento
+              div(class="input-field col s12 m6 l3")
+                select
+                  option(value="" disabled selected) Seleccione
+                  option(value="1") Option 1
+                  option(value="2") Option 2
+                  option(value="3") Option 3
+                label Provincia
+              div(class="input-field col s12 m6 l2")
+                select
+                  option(value="" disabled selected) Seleccione
+                  option(value="1") Option 1
+                  option(value="2") Option 2
+                  option(value="3") Option 3
+                label Unidad de Medida
+              div(class="input-field col s12 m6 l2")
+                select
+                  option(value="" disabled selected) Seleccione
+                  option(value="1") Option 1
+                  option(value="2") Option 2
+                  option(value="3") Option 3
+                label Periodo
+              div(class="input-field col s12 m6 l2")
+                a(class="btn") Buscar
+
+block append scripts
+    script.
+      const $ = require('jquery');
+
+      $(document).ready(function(){
+        $('select').formSelect();
+      });
+
+
 
 
     

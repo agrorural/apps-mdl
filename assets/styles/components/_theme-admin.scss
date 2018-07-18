@@ -8,10 +8,10 @@ html {
   display: flex;
   flex-direction: column;
 
-  @media only screen and (min-width: 993px) {
-    &.has-fixed-sidenav {
-        padding-left: 300px;
-    }
+  .sidenav.sidenav-fixed {
+    left:0;
+    // transform:translateX(-105%) !important;
+    position:fixed;
   }
 
   header {
@@ -19,9 +19,7 @@ html {
   }
 
   .sidenav {
-    @media #{$medium-and-down} {
-      transform: translateX(-105%);
-    }
+    transition: all 0.3s ease;
 
     .logo-container {
       padding: 0 16px;
@@ -93,16 +91,43 @@ html {
     padding: 0 20px;
   }
 
-  .footer-copyright .container {
-    width: 100%;
-    padding: 0 20px;
-  }
-
   .card {
     .card-title {
       @include font-family('ubuntu', 'medium');
 
       font-size: 16px;
+    }
+  }
+
+  @media #{$large-and-up} {
+    &.sidebar-expand {
+        padding-left: 300px;
+        // transform: translateX(0) !important;
+    }
+  }
+  
+  @media #{$medium-and-down} {
+    &.sidebar-collapse {
+      .sidenav {
+        // transform: translateX(-105%);
+      }
+    }
+  }
+  
+  @media #{$large-and-up} {
+    &.sidebar-collapse {
+      padding-left: 0;
+  
+      .navbar-fixed {
+        nav {
+          width: 100%;
+          left: 0;
+        }
+      }
+
+      .sidenav {
+        // transform: translateX(-105%) !important;
+      }
     }
   }
 }
