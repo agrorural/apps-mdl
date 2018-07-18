@@ -452,8 +452,8 @@
   position: relative;
   clear: both;
   zoom: 1;
-  border-top: 1px solid rgba(0,0,0,0.12);
-  border-bottom: 1px solid rgba(0,0,0,0.12);
+  // border-top: 1px solid rgba(0,0,0,0.12);
+  // border-bottom: 1px solid rgba(0,0,0,0.12);
   
   .dataTables_scrollHead thead > tr {
     border-bottom: 2px solid rgba(0, 0, 0, 0.2);
@@ -510,7 +510,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
     padding: 10px 18px;
+
+    @media #{$medium-and-up} {
+      flex-direction: row;
+    }
 
     .dataTables_length {
       float: left;

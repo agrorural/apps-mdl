@@ -82,6 +82,13 @@ $button-small-height: $button-height * .9;
     }*/
 
     &.theme-admin {
+      header .navbar-fixed > .navbar{
+        background-color: $primary-color;
+        
+        a {
+          @include color-yiq($primary-color);
+        }
+      }
       .tabs {
         .tab {
           a {
@@ -130,6 +137,13 @@ $button-small-height: $button-height * .9;
       }
 
       .paginate_button.current {
+        @include color-yiq($secondary-color);
+        
+        background-color: $secondary-color;
+      }
+
+      table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child:before,
+      table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child:before {
         @include color-yiq($secondary-color);
         
         background-color: $secondary-color;

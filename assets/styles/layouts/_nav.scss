@@ -5,40 +5,38 @@
       width: 100%;
       left: 0;
       z-index: 10;
-      transition: box-shadow .3s, background-color .3s;
+      // transition: box-shadow .3s, background-color .3s;
       padding: 0 20px;
-      color: rgba(0,0,0,0.87);
 
       @media #{$large-and-up} {
-        width: calc(100% - 300px);
-        left: 300px;
-      }
-
-      a {
-        color: rgba(0,0,0,0.87);
+        .has-fixed-sidenav & {
+          width: calc(100% - 300px);
+          left: 300px;
+        }
       }
 
       .brand-logo {
         @include font-family('ubuntu', 'medium');
 
         font-size: 18px;
-        color: rgba(0,0,0,0.87);
       }
     }
 
     .nav-content {
       width: 100%;
       left: 0;
-      transition: box-shadow .3s, background-color .3s;
+      // transition: box-shadow .3s, background-color .3s;
       padding: 0 20px;
       top: 56px;
       height: 48px;
       background-color: white;
     
       @media #{$large-and-up} {
-        top: 64px;
-        width: calc(100% - 300px);
-        left: 300px;
+        .has-fixed-sidenav & {
+          top: 64px;
+          width: calc(100% - 300px);
+          left: 300px;
+        }
       }
     }
 

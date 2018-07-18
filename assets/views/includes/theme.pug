@@ -11,9 +11,9 @@ html(lang="en")
     header
       if extended
         .navbar-fixed.nav-extended
-          nav(class="navbar white")
+          nav(class="navbar")
             .nav-wrapper
-              a(href="#", class="brand-logo grey-text text-darken-4") #{title}
+              a(href="#", class="brand-logo") #{title}
               ul(id="nav-mobile", class="right")
                 li.hide-on-med-and-down
                   a(href="#") Enlace
@@ -23,7 +23,7 @@ html(lang="en")
                 li
                   a(href="#")
                     i.fas.fa-cog
-              a(href="#!", data-target="sidenav-left", class="sidenav-trigger left show-on-small")
+              a(href="#!", data-target="slide-out", class="sidenav-trigger left")
                 i.fas.fa-bars
           nav(class="nav-content")
             .nav-wrapper
@@ -36,9 +36,9 @@ html(lang="en")
                   a(href="#test3") Calendario
       else
         .navbar-fixed
-          nav(class="navbar white")
+          nav(class="navbar")
             .nav-wrapper
-              a(href="#", class="brand-logo grey-text text-darken-4") #{title}
+              a(href="#", class="brand-logo") #{title}
               ul(id="nav-mobile", class="right")
                 li.hide-on-med-and-down
                   a(href="#") Enlace
@@ -48,10 +48,10 @@ html(lang="en")
                 li
                   a(href="#")
                     i.fas.fa-cog
-              a(href="#!", data-target="sidenav-left", class="sidenav-trigger left")
+              a(href="#!", data-target="slide-out", class="sidenav-trigger left")
                 i.fas.fa-bars
         
-      ul#sidenav-left.sidenav.sidenav-fixed(style="transform: translateX(0%);")
+      ul#slide-out.sidenav
           li
             a.logo-container(href="/admin.html")
               | SISGEP

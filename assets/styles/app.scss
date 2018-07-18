@@ -12,7 +12,7 @@
 @import "layouts/nav";
 
 @include theme(theme-default, #303F9F, #FF4081);
-@include theme(theme-teal, #009688, #03A9F4);
+@include theme(theme-teal, #009688, #ffc107);
 @include theme(theme-blue, #448AFF, #FF4081);
 
 @import "components/theme-admin";

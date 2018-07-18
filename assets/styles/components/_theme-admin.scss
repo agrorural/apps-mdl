@@ -13,7 +13,7 @@ html {
   }
 
   .sidenav {
-    transition: all 0.3s ease;
+    // transition: all 0.3s ease;
 
     .logo-container {
       padding: 0 16px;
@@ -81,6 +81,7 @@ html {
   main > .container,
   footer > .container {
     width: 100%;
+    max-width: 100%;
     margin-top: 20px;
     padding: 0 10px;
   }
@@ -94,14 +95,18 @@ html {
   }
 
   @media #{$large-and-up} {
-    &.sidebar-expand {
+    &.sidebar-expand.has-fixed-sidenav {
         padding-left: 300px;
         transform: translateX(0);
+
+        .sidenav {
+          transform: translateX(0);
+        }
     }
   }
   
   @media #{$medium-and-down} {
-    &.sidebar-collapse {
+    &.sidebar-collapse.has-fixed-sidenav {
       .sidenav {
         transform: translateX(-105%);
       }
@@ -109,7 +114,7 @@ html {
   }
   
   @media #{$large-and-up} {
-    &.sidebar-collapse {
+    &.sidebar-collapse.has-fixed-sidenav {
       padding-left: 0;
   
       .navbar-fixed {
@@ -119,9 +124,9 @@ html {
         }
       }
 
-      .sidenav {
-        transform: translateX(-105%) !important;
-      }
+      // .sidenav {
+      //   transform: translateX(-105%) !important;
+      // }
     }
   }
 }
