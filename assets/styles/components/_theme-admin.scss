@@ -8,12 +8,6 @@ html {
   display: flex;
   flex-direction: column;
 
-  .sidenav.sidenav-fixed {
-    left:0;
-    // transform:translateX(-105%) !important;
-    position:fixed;
-  }
-
   header {
     display: block;
   }
@@ -88,7 +82,7 @@ html {
   footer > .container {
     width: 100%;
     margin-top: 20px;
-    padding: 0 20px;
+    padding: 0 10px;
   }
 
   .card {
@@ -102,14 +96,14 @@ html {
   @media #{$large-and-up} {
     &.sidebar-expand {
         padding-left: 300px;
-        // transform: translateX(0) !important;
+        transform: translateX(0);
     }
   }
   
   @media #{$medium-and-down} {
     &.sidebar-collapse {
       .sidenav {
-        // transform: translateX(-105%);
+        transform: translateX(-105%);
       }
     }
   }
@@ -126,7 +120,7 @@ html {
       }
 
       .sidenav {
-        // transform: translateX(-105%) !important;
+        transform: translateX(-105%) !important;
       }
     }
   }

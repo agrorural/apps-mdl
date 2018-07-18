@@ -1,83 +1,129 @@
 extends includes/theme
 
 block globals
-    - var title = "Bienvenido"
+    - var title = "Listado Formularios"
     - var body_id = "index"
     - var body_class= "theme-teal theme-admin has-fixed-sidenav"
     - var page = "Panel de Control"
-    - var meta_descript = "Bienvenido"
+    - var meta_descript = "Listado Formularios"
 
 block mainmenu
     +mainmenu('Recursos Naturales','Listado Formularios')
     //- - var extended = true
 
-block main
-  main
-    .row
-      .col.s12
-        h2 #{page}
-        .card.card-horizontal
-          .card-content
-            span.card-title Card Title 1
-            .row
-              div(class="input-field col s12 m6 l3")
-                select
-                  option(value="" disabled selected) Seleccione
-                  option(value="1") Option 1
-                  option(value="2") Option 2
-                  option(value="3") Option 3
-                label Programa Presupuestal
-              div(class="input-field col s12 m6 l3")
-                select
-                  option(value="" disabled selected) Seleccione
-                  option(value="1") Option 1
-                  option(value="2") Option 2
-                  option(value="3") Option 3
-                label Producto
-              div(class="input-field col s12 m6 l3")
-                select
-                  option(value="" disabled selected) Seleccione
-                  option(value="1") Option 1
-                  option(value="2") Option 2
-                  option(value="3") Option 3
-                label Actividad
-              div(class="input-field col s12 m6 l3")
-                select
-                  option(value="" disabled selected) Seleccione
-                  option(value="1") Option 1
-                  option(value="2") Option 2
-                  option(value="3") Option 3
-                label Sub actividad
-              div(class="input-field col s12 m6 l3")
-                select
-                  option(value="" disabled selected) Seleccione
-                  option(value="1") Option 1
-                  option(value="2") Option 2
-                  option(value="3") Option 3
-                label Departamento
-              div(class="input-field col s12 m6 l3")
-                select
-                  option(value="" disabled selected) Seleccione
-                  option(value="1") Option 1
-                  option(value="2") Option 2
-                  option(value="3") Option 3
-                label Provincia
-              div(class="input-field col s12 m6 l2")
-                select
-                  option(value="" disabled selected) Seleccione
-                  option(value="1") Option 1
-                  option(value="2") Option 2
-                  option(value="3") Option 3
-                label Unidad de Medida
-              div(class="input-field col s12 m6 l2")
-                select
-                  option(value="" disabled selected) Seleccione
-                  option(value="1") Option 1
-                  option(value="2") Option 2
-                  option(value="3") Option 3
-                label Periodo
-              div(class="input-field col s12 m6 l2")
-                a(class="btn") Buscar
+block content
+  .row
+    .col.s12
+      .card.card-horizontal
+        .card-header
+          span.card-title Card Title 1
+          .row.no-margin-bottom
+            div(class="input-field col s12 m6 l3")
+              select
+                option(value="" disabled selected) Seleccione
+                option(value="1") Option 1
+                option(value="2") Option 2
+                option(value="3") Option 3
+              label Programa Presupuestal
+            div(class="input-field col s12 m6 l3")
+              select
+                option(value="" disabled selected) Seleccione
+                option(value="1") Option 1
+                option(value="2") Option 2
+                option(value="3") Option 3
+              label Producto
+            div(class="input-field col s12 m6 l3")
+              select
+                option(value="" disabled selected) Seleccione
+                option(value="1") Option 1
+                option(value="2") Option 2
+                option(value="3") Option 3
+              label Actividad
+            div(class="input-field col s12 m6 l3")
+              select
+                option(value="" disabled selected) Seleccione
+                option(value="1") Option 1
+                option(value="2") Option 2
+                option(value="3") Option 3
+              label Sub actividad
+            div(class="input-field col s12 m6 l3")
+              select
+                option(value="" disabled selected) Seleccione
+                option(value="1") Option 1
+                option(value="2") Option 2
+                option(value="3") Option 3
+              label Departamento
+            div(class="input-field col s12 m6 l3")
+              select
+                option(value="" disabled selected) Seleccione
+                option(value="1") Option 1
+                option(value="2") Option 2
+                option(value="3") Option 3
+              label Provincia
+            div(class="input-field col s12 m6 l2")
+              select
+                option(value="" disabled selected) Seleccione
+                option(value="1") Option 1
+                option(value="2") Option 2
+                option(value="3") Option 3
+              label Unidad de Medida
+            div(class="input-field col s12 m6 l2")
+              select
+                option(value="" disabled selected) Seleccione
+                option(value="1") Option 1
+                option(value="2") Option 2
+                option(value="3") Option 3
+              label Periodo
+            div(class="input-field col s12 m6 l2")
+              a(class="btn btn-light") 
+                i.fas.fa-search
+        
+        .card-content
+        .card-table
+          table(class='datagrid')
+            thead
+                tr
+                    th(scope="col") #
+                    th(scope="col") First
+                    th(scope="col") Last
+                    th(scope="col") Acciones
+            tbody
+                tr
+                    th(scope="row") 1
+                    td Mark
+                    td Otto
+                    td
+                        nav.nav-actions
+                            a(href="#", data-toggle="tooltip", data-placement="top", title="Ver") 
+                                i.fas.fa-eye
+                            a(href="#", data-toggle="tooltip", data-placement="top", title="Editar")
+                                i.fas.fa-edit
+                            a.danger(href="#", data-toggle="tooltip", data-placement="top", title="Eliminar")
+                                i.fas.fa-trash-alt
+                tr
+                    th(scope="row") 2
+                    td Jacob
+                    td Thornton
+                    td
+                        nav.nav-actions
+                            a(href="#", data-toggle="tooltip", data-placement="top", title="Ver") 
+                                i.fas.fa-eye
+                            a(href="#", data-toggle="tooltip", data-placement="top", title="Editar")
+                                i.fas.fa-edit
+                            a.danger(href="#", data-toggle="tooltip", data-placement="top", title="Eliminar")
+                                i.fas.fa-trash-alt
+                tr
+                    th(scope="row") 3
+                    td Larry
+                    td the Bird
+                    td 
+                        nav.nav-actions
+                            a(href="#", data-toggle="tooltip", data-placement="top", title="Ver") 
+                                i.fas.fa-eye
+                            a(href="#", data-toggle="tooltip", data-placement="top", title="Editar")
+                                i.fas.fa-edit
+                            a.danger(href="#", data-toggle="tooltip", data-placement="top", title="Eliminar")
+                                i.fas.fa-trash-alt
 
 block append scripts
     script.

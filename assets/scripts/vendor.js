@@ -75,6 +75,7 @@ $(function(){
       } else {
           $('body').removeClass('sidebar-expand');
           $('body').addClass('sidebar-collapse');
+          $('.sidenav').css("transform", "translateX(-105%)");
           console.log("window width is less than 992px");
       }
   }
