@@ -1,4 +1,5 @@
 const $ = require('jquery');
+const spinner = '<aside class="spinner"><i class="fas fa-circle-notch fa-spin"></i><span>Cargando datos...<span></aside>';
 
 window.jQuery = require('jquery');
 
@@ -90,3 +91,15 @@ $(function(){
     $('body').toggleClass('sidebar-expand sidebar-collapse');
   });
 });
+
+window.getSpinner = function(){
+  $("body").addClass("with-spinner");
+  $("body").append(spinner).hide().fadeIn(300);
+};
+
+window.deleteSpinner = function(){
+  $("aside.spinner").fadeOut(300, function() {
+    $(this).remove();
+  });
+  $("body").removeClass("with-spinner");
+};

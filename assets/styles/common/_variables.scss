@@ -86,6 +86,10 @@ $button-small-height: $button-height * .9;
     }*/
 
     &.theme-admin {
+      .fa-spin {
+        color: $primary-color;
+      }
+
       .btn-link {
         color: $primary-color;
       }
