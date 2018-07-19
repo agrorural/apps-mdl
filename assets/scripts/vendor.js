@@ -54,6 +54,7 @@ $(function(){
   $('.sidenav').sidenav();
   $('.tabs').tabs();
   $('.collapsible').collapsible();
+  $('.tooltipped').tooltip();
   $('.datagrid').DataTable({
     responsive: true,
     "language": {
