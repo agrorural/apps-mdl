@@ -74,6 +74,10 @@ $button-small-height: $button-height * .9;
 
     .modal-header {
       background-color: $primary-color;
+
+      h4 {
+        @include color-yiq($primary-color);
+      }
     }
 
     /*.sidenav .collapsible-body > ul:not(.collapsible) > li.active,
@@ -84,6 +88,15 @@ $button-small-height: $button-height * .9;
     &.theme-admin {
       .btn-link {
         color: $primary-color;
+      }
+
+      .card-panel {
+        @include color-yiq($secondary-color);
+
+        background-color: rgba($secondary-color, 0.25);
+        border: 1px solid rgba($secondary-color, 0.3);
+        box-shadow: none;
+        padding: 12px 18px;
       }
       
       header .navbar-fixed > .navbar{
