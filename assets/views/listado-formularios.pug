@@ -16,6 +16,16 @@ block content
     .col.s12
       .card.card-horizontal
         .card-header
+          span.card-title Uso de SimpleBarJS
+        .card-content
+          div(id="customBar", style="height: 150px")
+            p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis voluptatibus modi laboriosam ab facere pariatur et veniam dolor odio porro placeat maxime in expedita doloribus eos illo, aut repellendus molestiae?
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ullam neque id voluptatum voluptas, nulla error aliquam, aut molestiae labore quae dignissimos, earum odit ipsa autem nam corporis ea amet.Excepturi eos rerum perferendis aspernatur, sit tenetur architecto. Asperiores quos ducimus sit illo nam dolore aliquid rem minus soluta, pariatur inventore praesentium id, nemo dolores, quo labore consectetur repellat hic!Accusamus natus minima provident labore, animi earum! Cupiditate amet rem, dolor nulla numquam, adipisci eum debitis id unde, a reiciendis? Harum exercitationem aspernatur, alias amet aliquid sit excepturi ad praesentium.
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, a quis. Sed rem, sint vero earum, beatae voluptatibus rerum provident unde eaque adipisci praesentium ea facere tempora blanditiis, aperiam labore.Illo, veniam, quaerat voluptatem repudiandae sit aliquam eos ex consectetur nesciunt aperiam at veritatis quis cumque hic odit unde quos temporibus cum iure voluptate consequuntur nihil. Ipsa odit hic itaque.Voluptatibus tempore similique quibusdam aliquid perspiciatis veniam ipsa explicabo, sit quae illum minus voluptates libero velit nemo neque natus voluptatem repellendus! Iste est nostrum quibusdam voluptatem deserunt rerum laborum nihil.Reprehenderit, numquam magnam veniam blanditiis non quod ducimus cum perferendis ipsam sint deleniti fugiat corporis repudiandae dolorum illo iure amet voluptatibus repellendus itaque, doloribus, nam voluptatem excepturi necessitatibus iste. Adipisci.Deserunt quis et labore consectetur expedita beatae nobis. Consequuntur sapiente magnam consectetur neque ex minus at fugit beatae modi aliquam! Accusamus, nemo expedita recusandae quod repellendus quos. Fugiat, modi corrupti?
+  .row
+    .col.s12
+      .card.card-horizontal
+        .card-header
           span.card-title Uso de alert
         .card-content
           div(class="card-panel") This is a card panel with a teal lighten-2 class
@@ -707,18 +717,23 @@ block content
 block append scripts
     script.
       const $ = require('jquery');
+      const SimpleBar = require('simplebar');
       
-      getSpinner();
+      
+      //getSpinner();
+
+      setTimeout(getSpinner, 1000);
       
       $(document).ready(function(){
+        setTimeout(deleteSpinner, 3000);
         $('select').formSelect();
         $('.fixed-action-btn').floatingActionButton();
-
-        $('#default-table-example').DataTable({
+        var tables = $('#default-table-example').DataTable({
           responsive: true,
           scrollY:        "50vh",
           scrollCollapse: true,
           drawCallback: function( settings ) {
+            $(".dataTables_scrollBody").attr("data-simplebar", "");
             $('select[name="default-table-example_length"]').formSelect();
           },
           //dom: '<"header with-filter"fB>trlip',
@@ -727,6 +742,10 @@ block append scripts
           "language": {
             "url": "dist/scripts/datatables-es_ES.json"
           },
+        });
+
+        new SimpleBar(document.getElementById('customBar'), { 
+          scrollbarMinSize: 100
         });
       });
 
