@@ -1,5 +1,4 @@
 const $ = require('jquery');
-const spinner = '<aside class="spinner"><i class="fas fa-circle-notch fa-spin"></i><span>Cargando datos...<span></aside>';
 
 window.jQuery = require('jquery');
 
@@ -94,9 +93,9 @@ $(function(){
   });
 });
 
-window.getSpinner = function(){
+window.getSpinner = function(message = 'Cargando...'){
   $("body").addClass("with-spinner");
-  $("body").append(spinner).hide().fadeIn(300);
+  $("body").append('<aside class="spinner"><i class="fas fa-circle-notch fa-spin"></i><span>' + message + '<span></aside>').hide().fadeIn(300);
 };
 
 window.deleteSpinner = function(){

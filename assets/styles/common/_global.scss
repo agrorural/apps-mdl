@@ -68,6 +68,27 @@ body {
   @include font-family();
 }
 
+pre {
+  background-color: #fafafa;
+  border: 1px solid #dee2e6;
+  padding: 2rem;
+  color: #495057;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+
+  code {
+    color: inherit;
+    word-break: normal;
+  }
+
+  &:hover {
+    background-color: #fff;
+    color: #212529;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -145,11 +166,16 @@ h6 {
   top: -26px !important;
 }
 
+.btn-block {
+  display: block;
+}
+
 .btn-light {
   background-color: rgba(158,158,158,.2);
   color: rgba(0,0,0,.9);
 
-  &:hover {
+  &:hover, 
+  &:focus {
     background-color: rgba(158,158,158,.4);
     color: rgba(0,0,0,.95);
   }

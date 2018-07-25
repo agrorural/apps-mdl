@@ -86,8 +86,24 @@ $button-small-height: $button-height * .9;
     }*/
 
     &.theme-admin {
-      .fa-spin {
+      .btn-floating {
+        &.secondary {
+          @include color-yiq($secondary-color);
+        }
+
+        &.primary {
+          @include color-yiq($primary-color);
+        }
+      }
+      
+      aside .fa-spin {
         color: $primary-color;
+      }
+
+      .btn {
+        svg {
+          margin-right: 0.75rem;
+        }
       }
 
       .btn-link {

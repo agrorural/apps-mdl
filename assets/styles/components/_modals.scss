@@ -1,4 +1,10 @@
 .modal {
+  width: 90%;
+
+  @media #{$medium-and-down} {
+    width: 85%;
+   }
+
   .modal-header {
     padding: 16px 24px;
     
@@ -9,7 +15,26 @@
     }
   }
 
-  &.modal-fixed-header{
+  &.modal-fixed-header.modal-fixed-footer {
+    .modal-content {
+      top: 60px;
+      bottom: 56px;
+      height: calc(100% - 116px);
+    }
+  }
+
+  // &.modal-fixed-header,
+  // &.modal-fixed-footer {
+  //   min-height: 20%;
+  //   max-height: 70%;
+  //   height: auto;
+  // }
+
+  &.modal-fixed-header {
+    overflow: hidden;
+    padding: 0;
+    height: 70%;
+
     .modal-header {
       z-index: 1004;
       height: 60px;
@@ -17,10 +42,15 @@
 
     .modal-content {
       top: 60px;
+      bottom: 0;
+      position: absolute;
+      max-height: 100%;
+      width: 100%;
+      overflow-y: auto;
     }
   }
 
-  &.modal-fixed-footer{
+  &.modal-fixed-footer {
     .modal-footer {
       z-index: 1004;
     }

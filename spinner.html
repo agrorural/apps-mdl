@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="#{meta_descript}">
+    <title>Uso de Spinners - AGRO RURAL MDL WebApps</title>
+    <!-- Favicons-->
+    <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+    <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <!--  Android 5 Chrome Color-->
+    <meta name="theme-color" content="#EE6E73">
+    <!-- CSS-->
+    <link href="dist/styles/app.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body class="theme-teal theme-admin" id="index"></body>
+  <header>
+    <div class="navbar-fixed">
+      <nav class="navbar">
+        <div class="nav-wrapper"><a class="brand-logo" href="#">Uso de Spinners</a>
+          <ul class="right" id="nav-mobile">
+            <li class="hide-on-med-and-down"><a href="#">Enlace</a></li>
+            <li class="hide-on-med-and-down"><a href="#"><i class="fas fa-bell"></i></a></li>
+            <li><a href="#"><i class="fas fa-cog"></i></a></li>
+          </ul><a class="sidenav-trigger left" href="#!" data-target="slide-out"><i class="fas fa-bars"></i></a>
+        </div>
+      </nav>
+    </div>
+    <ul class="sidenav" id="slide-out">
+      <li><a class="logo-container" href="/admin.html">SISGEP</a></li>
+            <li class="bold waves-effect"><a class="waves-effect waves-primary" href="./admin.html" title="Inicio"><span>Inicio</span></a></li>
+            <li class="bold waves-effect"><a class="waves-effect waves-primary" href="./dashboard.html" title="Default Theme"><span>Default Theme</span></a></li>
+            <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                <li class="bold waves-effect"><a class="collapsible-header waves-effect waves-primary" tabindex="0"> <span>Recursos Naturales</span></a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a href="./listado-formularios.html" title="Listado Formularios"><i class="fab fa-wpforms"></i><span>Listado Formularios</span></a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                <li class="bold active"><a class="collapsible-header waves-effect waves-primary" tabindex="0"> <span>Componentes</span></a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li class="active"><a href="./spinner.html" title="Spinner"><i class="fas fa-circle-notch"></i><span>Spinner</span></a></li>
+                      <li><a href="./simplebar.html" title="SimpleBar"><i class="fas fa-sliders-h"></i><span>SimpleBar</span></a></li>
+                      <li><a href="./modals.html" title="Modals"><i class="fas fa-window-restore"></i><span>Modals</span></a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+    </ul>
+  </header>
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col s6">
+          <div class="card card-horizontal">
+            <div class="card-header"><span class="card-title">Llamando un spinner</span></div>
+            <div class="card-content">
+              <p>Para usar un spinner, llame la función 
+                <pre><code>getSpinner(message)</code></pre>, donde <code>message</code> es un <code>string</code> con el mensaje del spinner que por defecto es "Cargando data..."
+              </p><br>
+              <p><a class="btn btn-light btn-block" id="getSpinner" href="#"> <i class="fas fa-circle-notch fa-spin"></i><span>Llamar spinner</span></a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col s6">
+          <div class="card card-horizontal">
+            <div class="card-header"><span class="card-title">Eliminando un spinner</span></div>
+            <div class="card-content">
+              <p>Para destruir un spinner, llame la función 
+                <pre><code>deleteSpinner()</code></pre>y la función eliminará las clases y HTML creado por la funión de llamada.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col s6 m3"><img class="materialize-logo" src="dist/images/agro_rural__logo.svg" alt="AGRO RURAL" style="width:130px">
+          <p>Desarrollado por la OA/UTI <br>de AGRO RURAL.</p>
+        </div>
+        <div class="col s6 m3">
+          <h5>Links</h5>
+          <ul>
+            <li><a href="#!">Link 1</a></li>
+            <li><a href="#!">Link 2</a></li>
+            <li><a href="#!">Link 3</a></li>
+            <li><a href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col s6 m3">
+          <h5>Links 2</h5>
+          <ul>
+            <li><a href="#!">Link 1</a></li>
+            <li><a href="#!">Link 2</a></li>
+            <li><a href="#!">Link 3</a></li>
+            <li><a href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col s6 m3">
+          <h5>Links</h5>
+          <ul>
+            <li><a href="#!">Link 1</a></li>
+            <li><a href="#!">Link 2</a></li>
+            <li><a href="#!">Link 3</a></li>
+            <li><a href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="dist/scripts/vendor.js"></script>
+  <script>
+    const $ = require('jquery');
+    
+    $(document).ready(function(){
+      $("#getSpinner").click(function(){
+        setTimeout(getSpinner('El spinner se destruirá en 5s, por que se llamó a la función deleteSpinner()...'), 1000);
+        setTimeout(deleteSpinner, 5000);
+      });
+    });
+  </script>
+</html>

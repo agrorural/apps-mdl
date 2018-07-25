@@ -2,7 +2,7 @@ extends includes/base
 block globals
     - var title= 'Modals'
     - var body_id= "index"
-    - var body_class= "theme-teal"
+    - var body_class= "theme-teal theme-admin"
     - var page = "Inicio"
     - var meta_descript = "Uso de Modales"
 
@@ -10,103 +10,225 @@ block mainmenu
     +mainmenu('JavaScript','Modals')
 
 block content
-  a.waves-effect.waves-light.btn.modal-trigger(href="#modal1") Modal
+  .row
+      .col.s12
+        .card.card-horizontal
+          .card-header
+            span.card-title Modal por defecto
+          .card-content
+            p Es el modal por omisión. No tiene secciones  fijadas
+            pre.
+              &lt;!-- Modal Trigger --&gt;
+              &lt;a class="waves-effect waves-light btn modal-trigger" href="#modal1"&gt;Modal&lt;/a&gt;
 
-  #modal1.modal
-    .modal-header
-      h4 Modal Header
-    .modal-content
-      //- form
-      //-   .row
-      //-     .input-field.col.s6
-      //-       input#first_name.validate(placeholder="Placeholder" type="text")
-      //-       label.active(for="first_name") First Name
-      //-     .input-field.col.s6
-      //-       input#last_name(type="text")
-      //-       label(for="last_name") Last Name
-      //-   .row
-      //-     .input-field.col.s12
-      //-       input#disabled.validate(disabled="" value="I am not editable" type="text")
-      //-       label.active(for="disabled") Disabled
-      //-   .row
-      //-     .input-field.col.s12
-      //-       input#password.validate(type="password")
-      //-       label(for="password") Password
-      //-   .row
-      //-     .input-field.col.s12
-      //-       select
-      //-         option(value="" disabled="" selected="") Choose your option
-      //-         option(value="1") Option 1
-      //-         option(value="2") Option 2
-      //-         option(value="3") Option 3
-      //-       label Materialize Select
-      //-   .row
-      //-     .input-field.col.s12
-      //-       input#email.validate(type="email")
-      //-       label(for="email") Email
-      //-       span.helper-text(data-error="wrong" data-success="right") Helper text
-      //-   .row
-      //-     .col.s12
-      //-       | This is an inline input field:
-      //-       .input-field.inline
-      //-         input#email_inline.validate(type="email")
-      //-         label(for="email_inline") Email
-      //-         span.helper-text(data-error="wrong" data-success="right")
-    .modal-footer
-      a.modal-close.waves-effect.waves-green.btn-flat(href="#!") Agree
+              &lt;!-- Modal Structure --&gt;
+              &lt;div id="modal1" class="modal"&gt;
+              &lt;div class="modal-content"&gt;
+              &lt;h4&gt;Modal Header&lt;/h4&gt;
+              &lt;p&gt;A bunch of text&lt;/p&gt;
+              &lt;/div&gt;
+              &lt;div class="modal-footer"&gt;
+              &lt;a href="#!" class="modal-close waves-effect waves-green btn-flat"&gt;Agree&lt;/a&gt;
+              &lt;/div&gt;
+              &lt;/div&gt;
+            br
+            br
+            a.waves-effect.waves-light.btn.modal-trigger(href="#modal1") Lanzar Modal
+            #modal1.modal
+              .modal-header
+                h4 Modal por defecto
+              .modal-content
+                .row
+                    .col.s12
+                      p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem, labore animi ut quam iusto esse delectus, blanditiis harum est quo beatae doloremque qui ipsum praesentium veritatis deserunt repellat, in error?Dolorem corporis ea dolor laborum. Velit nemo dolores iusto quia quae nisi voluptate cupiditate earum debitis et. Repudiandae, aliquam similique ullam rerum molestias, corrupti consectetur autem corporis, natus sint voluptates.Tempora rerum quia molestiae debitis porro harum laudantium? Laudantium optio molestias, doloribus dolores dolor iure recusandae impedit a? Vero placeat aut dolores, earum soluta maxime dolor laborum iure nesciunt nihil.Rerum fugit aperiam corporis eaque maiores reprehenderit labore praesentium vitae iusto, officia fugiat distinctio architecto consectetur, cupiditate ut sequi eos ex sunt dolore tempora! Ab animi repellendus porro dolore obcaecati.Iste optio sit sint nisi aspernatur cupiditate reprehenderit nihil repellat. Architecto sapiente, placeat minima laborum velit minus. Ipsam error officia a itaque, consectetur laudantium quas officiis tempora placeat cupiditate doloremque.Eaque error, officiis quo voluptate praesentium porro, enim beatae optio sint excepturi deserunt. Earum nihil, ipsam commodi eligendi a quibusdam qui beatae libero, modi hic doloremque ducimus eum odio quae.Quaerat veniam soluta inventore perferendis, vel suscipit corrupti nobis natus quisquam odit. Similique id sequi necessitatibus eveniet pariatur, totam quis quas delectus reiciendis debitis rem dignissimos laboriosam voluptas praesentium culpa.Aliquam voluptatum est a labore, officia maiores dolores ex doloremque quos facilis reiciendis nam quam atque architecto distinctio cum facere voluptas voluptates nulla corporis dignissimos ea ab velit? Quis, neque!Accusamus, natus maiores perferendis officiis, corporis corrupti dolores dolore aliquid ut at iusto beatae quos, itaque delectus nam ratione. Ipsum recusandae, quia error qui similique dolores magnam libero ab aut.Ut debitis a veritatis magni dolorum pariatur iste totam. Eum exercitationem unde odit dolor blanditiis cumque porro consequuntur nihil non aperiam dignissimos, deserunt itaque necessitatibus ex neque minus, nisi pariatur.
+                      p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem, labore animi ut quam iusto esse delectus, blanditiis harum est quo beatae doloremque qui ipsum praesentium veritatis deserunt repellat, in error?Dolorem corporis ea dolor laborum. Velit nemo dolores iusto quia quae nisi voluptate cupiditate earum debitis et. Repudiandae, aliquam similique ullam rerum molestias, corrupti consectetur autem corporis, natus sint voluptates.Tempora rerum quia molestiae debitis porro harum laudantium? Laudantium optio molestias, doloribus dolores dolor iure recusandae impedit a? Vero placeat aut dolores, earum soluta maxime dolor laborum iure nesciunt nihil.Rerum fugit aperiam corporis eaque maiores reprehenderit labore praesentium vitae iusto, officia fugiat distinctio architecto consectetur, cupiditate ut sequi eos ex sunt dolore tempora! Ab animi repellendus porro dolore obcaecati.Iste optio sit sint nisi aspernatur cupiditate reprehenderit nihil repellat. Architecto sapiente, placeat minima laborum velit minus. Ipsam error officia a itaque, consectetur laudantium quas officiis tempora placeat cupiditate doloremque.Eaque error, officiis quo voluptate praesentium porro, enim beatae optio sint excepturi deserunt. Earum nihil, ipsam commodi eligendi a quibusdam qui beatae libero, modi hic doloremque ducimus eum odio quae.Quaerat veniam soluta inventore perferendis, vel suscipit corrupti nobis natus quisquam odit. Similique id sequi necessitatibus eveniet pariatur, totam quis quas delectus reiciendis debitis rem dignissimos laboriosam voluptas praesentium culpa.Aliquam voluptatum est a labore, officia maiores dolores ex doloremque quos facilis reiciendis nam quam atque architecto distinctio cum facere voluptas voluptates nulla corporis dignissimos ea ab velit? Quis, neque!Accusamus, natus maiores perferendis officiis, corporis corrupti dolores dolore aliquid ut at iusto beatae quos, itaque delectus nam ratione. Ipsum recusandae, quia error qui similique dolores magnam libero ab aut.Ut debitis a veritatis magni dolorum pariatur iste totam. Eum exercitationem unde odit dolor blanditiis cumque porro consequuntur nihil non aperiam dignissimos, deserunt itaque necessitatibus ex neque minus, nisi pariatur.
+              .modal-footer
+                a.modal-close.waves-effect.waves-green.btn-flat(href="#!") Agree
 
-  a.waves-effect.waves-light.btn.modal-trigger(href="#modal2") Modal 2
+      .col.s12
+        .card.card-horizontal
+          .card-header
+            span.card-title Modal fixed header (sin footer)
+          .card-content
+            p Modal que tiene header fijado sin footer.
+            pre.
+              &lt;!-- Modal Trigger --&gt;
+              &lt;a class="waves-effect waves-light btn modal-trigger" href="#modal3"&gt;Modal&lt;/a&gt;
 
-  #modal2.modal.modal-fixed-footer.modal-fixed-header
-    .modal-header
-      h4 Modal Fixed Header
-    .modal-content
-      form
-        .row
-          .input-field.col.s6
-            input#first_name.validate(placeholder="Placeholder" type="text")
-            label.active(for="first_name") First Name
-          .input-field.col.s6
-            input#last_name(type="text")
-            label(for="last_name") Last Name
-        .row
-          .input-field.col.s12
-            input#disabled.validate(disabled="" value="I am not editable" type="text")
-            label.active(for="disabled") Disabled
-        .row
-          .input-field.col.s12
-            input#password.validate(type="password")
-            label(for="password") Password
-        .row
-          .input-field.col.s12
-            select
-              option(value="" disabled="" selected="") Choose your option
-              option(value="1") Option 1
-              option(value="2") Option 2
-              option(value="3") Option 3
-              option(value="3") Option 4
-              option(value="3") Option 5
-              option(value="3") Option 6
-              option(value="3") Option 7
-              option(value="3") Option 8
-              option(value="3") Option 9
-              option(value="3") Option 10
-            label Materialize Select
-        .row
-          .input-field.col.s12
-            input#email.validate(type="email")
-            label(for="email") Email
-            span.helper-text(data-error="wrong" data-success="right") Helper text
-        .row
-          .col.s12
-            | This is an inline input field:
-            .input-field.inline
-              input#email_inline.validate(type="email")
-              label(for="email_inline") Email
-              span.helper-text(data-error="wrong" data-success="right")
+              &lt;!-- Modal Structure --&gt;
+              &lt;div id="modal3" class="modal modal-fixed-header"&gt;
+              &lt;div class="modal-content"&gt;
+              &lt;h4&gt;Modal Header&lt;/h4&gt;
+              &lt;p&gt;A bunch of text&lt;/p&gt;
+              &lt;/div&gt;
+              &lt;/div&gt;
+            br
+            br
+            a.waves-effect.waves-light.btn.modal-trigger(href="#modal3") Modal fixed header (sin footer)
 
-    .modal-footer
-      a.modal-close.waves-effect.waves-green.btn-flat(href="#!") Agree
+            #modal3.modal.modal-fixed-header
+              .modal-header
+                h4 Modal Fixed Header (sin footer)
+              .modal-content
+                //div(data-simplebar="")
+                form
+                  .row
+                    .col.s12
+                      p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem, labore animi ut quam iusto esse delectus, blanditiis harum est quo beatae doloremque qui ipsum praesentium veritatis deserunt repellat, in error?Dolorem corporis ea dolor laborum. Velit nemo dolores iusto quia quae nisi voluptate cupiditate earum debitis et. Repudiandae, aliquam similique ullam rerum molestias, corrupti consectetur autem corporis, natus sint voluptates.Tempora rerum quia molestiae debitis porro harum laudantium? Laudantium optio molestias, doloribus dolores dolor iure recusandae impedit a? Vero placeat aut dolores, earum soluta maxime dolor laborum iure nesciunt nihil.Rerum fugit aperiam corporis eaque maiores reprehenderit labore praesentium vitae iusto, officia fugiat distinctio architecto consectetur, cupiditate ut sequi eos ex sunt dolore tempora! Ab animi repellendus porro dolore obcaecati.Iste optio sit sint nisi aspernatur cupiditate reprehenderit nihil repellat. Architecto sapiente, placeat minima laborum velit minus. Ipsam error officia a itaque, consectetur laudantium quas officiis tempora placeat cupiditate doloremque.Eaque error, officiis quo voluptate praesentium porro, enim beatae optio sint excepturi deserunt. Earum nihil, ipsam commodi eligendi a quibusdam qui beatae libero, modi hic doloremque ducimus eum odio quae.Quaerat veniam soluta inventore perferendis, vel suscipit corrupti nobis natus quisquam odit. Similique id sequi necessitatibus eveniet pariatur, totam quis quas delectus reiciendis debitis rem dignissimos laboriosam voluptas praesentium culpa.Aliquam voluptatum est a labore, officia maiores dolores ex doloremque quos facilis reiciendis nam quam atque architecto distinctio cum facere voluptas voluptates nulla corporis dignissimos ea ab velit? Quis, neque!Accusamus, natus maiores perferendis officiis, corporis corrupti dolores dolore aliquid ut at iusto beatae quos, itaque delectus nam ratione. Ipsum recusandae, quia error qui similique dolores magnam libero ab aut.Ut debitis a veritatis magni dolorum pariatur iste totam. Eum exercitationem unde odit dolor blanditiis cumque porro consequuntur nihil non aperiam dignissimos, deserunt itaque necessitatibus ex neque minus, nisi pariatur.
+                      p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem, labore animi ut quam iusto esse delectus, blanditiis harum est quo beatae doloremque qui ipsum praesentium veritatis deserunt repellat, in error?Dolorem corporis ea dolor laborum. Velit nemo dolores iusto quia quae nisi voluptate cupiditate earum debitis et. Repudiandae, aliquam similique ullam rerum molestias, corrupti consectetur autem corporis, natus sint voluptates.Tempora rerum quia molestiae debitis porro harum laudantium? Laudantium optio molestias, doloribus dolores dolor iure recusandae impedit a? Vero placeat aut dolores, earum soluta maxime dolor laborum iure nesciunt nihil.Rerum fugit aperiam corporis eaque maiores reprehenderit labore praesentium vitae iusto, officia fugiat distinctio architecto consectetur, cupiditate ut sequi eos ex sunt dolore tempora! Ab animi repellendus porro dolore obcaecati.Iste optio sit sint nisi aspernatur cupiditate reprehenderit nihil repellat. Architecto sapiente, placeat minima laborum velit minus. Ipsam error officia a itaque, consectetur laudantium quas officiis tempora placeat cupiditate doloremque.Eaque error, officiis quo voluptate praesentium porro, enim beatae optio sint excepturi deserunt. Earum nihil, ipsam commodi eligendi a quibusdam qui beatae libero, modi hic doloremque ducimus eum odio quae.Quaerat veniam soluta inventore perferendis, vel suscipit corrupti nobis natus quisquam odit. Similique id sequi necessitatibus eveniet pariatur, totam quis quas delectus reiciendis debitis rem dignissimos laboriosam voluptas praesentium culpa.Aliquam voluptatum est a labore, officia maiores dolores ex doloremque quos facilis reiciendis nam quam atque architecto distinctio cum facere voluptas voluptates nulla corporis dignissimos ea ab velit? Quis, neque!Accusamus, natus maiores perferendis officiis, corporis corrupti dolores dolore aliquid ut at iusto beatae quos, itaque delectus nam ratione. Ipsum recusandae, quia error qui similique dolores magnam libero ab aut.Ut debitis a veritatis magni dolorum pariatur iste totam. Eum exercitationem unde odit dolor blanditiis cumque porro consequuntur nihil non aperiam dignissimos, deserunt itaque necessitatibus ex neque minus, nisi pariatur.
+                  .row
+                    .input-field.col.s12
+                      input#first_name.validate(placeholder="Placeholder" type="text")
+                      label.active(for="first_name") First Name
+                    .input-field.col.s12
+                      input#last_name(type="text")
+                      label(for="last_name") Last Name
+                  
+                  .row
+                    .input-field.col.s12
+                      input#disabled.validate(disabled="" value="I am not editable" type="text")
+                      label.active(for="disabled") Disabled
+                  .row
+                    .input-field.col.s12
+                      input#password.validate(type="password")
+                      label(for="password") Password
+                  .row
+                    .input-field.col.s12
+                      select
+                        option(value="" disabled="" selected="") Choose your option
+                        option(value="1") Option 1
+                        option(value="2") Option 2
+                        option(value="3") Option 3
+                        option(value="3") Option 4
+                        option(value="3") Option 5
+                        option(value="3") Option 6
+                        option(value="3") Option 7
+                        option(value="3") Option 8
+                        option(value="3") Option 9
+                        option(value="3") Option 10
+                      label Materialize Select
+                  .row
+                    .input-field.col.s12
+                      input#email.validate(type="email")
+                      label(for="email") Email
+                      span.helper-text(data-error="wrong" data-success="right") Helper text
+                  .row
+                    .col.s12
+                      | This is an inline input field:
+                      .input-field.inline
+                        input#email_inline.validate(type="email")
+                        label(for="email_inline") Email
+                        span.helper-text(data-error="wrong" data-success="right")
+
+      .col.s12
+        .card.card-horizontal
+          .card-header
+            span.card-title Modal fixed header y footer
+          .card-content
+            p Modal que tiene header y footer fijados.
+            pre.
+              &lt;!-- Modal Trigger --&gt;
+              &lt;a class="waves-effect waves-light btn modal-trigger" href="#modal2"&gt;Modal&lt;/a&gt;
+
+              &lt;!-- Modal Structure --&gt;
+              &lt;div id="modal2" class="modal modal-fixed-footer modal-fixed-header"&gt;
+              &lt;div class="modal-content"&gt;
+              &lt;h4&gt;Modal Header&lt;/h4&gt;
+              &lt;p&gt;A bunch of text&lt;/p&gt;
+              &lt;/div&gt;
+              &lt;div class="modal-footer"&gt;
+              &lt;a href="#!" class="modal-close waves-effect waves-green btn-flat"&gt;Agree&lt;/a&gt;
+              &lt;/div&gt;
+              &lt;/div&gt;
+            br
+            br
+            a.waves-effect.waves-light.btn.modal-trigger(href="#modal2") Lanzar Modal fixed header y footer
+            #modal2.modal.modal-fixed-footer.modal-fixed-header
+              .modal-header
+                h4 Modal Fixed Header y Footer
+              .modal-content
+                //div(data-simplebar="")
+                form
+                  .row
+                    .col.s12
+                      p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem, labore animi ut quam iusto esse delectus, blanditiis harum est quo beatae doloremque qui ipsum praesentium veritatis deserunt repellat, in error?Dolorem corporis ea dolor laborum. Velit nemo dolores iusto quia quae nisi voluptate cupiditate earum debitis et. Repudiandae, aliquam similique ullam rerum molestias, corrupti consectetur autem corporis, natus sint voluptates.Tempora rerum quia molestiae debitis porro harum laudantium? Laudantium optio molestias, doloribus dolores dolor iure recusandae impedit a? Vero placeat aut dolores, earum soluta maxime dolor laborum iure nesciunt nihil.Rerum fugit aperiam corporis eaque maiores reprehenderit labore praesentium vitae iusto, officia fugiat distinctio architecto consectetur, cupiditate ut sequi eos ex sunt dolore tempora! Ab animi repellendus porro dolore obcaecati.Iste optio sit sint nisi aspernatur cupiditate reprehenderit nihil repellat. Architecto sapiente, placeat minima laborum velit minus. Ipsam error officia a itaque, consectetur laudantium quas officiis tempora placeat cupiditate doloremque.Eaque error, officiis quo voluptate praesentium porro, enim beatae optio sint excepturi deserunt. Earum nihil, ipsam commodi eligendi a quibusdam qui beatae libero, modi hic doloremque ducimus eum odio quae.Quaerat veniam soluta inventore perferendis, vel suscipit corrupti nobis natus quisquam odit. Similique id sequi necessitatibus eveniet pariatur, totam quis quas delectus reiciendis debitis rem dignissimos laboriosam voluptas praesentium culpa.Aliquam voluptatum est a labore, officia maiores dolores ex doloremque quos facilis reiciendis nam quam atque architecto distinctio cum facere voluptas voluptates nulla corporis dignissimos ea ab velit? Quis, neque!Accusamus, natus maiores perferendis officiis, corporis corrupti dolores dolore aliquid ut at iusto beatae quos, itaque delectus nam ratione. Ipsum recusandae, quia error qui similique dolores magnam libero ab aut.Ut debitis a veritatis magni dolorum pariatur iste totam. Eum exercitationem unde odit dolor blanditiis cumque porro consequuntur nihil non aperiam dignissimos, deserunt itaque necessitatibus ex neque minus, nisi pariatur.
+                      p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem, labore animi ut quam iusto esse delectus, blanditiis harum est quo beatae doloremque qui ipsum praesentium veritatis deserunt repellat, in error?Dolorem corporis ea dolor laborum. Velit nemo dolores iusto quia quae nisi voluptate cupiditate earum debitis et. Repudiandae, aliquam similique ullam rerum molestias, corrupti consectetur autem corporis, natus sint voluptates.Tempora rerum quia molestiae debitis porro harum laudantium? Laudantium optio molestias, doloribus dolores dolor iure recusandae impedit a? Vero placeat aut dolores, earum soluta maxime dolor laborum iure nesciunt nihil.Rerum fugit aperiam corporis eaque maiores reprehenderit labore praesentium vitae iusto, officia fugiat distinctio architecto consectetur, cupiditate ut sequi eos ex sunt dolore tempora! Ab animi repellendus porro dolore obcaecati.Iste optio sit sint nisi aspernatur cupiditate reprehenderit nihil repellat. Architecto sapiente, placeat minima laborum velit minus. Ipsam error officia a itaque, consectetur laudantium quas officiis tempora placeat cupiditate doloremque.Eaque error, officiis quo voluptate praesentium porro, enim beatae optio sint excepturi deserunt. Earum nihil, ipsam commodi eligendi a quibusdam qui beatae libero, modi hic doloremque ducimus eum odio quae.Quaerat veniam soluta inventore perferendis, vel suscipit corrupti nobis natus quisquam odit. Similique id sequi necessitatibus eveniet pariatur, totam quis quas delectus reiciendis debitis rem dignissimos laboriosam voluptas praesentium culpa.Aliquam voluptatum est a labore, officia maiores dolores ex doloremque quos facilis reiciendis nam quam atque architecto distinctio cum facere voluptas voluptates nulla corporis dignissimos ea ab velit? Quis, neque!Accusamus, natus maiores perferendis officiis, corporis corrupti dolores dolore aliquid ut at iusto beatae quos, itaque delectus nam ratione. Ipsum recusandae, quia error qui similique dolores magnam libero ab aut.Ut debitis a veritatis magni dolorum pariatur iste totam. Eum exercitationem unde odit dolor blanditiis cumque porro consequuntur nihil non aperiam dignissimos, deserunt itaque necessitatibus ex neque minus, nisi pariatur.
+                  .row
+                    .input-field.col.s12
+                      input#first_name.validate(placeholder="Placeholder" type="text")
+                      label.active(for="first_name") First Name
+                    .input-field.col.s12
+                      input#last_name(type="text")
+                      label(for="last_name") Last Name
+                  
+                  .row
+                    .input-field.col.s12
+                      input#disabled.validate(disabled="" value="I am not editable" type="text")
+                      label.active(for="disabled") Disabled
+                  .row
+                    .input-field.col.s12
+                      input#password.validate(type="password")
+                      label(for="password") Password
+                  .row
+                    .input-field.col.s12
+                      select
+                        option(value="" disabled="" selected="") Choose your option
+                        option(value="1") Option 1
+                        option(value="2") Option 2
+                        option(value="3") Option 3
+                        option(value="3") Option 4
+                        option(value="3") Option 5
+                        option(value="3") Option 6
+                        option(value="3") Option 7
+                        option(value="3") Option 8
+                        option(value="3") Option 9
+                        option(value="3") Option 10
+                      label Materialize Select
+                  .row
+                    .input-field.col.s12
+                      input#email.validate(type="email")
+                      label(for="email") Email
+                      span.helper-text(data-error="wrong" data-success="right") Helper text
+                  .row
+                    .col.s12
+                      | This is an inline input field:
+                      .input-field.inline
+                        input#email_inline.validate(type="email")
+                        label(for="email_inline") Email
+                        span.helper-text(data-error="wrong" data-success="right")
+
+              .modal-footer
+                a.modal-close.waves-effect.waves-green.btn-flat(href="#!") Agree
+
+      .col.s12
+        .card.card-horizontal
+          .card-header
+            span.card-title Modal Header Custom Height
+          .card-content
+            p Modal que tiene tamaño personalizado
+            pre.
+              &lt;!-- Modal Trigger --&gt;
+              &lt;a class="waves-effect waves-light btn modal-trigger" href="#modal4"&gt;Modal&lt;/a&gt;
+
+              &lt;!-- Modal Structure --&gt;
+              &lt;div id="modal4" style="height:17%" class="modal modal-fixed-header"&gt;
+              &lt;div class="modal-content"&gt;
+              &lt;h4&gt;Modal Header&lt;/h4&gt;
+              &lt;p&gt;A bunch of text&lt;/p&gt;
+              &lt;/div&gt;
+              &lt;/div&gt;
+            br
+            br
+            a.waves-effect.waves-light.btn.modal-trigger(href="#modal4") Modal fixed header (sin footer y custom height)
+
+            #modal4.modal.modal-fixed-header(style="height:17%")
+              .modal-header
+                h4 Modal Header Custom Height
+              .modal-content
+                .row
+                  .col.s12
+                    p Ideal para contenidos muy pequeños.
+
 
 block append scripts
     script.
@@ -115,5 +237,7 @@ block append scripts
       $(document).ready(function(){
         $('#modal1').modal();
         $('#modal2').modal();
+        $('#modal3').modal();
+        $('#modal4').modal();
         $('select').formSelect();
       });
