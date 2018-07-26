@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="description" content="#{meta_descript}">
-    <title>Uso de Spinners - AGRO RURAL MDL WebApps</title>
+    <title>Uso de Botones - AGRO RURAL MDL WebApps</title>
     <!-- Favicons-->
     <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
     <meta name="msapplication-TileColor" content="#FFFFFF">
@@ -22,7 +22,7 @@
   <header>
     <div class="navbar-fixed">
       <nav class="navbar">
-        <div class="nav-wrapper"><a class="brand-logo" href="#">Uso de Spinners</a>
+        <div class="nav-wrapper"><a class="brand-logo" href="#">Uso de Botones</a>
           <ul class="right" id="nav-mobile">
             <li class="hide-on-med-and-down"><a href="#">Enlace</a></li>
             <li class="hide-on-med-and-down"><a href="#"><i class="fas fa-bell"></i></a></li>
@@ -51,10 +51,10 @@
                 <li class="bold active"><a class="collapsible-header waves-effect waves-primary" tabindex="0"> <span>Componentes</span></a>
                   <div class="collapsible-body">
                     <ul>
-                      <li class="active"><a href="./spinner.html" title="Spinner"><i class="fas fa-circle-notch"></i><span>Spinner</span></a></li>
+                      <li><a href="./spinner.html" title="Spinner"><i class="fas fa-circle-notch"></i><span>Spinner</span></a></li>
                       <li><a href="./simplebar.html" title="SimpleBar"><i class="fas fa-sliders-h"></i><span>SimpleBar</span></a></li>
                       <li><a href="./modals.html" title="Modals"><i class="fas fa-window-restore"></i><span>Modals</span></a></li>
-                      <li><a href="./buttons.html" title="Buttons"><i class="fas fa-sticky-note"></i><span>Buttons</span></a></li>
+                      <li class="active"><a href="./buttons.html" title="Buttons"><i class="fas fa-sticky-note"></i><span>Buttons</span></a></li>
                     </ul>
                   </div>
                 </li>
@@ -66,23 +66,51 @@
     <div class="container">
       <div class="row">
         <div class="col s6">
-          <div class="card card-horizontal">
-            <div class="card-header"><span class="card-title">Llamando un spinner</span></div>
+          <div class="card">
+            <div class="card-header"><span class="card-title">Raised</span></div>
             <div class="card-content">
-              <p>Para usar un spinner, llame la función 
-                <pre><code>getSpinner(message)</code></pre>, donde <code>message</code> es un <code>string</code> con el mensaje del spinner que por defecto es "Cargando data..."
+              <p>Botón por defecto. Toma el color primario.
+                <pre><code>&lt;a class=&quot;waves-effect waves-light btn&quot;&gt;button&lt;/a&gt;</code></pre>
               </p><br>
-              <p><a class="btn btn-light btn-block" id="getSpinner" href="#"> <i class="fas fa-circle-notch fa-spin"></i><span>Llamar spinner</span></a></p>
+              <p><a class="waves-effect waves-light btn">Botón por defecto</a></p><br>
+              <p>Botón con ícono a la izquierda
+                <pre><code>&lt;a class=&quot;waves-effect waves-light btn btn-icon-left&quot;&gt;&lt;i class=&quot;fas fa-user&quot;&gt;&lt;/i&gt; User&lt;/a&gt;</code></pre>
+              </p><br>
+              <p><a class="waves-effect waves-light btn btn-icon-left"><i class="fas fa-user"></i>Botón con ícono a la izquierda</a></p><br>
+              <p>Botón con ícono a la derecha
+                <pre><code>&lt;a class=&quot;waves-effect waves-light btn btn-icon-right&quot;&gt;&lt;i class=&quot;fas fa-user&quot;&gt;&lt;/i&gt; User&lt;/a&gt;</code></pre>
+              </p><br>
+              <p><a class="waves-effect waves-light btn btn-icon-right">Botón con ícono a la Derecha<i class="fas fa-user"></i></a></p><br>
             </div>
           </div>
         </div>
         <div class="col s6">
-          <div class="card card-horizontal">
-            <div class="card-header"><span class="card-title">Eliminando un spinner</span></div>
+          <div class="card">
+            <div class="card-header"><span class="card-title">Botón tipo link</span></div>
             <div class="card-content">
-              <p>Para destruir un spinner, llame la función 
-                <pre><code>deleteSpinner()</code></pre>y la función eliminará las clases y HTML creado por la funión de llamada.
-              </p>
+              <p>Se usa como botón secundario. En la mayoría de casos acompaña a un botón secundario.
+                <pre><code> &lt;a class=&quot;waves-effect waves-light btn&quot;&gt;Primario&lt;/a&gt;
+&lt;a class=&quot;waves-effect waves-light btn btn-link&quot;&gt;Secundario&lt;/a&gt;</code></pre>
+              </p><br>
+              <p><a class="waves-effect waves-light btn">Primario</a><a class="waves-effect waves-light btn btn-link">Secundario</a></p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header"><span class="card-title">Botón tipo light</span></div>
+            <div class="card-content">
+              <p>Se usa como botón cuando este está en el contexto de un formulario y acompaña a textfields.
+                <pre><code>&lt;a class=&quot;waves-effect waves-light btn btn-light&quot;&gt;Buscar&lt;/a&gt;</code></pre>
+              </p><br>
+              <p><a class="waves-effect waves-light btn btn-light">Buscar</a></p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header"><span class="card-title">Botón tipo block</span></div>
+            <div class="card-content">
+              <p>Se usa para extender un botón a su contenedor.
+                <pre><code>&lt;a class=&quot;waves-effect waves-light btn btn-block&quot;&gt;Botón extendido&lt;/a&gt;</code></pre>
+              </p><br>
+              <p><a class="waves-effect waves-light btn btn-block">Botón extendido</a></p>
             </div>
           </div>
         </div>

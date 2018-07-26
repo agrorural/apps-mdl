@@ -166,6 +166,18 @@ h6 {
   top: -26px !important;
 }
 
+.btn-icon-left {
+  svg {
+    margin-right: 0.5rem;
+  }
+}
+
+.btn-icon-right {
+  svg {
+    margin-left: 0.5rem;
+  }
+}
+
 .btn-block {
   display: block;
 }
