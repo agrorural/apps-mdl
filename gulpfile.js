@@ -78,8 +78,8 @@ function styles() {
   return gulp.src(paths.styles.src)
     .pipe(sourcemaps.init())
     .pipe(sass())
-    .pipe(sourcemaps.write({includeContent: false}))
-    .pipe(sourcemaps.init({loadMaps: true}))
+    // .pipe(sourcemaps.write({includeContent: false}))
+    // .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
         browsers: ['last 2 versions'],
