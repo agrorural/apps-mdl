@@ -30,14 +30,17 @@ table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child:b
   // box-sizing: content-box;
   text-align: center;
   text-indent: 0 !important;
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f007";
+  //font-family: "Font Awesome 5 Free";
+  //font-weight: 900;
   // font-family: 'Courier New', Courier, monospace;
   line-height: 0.95rem;
-  content: '+';
+  //content: '\f007';
   margin: auto;
 }
 table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before,
 table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before {
-  content: '-';
+  content: '\f00d';
   background-color: #d33333;
 }
 table.dataTable.dtr-inline.collapsed.compact > tbody > tr > td:first-child,
