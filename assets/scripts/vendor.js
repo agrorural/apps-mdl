@@ -6,17 +6,18 @@ require('materialize-css');
 
 import SimpleBar from 'simplebar';
 
-import { library, dom } from '@fortawesome/fontawesome-svg-core'
-import { fas } from '@fortawesome/free-solid-svg-icons'
-import { far } from '@fortawesome/free-regular-svg-icons'
-import { fab } from '@fortawesome/free-brands-svg-icons'
+import { library, dom, config } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
 
-//console.log(FontAwesomeConfig);
 
-library.add(fas, far, fab)
+library.add(fas, far, fab);
+config.searchPseudoElements = true;
+console.log(config.searchPseudoElements);
 // Replace any existing <i> tags with <svg> and set up a MutationObserver to
 // continue doing this as the DOM changes.
-dom.watch()
+dom.watch();
 
 //require( 'jszip' );
 

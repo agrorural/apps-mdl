@@ -14,35 +14,35 @@ table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child {
   padding-left: 30px;
   cursor: pointer;
 }
-table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child:before,
-table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child:before {
-  top: 0;
-  left: 6px;
-  bottom: 0;
-  height: 14px;
-  width: 14px;
-  display: block;
-  position: absolute;
-  color: white;
-  // border: 2px solid white;
-  border-radius: 14px;
-  // box-shadow: 0 0 3px #444;
-  // box-sizing: content-box;
-  text-align: center;
-  text-indent: 0 !important;
-  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f007";
-  //font-family: "Font Awesome 5 Free";
-  //font-weight: 900;
-  // font-family: 'Courier New', Courier, monospace;
-  line-height: 0.95rem;
-  //content: '\f007';
-  margin: auto;
+
+table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child,
+table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child {
+  &::before {
+    display: none;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f067";
+  }
+
+  svg {
+    top: 0;
+    left: 6px;
+    bottom: 0;
+    display: block;
+    position: absolute;
+    margin: auto;
+    text-align: center;
+    font-size: 85%;
+  }
 }
-table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before,
-table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before {
-  content: '\f00d';
-  background-color: #d33333;
+
+table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child,
+table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child {
+  svg {
+    transform: rotate(45deg);
+  }
 }
+
 table.dataTable.dtr-inline.collapsed.compact > tbody > tr > td:first-child,
 table.dataTable.dtr-inline.collapsed.compact > tbody > tr > th:first-child {
   padding-left: 27px;

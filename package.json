@@ -16,7 +16,7 @@
     "babel-core": "^6.26.3",
     "babel-preset-es2015": "^6.24.1",
     "babelify": "^8.0.0",
-    "browser-sync": "^2.24.5",
+    "browser-sync": "^2.24.6",
     "browserify": "^16.2.2",
     "del": "^3.0.0",
     "gulp": "^4.0.0",
@@ -38,10 +38,10 @@
     "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.0",
-    "@fortawesome/free-brands-svg-icons": "^5.1.0",
-    "@fortawesome/free-regular-svg-icons": "^5.1.0",
-    "@fortawesome/free-solid-svg-icons": "^5.1.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.2",
+    "@fortawesome/free-brands-svg-icons": "^5.2.0",
+    "@fortawesome/free-regular-svg-icons": "^5.2.0",
+    "@fortawesome/free-solid-svg-icons": "^5.2.0",
     "chart.js": "^2.7.2",
     "chartkick": "^2.3.6",
     "datatables.net-autofill-dt": "^2.3.1",

@@ -9,6 +9,32 @@ block mainmenu
     +mainmenu('Inicio','')
     
 block content
+  style.
+      p .svg-inline--fa {
+        margin-right: .5em;
+      }
+
+      ::before {
+        display: none;
+      }
+
+      .brands::before {
+        font-family: "Font Awesome 5 Brands";
+        content: "\f099";
+      }
+
+      .solid::before {
+        font-family: 'Font Awesome 5 Solid';
+        content: "\f02d";
+      }
+
+      .regular::before {
+        font-family: 'Font Awesome 5 Regular';
+        content: "\f086";
+      }
+
+  p(class="brands") Amazon
+
   #index-banner.section
       .container
         canvas(id="myChart" width="400" height="400")
@@ -19,7 +45,7 @@ block content
               input(type="text", id="phoneNumber")
               label(for="phoneNumber") Phone Number
 
-        table.ejemplito(style="width:100%")
+        table#ejemplito.ejemplito(style="width:100%")
           thead
             tr
               th Name
@@ -524,8 +550,14 @@ block append scripts
           "language": {
             "url": "dist/scripts/datatables-es_ES.json"
           },
-          dom: 'Blfrtip',
-          //dom: '<"row"<"col s12"t>r><"row bottom"f<"col s12 m4 l2"l><"col s12 m8 l5"i><"col s12 m12 l5"p>>'
+          scrollY:        "50vh",
+          scrollX: "100%",
+          scrollCollapse: true,
+          drawCallback: function( settings ) {
+            $(".dataTables_scrollBody").attr("data-simplebar", "");
+            $('select[name="ejemplito_length"]').formSelect();
+          },
+          dom: '<"header"B>tr<"footer"l<"paging-info"ip>>',
           buttons: [
             { extend: 'copy', text: '<i class="fas fa-copy"></i>' },
             { extend: 'csv', text: '<i class="fas fa-file-excel"></i>' },
