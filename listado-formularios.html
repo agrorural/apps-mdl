@@ -93,7 +93,7 @@
             <div class="card-header"><span class="card-title">Card Title 1</span>
               <div class="row no-margin-bottom">
                 <div class="input-field col s12 m6 l3">
-                  <select>
+                  <select id="selectID">
                     <option value="" disabled selected>Seleccione</option>
                     <option value="1">Option 1</option>
                     <option value="2">Option 2</option>
@@ -858,6 +858,12 @@
     const $ = require('jquery');
     const SimpleBar = require('simplebar');
     
+    document.addEventListener('DOMContentLoaded', function() {
+      var instances = M.FormSelect.init($("select"));
+    
+      //- instances.formSelect();
+    });
+    
     
     //getSpinner();
     
@@ -865,7 +871,7 @@
     
     $(document).ready(function(){
       setTimeout(deleteSpinner, 3000);
-      $('select').formSelect();
+      //- $('select').formSelect();
       $('.fixed-action-btn').floatingActionButton();
       var tables = $('#default-table-example').DataTable({
         responsive: true,
@@ -875,9 +881,20 @@
           $(".dataTables_scrollBody").attr("data-simplebar", "");
           $('select[name="default-table-example_length"]').formSelect();
         },
-        //dom: '<"header with-filter"fB>trlip',
         dom: '<"header"B>tr<"footer"l<"paging-info"ip>>',
-         //dom: '<"row"<"col s12"t><"col s12"r>><"row dataTable-footer"f<"col s12 m4 l2"l><"col s12 m8 l6 center"i><"col s12 m12 l4"p>>',
+        //-  buttons: [{
+        //-   extend: 'csv',
+        //-   exportOptions: {
+        //-       columns: ':visible'
+        //-   }
+        //- }],
+        buttons: [
+          { extend: 'copy', text: '<i class="fas fa-copy"></i> Copiar' },
+          { extend: 'csv', text: '<i class="fas fa-file-excel"></i> CSV' },
+          { extend: 'excelHtml5', text: '<i class="fas fa-file-excel"></i> Excel' },
+          { extend: 'pdf', text: '<i class="fas fa-file-pdf"></i> PDF' },
+          { extend: 'print', text: '<i class="fas fa-print"></i> Imprimir' }
+        ],
         "language": {
           "url": "dist/scripts/datatables-es_ES.json"
         },
