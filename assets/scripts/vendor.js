@@ -57,6 +57,14 @@ const Chart = require('chart.js');
 
 $(function(){
   $('.sidenav').sidenav();
+  $('.profile-trigger').dropdown({
+    inDuration: 300,
+    outDuration: 225,
+    hover: false, // Activate on hover
+    coverTrigger: false, // Displays dropdown below the button
+    alignment: 'top' // Displays dropdown with edge aligned to the left of button
+  });
+  //$('.profile-trigger').dropdown();
   $('.tabs').tabs();
   $('.collapsible').collapsible();
   $('.tooltipped').tooltip();

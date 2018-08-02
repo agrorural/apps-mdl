@@ -134,10 +134,10 @@ $button-small-height: $button-height * .9;
         padding: 12px 18px;
       }
       
-      header .navbar-fixed > .navbar{
+      header .navbar-fixed > .navbar {
         background-color: $primary-color;
         
-        a {
+        > a {
           @include color-yiq($primary-color);
         }
       }

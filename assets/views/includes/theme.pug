@@ -41,13 +41,24 @@ html(lang="en")
               a(href="#", class="brand-logo") #{title}
               ul(id="nav-mobile", class="right")
                 li.hide-on-med-and-down
-                  a(href="#") Enlace
-                li.hide-on-med-and-down
                   a(href="#")
                     i.fas.fa-bell
                 li
-                  a(href="#")
-                    i.fas.fa-cog
+                  a(class="profile-trigger" href="#!" data-target="dropdownProfile")
+                    picture
+                      img(src="http://via.placeholder.com/32x32", alt="", srcset="")
+                    span Julio Leonardo
+                  ul(id="dropdownProfile", class="dropdown-content", style="top:100% !important")
+                    li
+                      a(href="#!") Perfil
+                    li
+                      a(href="#!") Configuración
+                    li(class="divider")
+                    li
+                      a(href='#!')
+                        i.fas.fa-sign-out-alt
+                        span(style="padding-left:0.5rem") Salir
+                        
               a(href="#!", data-target="slide-out", class="sidenav-trigger left")
                 i.fas.fa-bars
         

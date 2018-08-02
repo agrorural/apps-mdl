@@ -7620,6 +7620,36 @@ table nav a {
 .without-spinner .spinner {
   opacity: 0; }
 
+.profile-trigger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.profile-trigger picture {
+  height: 32px;
+  line-height: 32px;
+  padding-right: 0.5rem; }
+
+.profile-trigger picture img {
+  border-radius: 500rem; }
+
+.profile-trigger::after {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 0.5rem;
+  vertical-align: 0.5rem;
+  content: "";
+  border-top: .3em solid;
+  border-right: .3em solid transparent;
+  border-bottom: 0;
+  border-left: .3em solid transparent;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in; }
+
 .login {
   background-color: #f5f5f5; }
 
@@ -8460,7 +8490,7 @@ nav a.sidenav-trigger {
 .theme-default.theme-admin header .navbar-fixed > .navbar {
   background-color: #303F9F; }
 
-.theme-default.theme-admin header .navbar-fixed > .navbar a {
+.theme-default.theme-admin header .navbar-fixed > .navbar > a {
   color: rgba(255, 255, 255, 0.85); }
 
 .theme-default.theme-admin .tabs .tab a {
@@ -8563,7 +8593,7 @@ nav a.sidenav-trigger {
 .theme-teal.theme-admin header .navbar-fixed > .navbar {
   background-color: #009688; }
 
-.theme-teal.theme-admin header .navbar-fixed > .navbar a {
+.theme-teal.theme-admin header .navbar-fixed > .navbar > a {
   color: rgba(255, 255, 255, 0.85); }
 
 .theme-teal.theme-admin .tabs .tab a {
@@ -8666,7 +8696,7 @@ nav a.sidenav-trigger {
 .theme-blue.theme-admin header .navbar-fixed > .navbar {
   background-color: #448AFF; }
 
-.theme-blue.theme-admin header .navbar-fixed > .navbar a {
+.theme-blue.theme-admin header .navbar-fixed > .navbar > a {
   color: rgba(255, 255, 255, 0.85); }
 
 .theme-blue.theme-admin .tabs .tab a {
