@@ -7487,6 +7487,9 @@ h1, h2, h3, h4, h5, h6 {
   -ms-flex-align: center;
   align-items: center; }
 
+.collapsible-header {
+  position: relative; }
+
 .collapsible-header::after {
   display: inline-block;
   width: 0;
