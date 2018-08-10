@@ -27,8 +27,11 @@
     margin-right: auto;
 
     .card-content {
+      padding: 3rem !important;
+
       header {
         text-align: center;
+        padding: 1.5rem 0;
 
         a {
           display: block;

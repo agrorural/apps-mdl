@@ -7453,10 +7453,28 @@ h1, h2, h3, h4, h5, h6 {
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased; }
 
-.logo-container {
+.flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.flex-evenly {
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly; }
+
+.flex-between {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.logo-container {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
@@ -7710,8 +7728,12 @@ table nav a {
   margin-left: auto;
   margin-right: auto; }
 
+.login .card .card-content {
+  padding: 3rem !important; }
+
 .login .card .card-content header {
-  text-align: center; }
+  text-align: center;
+  padding: 1.5rem 0; }
 
 .login .card .card-content header a {
   display: block;
@@ -8465,6 +8487,23 @@ nav a.sidenav-trigger {
       background-color: $secondary-color;
     }*/ }
 
+.theme-default input:-webkit-autofill,
+.theme-default input:-webkit-autofill:hover,
+.theme-default input:-webkit-autofill:focus,
+.theme-default input:-webkit-autofill:active {
+  -webkit-animation: autofill-theme-default 0s forwards;
+  animation: autofill-theme-default 0s forwards; }
+
+@keyframes autofill-theme-default {
+  100% {
+    background: transparent;
+    color: inherit; } }
+
+@-webkit-keyframes autofill-theme-default {
+  100% {
+    background: transparent;
+    color: inherit; } }
+
 .theme-default table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child svg,
 .theme-default table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child svg {
   color: #303F9F; }
@@ -8490,6 +8529,12 @@ nav a.sidenav-trigger {
 .theme-default .modal-header h4 {
   color: rgba(255, 255, 255, 0.85); }
 
+.theme-default.theme-admin .logo-container {
+  background-color: #303F9F; }
+
+.theme-default.theme-admin .logo-container:hover {
+  background-color: #303F9F !important; }
+
 .theme-default.theme-admin .btn-floating.secondary {
   color: rgba(255, 255, 255, 0.85); }
 
@@ -8512,6 +8557,9 @@ nav a.sidenav-trigger {
   box-shadow: none;
   padding: 12px 18px; }
 
+.theme-default.theme-admin header nav ul.dropdown-content a:hover {
+  background-color: rgba(255, 64, 129, 0.1); }
+
 .theme-default.theme-admin header .navbar-fixed > .navbar {
   background-color: #303F9F; }
 
@@ -8532,16 +8580,28 @@ nav a.sidenav-trigger {
   background-color: #303F9F; }
 
 .theme-default.theme-admin .sidenav {
-  background-color: #303F9F; }
+  background-color: white; }
 
-.theme-default.theme-admin .sidenav .logo-container {
-  color: rgba(255, 255, 255, 0.85); }
+.theme-default.theme-admin .sidenav li a {
+  color: #303F9F; }
 
-.theme-default.theme-admin .sidenav li > a {
-  color: rgba(255, 255, 255, 0.85); }
+.theme-default.theme-admin .sidenav li a:hover {
+  background-color: rgba(255, 64, 129, 0.1); }
 
 .theme-default.theme-admin .sidenav li.active {
-  background-color: rgba(0, 0, 0, 0.05) !important; }
+  background-color: rgba(255, 64, 129, 0.1) !important; }
+
+.theme-default.theme-admin .sidenav li.active a {
+  color: #303F9F !important; }
+
+.theme-default.theme-admin .sidenav li.active a:hover {
+  background-color: transparent; }
+
+.theme-default.theme-admin .sidenav li.active .collapsible-body a:hover {
+  background-color: rgba(255, 64, 129, 0.1); }
+
+.theme-default.theme-admin .sidenav li.active .collapsible-body .active a {
+  background-color: transparent; }
 
 .theme-default.theme-admin .page-footer a:hover {
   color: #303F9F; }
@@ -8568,6 +8628,23 @@ nav a.sidenav-trigger {
       background-color: $secondary-color;
     }*/ }
 
+.theme-teal input:-webkit-autofill,
+.theme-teal input:-webkit-autofill:hover,
+.theme-teal input:-webkit-autofill:focus,
+.theme-teal input:-webkit-autofill:active {
+  -webkit-animation: autofill-theme-teal 0s forwards;
+  animation: autofill-theme-teal 0s forwards; }
+
+@keyframes autofill-theme-teal {
+  100% {
+    background: transparent;
+    color: inherit; } }
+
+@-webkit-keyframes autofill-theme-teal {
+  100% {
+    background: transparent;
+    color: inherit; } }
+
 .theme-teal table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child svg,
 .theme-teal table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child svg {
   color: #009688; }
@@ -8593,6 +8670,12 @@ nav a.sidenav-trigger {
 .theme-teal .modal-header h4 {
   color: rgba(255, 255, 255, 0.85); }
 
+.theme-teal.theme-admin .logo-container {
+  background-color: #009688; }
+
+.theme-teal.theme-admin .logo-container:hover {
+  background-color: #009688 !important; }
+
 .theme-teal.theme-admin .btn-floating.secondary {
   color: rgba(0, 0, 0, 0.85); }
 
@@ -8615,6 +8698,9 @@ nav a.sidenav-trigger {
   box-shadow: none;
   padding: 12px 18px; }
 
+.theme-teal.theme-admin header nav ul.dropdown-content a:hover {
+  background-color: rgba(255, 193, 7, 0.1); }
+
 .theme-teal.theme-admin header .navbar-fixed > .navbar {
   background-color: #009688; }
 
@@ -8635,16 +8721,28 @@ nav a.sidenav-trigger {
   background-color: #009688; }
 
 .theme-teal.theme-admin .sidenav {
-  background-color: #009688; }
+  background-color: white; }
 
-.theme-teal.theme-admin .sidenav .logo-container {
-  color: rgba(255, 255, 255, 0.85); }
+.theme-teal.theme-admin .sidenav li a {
+  color: #009688; }
 
-.theme-teal.theme-admin .sidenav li > a {
-  color: rgba(255, 255, 255, 0.85); }
+.theme-teal.theme-admin .sidenav li a:hover {
+  background-color: rgba(255, 193, 7, 0.1); }
 
 .theme-teal.theme-admin .sidenav li.active {
-  background-color: rgba(0, 0, 0, 0.05) !important; }
+  background-color: rgba(255, 193, 7, 0.1) !important; }
+
+.theme-teal.theme-admin .sidenav li.active a {
+  color: #009688 !important; }
+
+.theme-teal.theme-admin .sidenav li.active a:hover {
+  background-color: transparent; }
+
+.theme-teal.theme-admin .sidenav li.active .collapsible-body a:hover {
+  background-color: rgba(255, 193, 7, 0.1); }
+
+.theme-teal.theme-admin .sidenav li.active .collapsible-body .active a {
+  background-color: transparent; }
 
 .theme-teal.theme-admin .page-footer a:hover {
   color: #009688; }
@@ -8671,6 +8769,23 @@ nav a.sidenav-trigger {
       background-color: $secondary-color;
     }*/ }
 
+.theme-blue input:-webkit-autofill,
+.theme-blue input:-webkit-autofill:hover,
+.theme-blue input:-webkit-autofill:focus,
+.theme-blue input:-webkit-autofill:active {
+  -webkit-animation: autofill-theme-blue 0s forwards;
+  animation: autofill-theme-blue 0s forwards; }
+
+@keyframes autofill-theme-blue {
+  100% {
+    background: transparent;
+    color: inherit; } }
+
+@-webkit-keyframes autofill-theme-blue {
+  100% {
+    background: transparent;
+    color: inherit; } }
+
 .theme-blue table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child svg,
 .theme-blue table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child svg {
   color: #448AFF; }
@@ -8696,6 +8811,12 @@ nav a.sidenav-trigger {
 .theme-blue .modal-header h4 {
   color: rgba(255, 255, 255, 0.85); }
 
+.theme-blue.theme-admin .logo-container {
+  background-color: #448AFF; }
+
+.theme-blue.theme-admin .logo-container:hover {
+  background-color: #448AFF !important; }
+
 .theme-blue.theme-admin .btn-floating.secondary {
   color: rgba(255, 255, 255, 0.85); }
 
@@ -8718,6 +8839,9 @@ nav a.sidenav-trigger {
   box-shadow: none;
   padding: 12px 18px; }
 
+.theme-blue.theme-admin header nav ul.dropdown-content a:hover {
+  background-color: rgba(255, 64, 129, 0.1); }
+
 .theme-blue.theme-admin header .navbar-fixed > .navbar {
   background-color: #448AFF; }
 
@@ -8738,16 +8862,28 @@ nav a.sidenav-trigger {
   background-color: #448AFF; }
 
 .theme-blue.theme-admin .sidenav {
-  background-color: #448AFF; }
+  background-color: white; }
 
-.theme-blue.theme-admin .sidenav .logo-container {
-  color: rgba(255, 255, 255, 0.85); }
+.theme-blue.theme-admin .sidenav li a {
+  color: #448AFF; }
 
-.theme-blue.theme-admin .sidenav li > a {
-  color: rgba(255, 255, 255, 0.85); }
+.theme-blue.theme-admin .sidenav li a:hover {
+  background-color: rgba(255, 64, 129, 0.1); }
 
 .theme-blue.theme-admin .sidenav li.active {
-  background-color: rgba(0, 0, 0, 0.05) !important; }
+  background-color: rgba(255, 64, 129, 0.1) !important; }
+
+.theme-blue.theme-admin .sidenav li.active a {
+  color: #448AFF !important; }
+
+.theme-blue.theme-admin .sidenav li.active a:hover {
+  background-color: transparent; }
+
+.theme-blue.theme-admin .sidenav li.active .collapsible-body a:hover {
+  background-color: rgba(255, 64, 129, 0.1); }
+
+.theme-blue.theme-admin .sidenav li.active .collapsible-body .active a {
+  background-color: transparent; }
 
 .theme-blue.theme-admin .page-footer a:hover {
   color: #448AFF; }
@@ -8794,6 +8930,9 @@ html {
   -webkit-box-sizing: content-box;
   box-sizing: content-box; }
 
+.theme-admin .sidenav li.bold {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+
 .theme-admin .sidenav li.bold > a {
   font-family: "ubuntubold", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -8801,12 +8940,7 @@ html {
   font-smoothing: antialiased;
   text-transform: uppercase; }
 
-.theme-admin .sidenav li.active a,
-.theme-admin .sidenav li:hover a {
-  background-color: transparent; }
-
 .theme-admin .sidenav .collapsible > li {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   -webkit-transition: background-color .2s;
   transition: background-color .2s; }
 
@@ -8815,13 +8949,13 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
-  padding-bottom: 16px;
+  padding-bottom: 0;
   background-color: transparent; }
 
 .theme-admin .sidenav .collapsible-body li > a {
   padding: 0 16px;
-  -webkit-transition: background-color .2s ease-out;
-  transition: background-color .2s ease-out; }
+  -webkit-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out; }
 
 .theme-admin .sidenav .collapsible-body li > a.active, .theme-admin .sidenav .collapsible-body li > a:hover {
   background-color: rgba(0, 0, 0, 0.07); }

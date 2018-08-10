@@ -57,9 +57,32 @@ $button-small-height: $button-height * .9;
 
   $primary: map-get($colors, primary);
   $secondary: map-get($colors, secondary);
-  $sidenav-bg-color: $primary-color;
+  $sidenav-bg-color: white;
 
   .#{$name} {
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+      -webkit-animation: autofill-#{$name} 0s forwards;
+      animation: autofill-#{$name} 0s forwards;
+      // border-color: $primary !important;
+    }
+      
+    @keyframes autofill-#{$name} {
+      100% {
+          background: transparent;
+          color: inherit;
+      }
+    }
+      
+    @-webkit-keyframes autofill-#{$name} {
+      100% {
+          background: transparent;
+          color: inherit;
+      }
+    }
+
     table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child,
     table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child {
       svg {
@@ -101,6 +124,14 @@ $button-small-height: $button-height * .9;
     }*/
 
     &.theme-admin {
+      .logo-container {
+        background-color: $primary-color;
+        
+        &:hover {
+          background-color: $primary-color !important;
+        }
+      }
+
       .btn-floating {
         &.secondary {
           @include color-yiq($secondary-color);
@@ -132,6 +163,10 @@ $button-small-height: $button-height * .9;
         border: 1px solid rgba($secondary-color, 0.3);
         box-shadow: none;
         padding: 12px 18px;
+      }
+
+      header nav ul.dropdown-content a:hover {
+        background-color: rgba($secondary-color, 0.1);
       }
       
       header .navbar-fixed > .navbar {
@@ -168,18 +203,42 @@ $button-small-height: $button-height * .9;
       .sidenav {
         background-color: $sidenav-bg-color;
 
-        .logo-container {
-          @include color-yiq($primary-color);
-        }
+        // .logo-container {
+        //   @include color-yiq($primary-color);
+        // }
 
         li {
-          > a {
-            @include color-yiq($primary-color);
+          a {
+            color: $primary-color;
+
+            &:hover {
+              background-color: rgba($secondary-color, 0.1);
+            }
           }
         }
 
         li.active {
-          background-color: rgba(0,0,0,0.05) !important;
+          background-color: rgba($secondary-color, 0.1) !important;
+
+          a {
+            color: $primary-color !important;
+
+            &:hover {
+              background-color: transparent;
+            }
+          }
+
+          .collapsible-body {
+            a:hover {
+              background-color: rgba($secondary-color, 0.1);
+            }
+
+            .active {
+              a {
+                background-color: transparent;
+              }
+            }
+          }
         }
       }
 
