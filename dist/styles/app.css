@@ -7453,18 +7453,15 @@ h1, h2, h3, h4, h5, h6 {
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased; }
 
-.sidenav .bold .collapsible-header {
+.logo-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between; }
+  align-items: center; }
 
-.sidenav .bold .collapsible-header::after {
+.collapsible-header::after {
   display: inline-block;
   width: 0;
   height: 0;
@@ -7478,9 +7475,28 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in; }
 
-.sidenav .bold.active .collapsible-header::after {
+.active .collapsible-header::after {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg); }
+
+.collapsible-accordion {
+  position: relative; }
+
+.collapsible-accordion .collapsible-header::after {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem; }
+
+.sidenav .bold .collapsible-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
 
 .sidenav .collapsible-body span {
   padding-left: 1rem; }
@@ -7554,10 +7570,19 @@ table nav a {
 .nav-actions a.danger {
   color: red; }
 
+.collapsible-body {
+  padding: 1.5rem; }
+
+.collapsible-body .card {
+  margin-top: 0; }
+
 .card-header {
-  padding: 24px;
+  padding: 0.75rem;
   border-radius: 0 0 2px 2px;
   background-color: rgba(0, 0, 0, 0.015); }
+
+.card-content {
+  padding: 0.75rem !important; }
 
 .no-margin-bottom {
   margin-bottom: 0 !important; }
@@ -8828,7 +8853,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
-  font-size: 16px; }
+  font-size: 14px; }
 
 @media only screen and (min-width: 993px) {
   .theme-admin.sidebar-expand.has-fixed-sidenav {

@@ -59,9 +59,11 @@
     "datatables.net-select-dt": "^1.2.7",
     "inputmask": "^4.0.0",
     "jquery": "^3.3.1",
+    "jquery-validation": "^1.17.0",
     "jquery.redirect": "^1.1.4",
     "jszip": "^3.1.5",
     "materialize-css": "^1.0.0-rc.2",
+    "materialize-stepper": "^2.1.4",
     "pdfmake": "^0.1.37",
     "simplebar": "^2.6.1"
   }

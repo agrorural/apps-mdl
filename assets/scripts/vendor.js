@@ -1,6 +1,4 @@
-const $ = require('jquery');
-
-window.jQuery = require('jquery');
+window.$ = window.jQuery = require('jquery');
 
 require('materialize-css');
 
@@ -14,7 +12,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 
 library.add(fas, far, fab);
 config.searchPseudoElements = true;
-console.log(config.searchPseudoElements);
+//console.log(config.searchPseudoElements);
 // Replace any existing <i> tags with <svg> and set up a MutationObserver to
 // continue doing this as the DOM changes.
 dom.watch();
@@ -46,6 +44,8 @@ require( 'datatables.net-scroller' )( window, $ );
 require( 'datatables.net-select' )( window, $ );
 
 import "inputmask/dist/inputmask/jquery.inputmask";
+const materializeStepper = require('materialize-stepper');
+import "jquery-validation/dist/jquery.validate";
 
 // require('inputmask');
 
@@ -54,6 +54,9 @@ import "inputmask/dist/inputmask/jquery.inputmask";
 
 const Chart = require('chart.js');
 
+
+
+//console.log('activateStepper');
 
 $(function(){
   $('.sidenav').sidenav();
@@ -90,12 +93,12 @@ $(function(){
             $(".sidenav-overlay").css("opacity", "0");
           });
 
-          console.log("window width is at least 992px");
+          //console.log("window width is at least 992px");
       } else {
           $('body').removeClass('sidebar-expand');
           $('body').addClass('sidebar-collapse');
           // $('.sidenav').css("transform", "translateX(-105%)");
-          console.log("window width is less than 992px");
+          //console.log("window width is less than 992px");
       }
   }
 

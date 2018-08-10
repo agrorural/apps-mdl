@@ -99,6 +99,47 @@ h6 {
     'light');
 }
 
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.collapsible-header {
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-between;
+
+  &::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+    transition: all 0.3s ease-in;
+  }
+}
+
+.active {
+  .collapsible-header::after {
+    transform: rotate(180deg);
+  }
+}
+
+.collapsible-accordion {
+  position: relative;
+
+  .collapsible-header::after {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+  }
+}
+
 .sidenav {
   .bold {
     .collapsible-header {
@@ -106,26 +147,26 @@ h6 {
       align-items: center;
       justify-content: space-between;
   
-      &::after {
-        display: inline-block;
-        width: 0;
-        height: 0;
-        margin-left: .255em;
-        vertical-align: .255em;
-        content: "";
-        border-top: .3em solid;
-        border-right: .3em solid transparent;
-        border-bottom: 0;
-        border-left: .3em solid transparent;
-        transition: all 0.3s ease-in;
-      }
+      // &::after {
+      //   display: inline-block;
+      //   width: 0;
+      //   height: 0;
+      //   margin-left: .255em;
+      //   vertical-align: .255em;
+      //   content: "";
+      //   border-top: .3em solid;
+      //   border-right: .3em solid transparent;
+      //   border-bottom: 0;
+      //   border-left: .3em solid transparent;
+      //   transition: all 0.3s ease-in;
+      // }
     }
 
-    &.active {
-      .collapsible-header::after {
-        transform: rotate(180deg);
-      }
-    }
+    // &.active {
+    //   .collapsible-header::after {
+    //     transform: rotate(180deg);
+    //   }
+    // }
   }
 
   .collapsible-body {
@@ -226,10 +267,22 @@ table nav {
   }
 }
 
+.collapsible-body {
+  padding: 1.5rem;
+
+  .card {
+    margin-top: 0;
+  }
+}
+
 .card-header {
-  padding: 24px;
+  padding: 0.75rem;
   border-radius: 0 0 2px 2px;
   background-color: rgba(0,0,0,0.015);
+}
+
+.card-content {
+  padding: 0.75rem !important;
 }
 
 .no-margin-bottom {
