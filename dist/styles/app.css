@@ -7471,6 +7471,14 @@ h1, h2, h3, h4, h5, h6 {
   -ms-flex-pack: justify;
   justify-content: space-between; }
 
+.flex-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.h-100 {
+  height: 100vh; }
+
 .logo-container {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
