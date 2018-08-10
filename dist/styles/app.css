@@ -7371,43 +7371,43 @@ a.dt-button):hover {
 
 @font-face {
   font-family: 'vigaregular';
-  src: url("http://cdn.agrorural.gob.pe/?u=http://cdn.agrorural.gob.pe/apps-mdl/dist/fonts/Viga-Regular.woff2") format("woff2"), url("http://cdn.agrorural.gob.pe/?u=http://cdn.agrorural.gob.pe/apps-mdl/dist/fonts/Viga-Regular.woff") format("woff");
+  src: url("/dist/fonts/Viga-Regular.woff2") format("woff2"), url("/dist/fonts/Viga-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'ubuntulight';
-  src: url("http://cdn.agrorural.gob.pe/?u=http://cdn.agrorural.gob.pe/apps-mdl/dist/fonts/Ubuntu-Light.woff2") format("woff2"), url("http://cdn.agrorural.gob.pe/?u=http://cdn.agrorural.gob.pe/apps-mdl/dist/fonts/Ubuntu-Light.woff") format("woff");
+  src: url("/dist/fonts/Ubuntu-Light.woff2") format("woff2"), url("/dist/fonts/Ubuntu-Light.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'ubunturegular';
-  src: url("http://cdn.agrorural.gob.pe/?u=http://cdn.agrorural.gob.pe/apps-mdl/dist/fonts/Ubuntu-Regular.woff2") format("woff2"), url("http://cdn.agrorural.gob.pe/?u=http://cdn.agrorural.gob.pe/apps-mdl/dist/fonts/Ubuntu-Regular.woff") format("woff");
+  src: url("/dist/fonts/Ubuntu-Regular.woff2") format("woff2"), url("/dist/fonts/Ubuntu-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'ubuntumedium';
-  src: url("http://cdn.agrorural.gob.pe/?u=http://cdn.agrorural.gob.pe/apps-mdl/dist/fonts/Ubuntu-Medium.woff2") format("woff2"), url("http://cdn.agrorural.gob.pe/?u=http://cdn.agrorural.gob.pe/apps-mdl/dist/fonts/Ubuntu-Medium.woff") format("woff");
+  src: url("/dist/fonts/Ubuntu-Medium.woff2") format("woff2"), url("/dist/fonts/Ubuntu-Medium.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'ubuntubold';
-  src: url("http://cdn.agrorural.gob.pe/?u=http://cdn.agrorural.gob.pe/apps-mdl/dist/fonts/Ubuntu-Bold.woff2") format("woff2"), url("http://cdn.agrorural.gob.pe/?u=http://cdn.agrorural.gob.pe/apps-mdl/dist/fonts/Ubuntu-Bold.woff") format("woff");
+  src: url("/dist/fonts/Ubuntu-Bold.woff2") format("woff2"), url("/dist/fonts/Ubuntu-Bold.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'ubuntumono';
-  src: url("http://cdn.agrorural.gob.pe/?u=http://cdn.agrorural.gob.pe/apps-mdl/dist/fonts/Ubuntu-Mono.woff2") format("woff2"), url("http://cdn.agrorural.gob.pe/?u=http://cdn.agrorural.gob.pe/apps-mdl/dist/fonts/Ubuntu-Mono.woff") format("woff");
+  src: url("/dist/fonts/Ubuntu-Mono.woff2") format("woff2"), url("/dist/fonts/Ubuntu-Mono.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'libre_franklinlight';
-  src: url("http://cdn.agrorural.gob.pe/?u=http://cdn.agrorural.gob.pe/apps-mdl/dist/fonts/Libre_Franklin-Light.woff2") format("woff2"), url("http://cdn.agrorural.gob.pe/?u=http://cdn.agrorural.gob.pe/apps-mdl/dist/fonts/Libre_Franklin-Light.woff") format("woff");
+  src: url("/dist/fonts/Libre_Franklin-Light.woff2") format("woff2"), url("/dist/fonts/Libre_Franklin-Light.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
@@ -7608,7 +7608,8 @@ table nav a {
 .card-header {
   padding: 0.75rem;
   border-radius: 0 0 2px 2px;
-  background-color: rgba(0, 0, 0, 0.015); }
+  background-color: rgba(0, 0, 0, 0.015);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15); }
 
 .card-content {
   padding: 0.75rem !important; }
