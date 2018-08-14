@@ -409,11 +409,50 @@ table nav {
 // Logo
 //
 @keyframes dash {
-  from {
+  0% {
     stroke-dashoffset: 500;
   }
-  to {
+  50% {
     stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 500;
+  }
+}
+
+@keyframes growth1 {
+  0% {
+    height: 46px;
+  }
+  50% {
+    height: 24px;
+  }
+  100% {
+    height: 46px;
+  }
+}
+
+@keyframes growth2 {
+  0% {
+    height: 28.9px;
+  }
+  50% {
+    height: 36px;
+  }
+  100% {
+    height: 28.9px;
+  }
+}
+
+@keyframes growth3 {
+  0% {
+    height: 18.1px;
+  }
+  50% {
+    height: 30px;
+  }
+  100% {
+    height: 18.1px;
   }
 }
 
@@ -436,7 +475,7 @@ table nav {
       stroke-miterlimit: 10;
       stroke-dasharray: 500;
       stroke-dashoffset: 500;
-      animation: dash 5s linear alternate infinite;
+      animation: dash 4s linear alternate;
     }
     
     .barraTop {
@@ -456,14 +495,17 @@ table nav {
     #isologo {
       .barraTop {
         height: 24px;
+        animation: growth1 3s infinite linear;
       }
 
       .barraMiddle {
         height: 36px;
+        animation: growth2 3s infinite linear;
       }
 
       .barraBottom {
         height: 30px;
+        animation: growth3 3s infinite linear;
       }
 
       #trazo {
