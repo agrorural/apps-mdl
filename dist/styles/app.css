@@ -7657,17 +7657,59 @@ table nav a {
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in; }
 
-#logo.logo-color #text path {
-  fill: #FFFFFF; }
+@-webkit-keyframes dash {
+  from {
+    stroke-dashoffset: 500; }
+  to {
+    stroke-dashoffset: 0; } }
 
-#logo.logo-color #isologo #barra rect {
+@keyframes dash {
+  from {
+    stroke-dashoffset: 500; }
+  to {
+    stroke-dashoffset: 0; } }
+
+#logo #isologo rect {
+  -webkit-transition: height 0.5s ease-in;
+  transition: height 0.5s ease-in; }
+
+#logo #isologo #barra rect {
   fill: #F0B405; }
 
-#logo.logo-color #isologo #trazo {
+#logo #isologo #trazo {
   fill: none;
   stroke: #EBEBEB;
   stroke-width: 2;
-  stroke-miterlimit: 10; }
+  stroke-miterlimit: 10;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  -webkit-animation: dash 5s linear alternate infinite;
+  animation: dash 5s linear alternate infinite; }
+
+#logo #isologo .barraTop {
+  height: 46px; }
+
+#logo #isologo .barraMiddle {
+  height: 28.9px; }
+
+#logo #isologo .barraBottom {
+  height: 18.1px; }
+
+#logo:hover #isologo .barraTop {
+  height: 24px; }
+
+#logo:hover #isologo .barraMiddle {
+  height: 36px; }
+
+#logo:hover #isologo .barraBottom {
+  height: 30px; }
+
+#logo:hover #isologo #trazo {
+  -webkit-animation: dash 5s linear alternate infinite;
+  animation: dash 5s linear alternate infinite; }
+
+#logo.logo-color #text path {
+  fill: #FFFFFF; }
 
 #logo.logo-gray #text path {
   fill: #cccccc; }

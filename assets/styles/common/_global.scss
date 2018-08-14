@@ -408,26 +408,74 @@ table nav {
 //
 // Logo
 //
+@keyframes dash {
+  from {
+    stroke-dashoffset: 500;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 #logo {
+  #isologo {
+    rect {
+      transition: height 0.5s ease-in;
+    }
+
+    #barra {
+      rect {
+        fill: #F0B405;
+      }
+    }
+
+    #trazo {
+      fill: none;
+      stroke: #EBEBEB;
+      stroke-width: 2;
+      stroke-miterlimit: 10;
+      stroke-dasharray: 500;
+      stroke-dashoffset: 500;
+      animation: dash 5s linear alternate infinite;
+    }
+    
+    .barraTop {
+      height: 46px;
+    }
+
+    .barraMiddle {
+      height: 28.9px;
+    }
+
+    .barraBottom {
+      height: 18.1px;
+    }
+  }
+
+  &:hover {
+    #isologo {
+      .barraTop {
+        height: 24px;
+      }
+
+      .barraMiddle {
+        height: 36px;
+      }
+
+      .barraBottom {
+        height: 30px;
+      }
+
+      #trazo {
+        animation: dash 5s linear alternate infinite;
+      }
+    }
+  }
+
   &.logo-color {
     #text {
       path {
         fill: #FFFFFF;
-      }
-    }
-
-    #isologo {
-      #barra {
-        rect {
-          fill: #F0B405;
-        }
-      }
-
-      #trazo {
-        fill: none;
-        stroke: #EBEBEB;
-        stroke-width: 2;
-        stroke-miterlimit: 10;
       }
     }
   }
