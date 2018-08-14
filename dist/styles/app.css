@@ -7657,6 +7657,30 @@ table nav a {
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in; }
 
+#logo.logo-color #text path {
+  fill: #FFFFFF; }
+
+#logo.logo-color #isologo #barra rect {
+  fill: #F0B405; }
+
+#logo.logo-color #isologo #trazo {
+  fill: none;
+  stroke: #EBEBEB;
+  stroke-width: 2;
+  stroke-miterlimit: 10; }
+
+#logo.logo-gray #text path {
+  fill: #cccccc; }
+
+#logo.logo-gray #isologo #barra rect {
+  fill: #999999; }
+
+#logo.logo-gray #isologo #trazo {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2;
+  stroke-miterlimit: 10; }
+
 .login {
   background-color: #f5f5f5; }
 

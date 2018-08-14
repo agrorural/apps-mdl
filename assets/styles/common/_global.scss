@@ -404,3 +404,54 @@ table nav {
     transition: all 0.3s ease-in;
   }
 }
+
+//
+// Logo
+//
+#logo {
+  &.logo-color {
+    #text {
+      path {
+        fill: #FFFFFF;
+      }
+    }
+
+    #isologo {
+      #barra {
+        rect {
+          fill: #F0B405;
+        }
+      }
+
+      #trazo {
+        fill: none;
+        stroke: #EBEBEB;
+        stroke-width: 2;
+        stroke-miterlimit: 10;
+      }
+    }
+  }
+
+  &.logo-gray {
+    #text {
+      path {
+        fill: #cccccc;
+      }
+    }
+
+    #isologo {
+      #barra {
+        rect {
+          fill: #999999;
+        }
+      }
+
+      #trazo {
+        fill: none;
+        stroke: #ffffff;
+        stroke-width: 2;
+        stroke-miterlimit: 10;
+      }
+    }
+  }
+}
