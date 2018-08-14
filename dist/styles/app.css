@@ -7735,8 +7735,8 @@ table nav a {
   stroke-miterlimit: 10;
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
-  -webkit-animation: dash 4s linear alternate;
-  animation: dash 4s linear alternate; }
+  -webkit-animation: dash 4s linear alternate infinite;
+  animation: dash 4s linear alternate infinite; }
 
 #logo #isologo .barraTop {
   height: 46px; }
