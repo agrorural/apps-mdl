@@ -22,6 +22,13 @@ html {
       font-size: 24px;
       border-bottom: 1px solid rgba(0,0,0,0.2);
       box-sizing: content-box;
+
+      flex-direction: row;
+      justify-content: flex-start;
+
+      svg {
+        width: 100%;
+      }
     }
 
     li.bold {
@@ -29,8 +36,9 @@ html {
     }
 
     li.bold > a {
-      @include font-family('ubuntu', 'bold');
+      @include font-family('Ubuntu', '');
       
+      font-weight: 700;
       text-transform: uppercase;
     }
     // li.active a,
@@ -47,7 +55,7 @@ html {
     // }
 
     .collapsible-body {
-      @include font-family('ubuntu');
+      @include font-family('Ubuntu');
 
       padding-bottom: 0;
       background-color: transparent;
@@ -91,45 +99,82 @@ html {
 
   .card {
     .card-title {
-      @include font-family('ubuntu', 'medium');
+      @include font-family('Ubuntu');
 
       font-size: 14px;
     }
   }
 
-  @media #{$large-and-up} {
-    &.sidebar-expand.has-fixed-sidenav {
-        padding-left: 300px;
-        transform: translateX(0);
+  @media (min-width: 992px) {
+    &.has-fixed-sidenav {
+        padding-left: 60px;
 
         .sidenav {
           transform: translateX(0) !important;
-        }
-    }
-  }
-  
-  @media #{$medium-and-down} {
-    &.sidebar-collapse.has-fixed-sidenav {
-      .sidenav {
-        transform: translateX(-105%);
-      }
-    }
-  }
-  
-  @media #{$large-and-up} {
-    &.sidebar-collapse.has-fixed-sidenav {
-      padding-left: 0;
-  
-      .navbar-fixed {
-        nav {
-          width: 100%;
-          left: 0;
-        }
-      }
+          transition: width 0.1s ease-in;
+          width: 60px;
+          text-align: center;
 
-      .sidenav {
-        transform: translateX(-105%) !important;
-      }
+          .bold {
+            .collapsible-header {
+              display: block;
+            }
+          }
+          
+          span {
+            transition: display 0.2s ease-in-out;
+            display: none;
+          }
+
+          &:hover {
+            width: 300px;
+            text-align: left;
+
+            span {
+              display: inline-block;
+            }
+          }
+        }
     }
   }
+
+  @media (min-width: 1200px) {
+    &.has-fixed-sidenav {
+        padding-left: 300px;
+
+        .sidenav {
+          width: 300px;
+          text-align: left;
+
+          span {
+            display: inline-block;
+          }
+        }
+    }
+  }
+  
+  // @media #{$medium-and-down} {
+  //   &.sidebar-collapse.has-fixed-sidenav {
+  //     .sidenav {
+  //       transform: translateX(-105%);
+  //     }
+  //   }
+  // }
+  
+  // @media #{$large-and-up} {
+  //   &.sidebar-collapse.has-fixed-sidenav {
+  //     padding-left: 0;
+  
+  //     .navbar-fixed {
+  //       nav {
+  //         width: 100%;
+  //         left: 0;
+  //       }
+  //     }
+
+  //     .sidenav {
+  //       transform: translateX(-105%) !important;
+  //     }
+  //   }
+  // }
 }

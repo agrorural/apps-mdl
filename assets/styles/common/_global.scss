@@ -1,54 +1,56 @@
 //
 // Fonts
 //
-@font-face {
-    font-family: 'vigaregular';
-    src: url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Viga-Regular.woff2') format('woff2'), url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Viga-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+// @font-face {
+//     font-family: 'vigaregular';
+//     src: url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Viga-Regular.woff2') format('woff2'), url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Viga-Regular.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+// }
 
-@font-face {
-    font-family: 'ubuntulight';
-    src: url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Ubuntu-Light.woff2') format('woff2'), url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Ubuntu-Light.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+// @font-face {
+//     font-family: 'ubuntulight';
+//     src: url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Ubuntu-Light.woff2') format('woff2'), url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Ubuntu-Light.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+// }
 
-@font-face {
-    font-family: 'ubunturegular';
-    src: url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Ubuntu-Regular.woff2') format('woff2'), url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Ubuntu-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+// @font-face {
+//     font-family: 'ubunturegular';
+//     src: url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Ubuntu-Regular.woff2') format('woff2'), url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Ubuntu-Regular.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+// }
 
-@font-face {
-    font-family: 'ubuntumedium';
-    src: url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Ubuntu-Medium.woff2') format('woff2'), url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Ubuntu-Medium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+// @font-face {
+//     font-family: 'ubuntumedium';
+//     src: url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Ubuntu-Medium.woff2') format('woff2'), url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Ubuntu-Medium.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+// }
 
-@font-face {
-    font-family: 'ubuntubold';
-    src: url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Ubuntu-Bold.woff2') format('woff2'), url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Ubuntu-Bold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+// @font-face {
+//     font-family: 'ubuntubold';
+//     src: url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Ubuntu-Bold.woff2') format('woff2'), url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Ubuntu-Bold.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+// }
 
-@font-face {
-    font-family: 'ubuntumono';
-    src: url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Ubuntu-Mono.woff2') format('woff2'), url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Ubuntu-Mono.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+// @font-face {
+//     font-family: 'ubuntumono';
+//     src: url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Ubuntu-Mono.woff2') format('woff2'), url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Ubuntu-Mono.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+// }
 
-@font-face {
-    font-family: 'libre_franklinlight';
-    src: url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Libre_Franklin-Light.woff2') format('woff2'), url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Libre_Franklin-Light.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+// @font-face {
+//     font-family: 'libre_franklinlight';
+//     src: url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Libre_Franklin-Light.woff2') format('woff2'), url('#{$cdn-prefix}#{$cdn-dist-path}/fonts/Libre_Franklin-Light.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:400,700|Ubuntu');
 
 html{
   @media only screen and (min-width: 0) {
@@ -96,7 +98,7 @@ h4,
 h5,
 h6 {
     @include font-family('ubuntu',
-    'light');
+    '');
 }
 
 .flex {
@@ -167,7 +169,7 @@ h6 {
     .collapsible-header {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: start;
   
       // &::after {
       //   display: inline-block;
@@ -191,22 +193,22 @@ h6 {
     // }
   }
 
-  .collapsible-body {
-    span {
-      padding-left: 1rem;
-    }
-  }
+  // .collapsible-body {
+  //   span {
+  //     padding-left: 0.5rem;
+  //   }
+  // }
 
   .bold {
     .collapsible-header svg {
       transition: all 0.3s ease-in;
     }
 
-    &.active {
-      .collapsible-header svg {
-        transform: rotate(180deg);
-      }
-    }
+    // &.active {
+    //   .collapsible-header svg {
+    //     transform: rotate(180deg);
+    //   }
+    // }
   }
 }
 

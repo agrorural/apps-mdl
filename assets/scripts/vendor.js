@@ -59,7 +59,15 @@ const Chart = require('chart.js');
 //console.log('activateStepper');
 
 $(function(){
-  $('.sidenav').sidenav();
+  var elems = document.querySelectorAll('.sidenav');
+  var instances = M.Sidenav.init(elems, {
+    onOpenEnd: function() {
+      $("#logo").attr("viewBox", "0 0 260 64");
+    },
+    onCloseEnd: function() {
+    },
+  });
+  //$('.sidenav').sidenav();
   $('.profile-trigger').dropdown({
     inDuration: 300,
     outDuration: 225,
@@ -78,29 +86,105 @@ $(function(){
     },
   });
 
-  if (matchMedia) {
-    const mq = window.matchMedia("(min-width: 992px)");
-    mq.addListener(WidthChange);
-    WidthChange(mq);
-  }
-  // media query change
-  function WidthChange(mq) {
-      if (mq.matches) {
-          $('body').addClass('sidebar-expand');
-          $('body').removeClass('sidebar-collapse');
-          $(document).on('click', '.has-fixed-sidenav .sidenav-trigger', function(){
-            $(".sidenav-overlay").css("display", "none");
-            $(".sidenav-overlay").css("opacity", "0");
-          });
+  var mqls = [ // list of window.matchMedia() queries
+    window.matchMedia("(max-width: 575.98px)"),
+    window.matchMedia("(max-width: 767.98px)"),
+    window.matchMedia("(max-width: 991.98px)"),
+    window.matchMedia("(max-width: 1199.98px)"),
+    window.matchMedia("(min-width: 1200px)")
+  ]
 
-          //console.log("window width is at least 992px");
-      } else {
-          $('body').removeClass('sidebar-expand');
-          $('body').addClass('sidebar-collapse');
-          // $('.sidenav').css("transform", "translateX(-105%)");
-          //console.log("window width is less than 992px");
-      }
+  function mediaqueryresponse(mql){
+    if (mqls[0].matches){
+      // console.log(mql.media)
+    }
+
+    if (mqls[1].matches){
+      // console.log(mql.media)
+    }
+
+    if (mqls[2].matches){
+      $("#logo").attr("viewBox", "0 0 260 64");
+      //console.log(instances[0].isOpen)
+      // console.log(mql.media)
+
+      // $(".sidenav")
+      //   .mouseenter(function(){
+      //     $("#logo").attr("viewBox", "0 0 260 64");
+      //   })
+      //   .mouseleave(function(){
+      //     $("#logo").attr("viewBox", "0 0 260 64");
+      //   });
+    }
+
+    if (mqls[3].matches){
+      $("#logo").attr("viewBox", "160 0 60 64");
+    }
+
+    // if (mqls[3].matches && !mqls[2].matches){
+    //   $(".sidenav")
+    //     .mouseenter(function(){
+    //       $("#logo").attr("viewBox", "0 0 260 64");
+    //     })
+    //     .mouseleave(function(){
+    //       $("#logo").attr("viewBox", "160 0 60 64");
+    //     });
+
+    //   console.log("3 pero no 2");
+    // }
+
+    if (mqls[4].matches){
+      // console.log(mql.media)
+    }
   }
+
+  for (var i=0; i<mqls.length; i++){
+    mediaqueryresponse(mqls[i]) // call listener function explicitly at run time
+    mqls[i].addListener(mediaqueryresponse) // attach listener function to listen in on state changes
+  }
+
+  // if (matchMedia) {
+  //   const mq = window.matchMedia("(min-width: 992px)");
+  //   mq.addListener(WidthChange);
+  //   WidthChange(mq);
+  // }
+  // // media query change
+  // function WidthChange(mq) {
+  //     if (mq.matches) {
+  //         // $("#logo").attr("viewBox", "0 0 260 64");
+  //         $('body').addClass('sidebar-expand');
+  //         $('body').removeClass('sidebar-collapse');
+          
+
+  //         console.log("window width is at least 992px");
+  //     } else {
+  //         // $("#logo").attr("viewBox", "160 0 60 64");
+  //         $('body').removeClass('sidebar-expand');
+  //         $('body').addClass('sidebar-collapse');
+  //         // $('.sidenav').css("transform", "translateX(-105%)");
+  //         console.log("window width is less than 992px");
+          
+  //         if(instances[0].isOpen === false){
+  //         //   $(".sidenav")
+  //         //   .mouseenter(function(){
+  //         //     $("#logo").attr("viewBox", "0 0 260 64");
+  //         //   })
+  //         //   .mouseleave(function(){
+  //         //     $("#logo").attr("viewBox", "160 0 60 64");
+  //         //   });
+  //         // }else{
+  //         //   $(".sidenav")
+  //         //   .mouseenter(function(){
+  //         //     $("#logo").attr("viewBox", "0 0 260 64");
+  //         //   })
+  //         //   .mouseleave(function(){
+  //         //     $("#logo").attr("viewBox", "0 0 260 64");
+  //         //   });
+  //         }
+        
+  //         console.log(instances[0].options);
+  //     }
+  // }
 
   $('.sidenav-trigger').click(function() {
     $('body').toggleClass('sidebar-expand sidebar-collapse');

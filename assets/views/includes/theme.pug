@@ -62,10 +62,10 @@ html(lang="en")
               a(href="#!", data-target="slide-out", class="sidenav-trigger left")
                 i.fas.fa-bars
         
-      ul#slide-out.sidenav
+      ul#slide-out.sidenav.sidenav-fixed
           li
             a.logo-container(href='/admin.html')
-              svg(version='1.1', height='2.5rem', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 260 64', style='enable-background:new 0 0 260 64;', xml:space='preserve')
+              svg(id="logo", version='1.1', height='32', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 260 64', xml:space='preserve')
                 style(type='text/css').
                   .st0 {
                   fill: #EBEBEB;
@@ -93,24 +93,27 @@ html(lang="en")
                     rect.st1(x='171', y='49.2', transform='matrix(6.123234e-17 -1 1 6.123234e-17 117.9785 234.3636)', width='10.3', height='18.1')
                   path#trazo.st2(d='M176.1,58.2l-4.7-1.8c-1.2-0.5-1.6-1.9-0.7-2.8l13.2-14.4c1.7-1.6,1.9-4.2,0.4-6l-13.1-16c-1.1-1.3-0.4-3.2,1.2-3.7l40.3-12')
           mixin mainmenu(activeItem, activeItemChild)
-            -var menuItems = [{name: 'Inicio', href: './admin.html', isActive: false, child: null}, {name: 'Default Theme', href: './dashboard.html', isActive: false, child: null}, {name: 'Recursos Naturales', href :null, isActive: false, child: [{name: 'Listado Formularios', href: './listado-formularios.html', isActive: false, child: null, icon: 'fab fa-wpforms'}]}, {name: 'Componentes', href :null, isActive: false, child: [{name: 'Spinner', href: './spinner.html', isActive: false, child: null, icon: 'fas fa-circle-notch'}, {name: 'SimpleBar', href: './simplebar.html', isActive: false, child: null, icon: 'fas fa-sliders-h'}, {name: 'Modals', href: './modals.html', isActive: false, child: null, icon: 'fas fa-window-restore'}, {name: 'Buttons', href: './buttons.html', isActive: false, child: null, icon: 'fas fa-sticky-note'}]}]
+            -var menuItems = [{name: 'Inicio', href: './admin.html', isActive: false, child: null, icon: 'fa-fw fas fa-home'}, {name: 'Default Theme', href: './dashboard.html', isActive: false, child: null, icon: 'fa-fw fas fa-bookmark'}, {name: 'Recursos Naturales', href :null, isActive: false, icon: 'fa-fw fas fa-home', child: [{name: 'Listado Formularios', href: './listado-formularios.html', isActive: false, child: null, icon: 'fa-fw fab fa-wpforms'}]}, {name: 'Componentes', href :null, isActive: false, icon: 'fa-fw fas fa-home', child: [{name: 'Spinner', href: './spinner.html', isActive: false, child: null, icon: 'fa-fw fas fa-circle-notch'}, {name: 'SimpleBar', href: './simplebar.html', isActive: false, child: null, icon: 'fa-fw fas fa-sliders-h'}, {name: 'Modals', href: './modals.html', isActive: false, child: null, icon: 'fa-fw fas fa-window-restore'}, {name: 'Buttons', href: './buttons.html', isActive: false, child: null, icon: 'fa-fw fas fa-sticky-note'}]}]
 
             each val, index in menuItems
               if val.child == null
                 if menuItems[index].name === activeItem
                   li.bold.active
                     a.waves-effect.waves-primary(href=val.href, title=val.name)
+                        i(class=val.icon)
                         span= val.name
                 else
                   li.bold.waves-effect
                     a.waves-effect.waves-primary(href=val.href, title=val.name)
+                      i(class=val.icon)
                       span= val.name
               else
                 li.no-padding
                   ul.collapsible.collapsible-accordion
                     if menuItems[index].name === activeItem
                       li.bold.active
-                        a.collapsible-header.waves-effect.waves-primary(tabindex="0") 
+                        a.collapsible-header.waves-effect.waves-primary(tabindex="0")
+                          i(class=val.icon)
                           span= val.name
                         .collapsible-body
                           ul
@@ -129,6 +132,7 @@ html(lang="en")
                     else
                       li.bold.waves-effect
                         a.collapsible-header.waves-effect.waves-primary(tabindex="0") 
+                          i(class=val.icon)
                           span= val.name
                         .collapsible-body
                           ul

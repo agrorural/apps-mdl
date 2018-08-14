@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Libre+Franklin:400,700|Ubuntu");
 .materialize-red {
   background-color: #e51c23 !important; }
 
@@ -7369,48 +7370,6 @@ a.dt-button):hover {
     text-align: center;
     margin-top: 1.2rem; } }
 
-@font-face {
-  font-family: 'vigaregular';
-  src: url("https://www.agrorural.gob.pe/cdn/?u=https://www.agrorural.gob.pe/cdn/apps-mdl/dist/fonts/Viga-Regular.woff2") format("woff2"), url("https://www.agrorural.gob.pe/cdn/?u=https://www.agrorural.gob.pe/cdn/apps-mdl/dist/fonts/Viga-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'ubuntulight';
-  src: url("https://www.agrorural.gob.pe/cdn/?u=https://www.agrorural.gob.pe/cdn/apps-mdl/dist/fonts/Ubuntu-Light.woff2") format("woff2"), url("https://www.agrorural.gob.pe/cdn/?u=https://www.agrorural.gob.pe/cdn/apps-mdl/dist/fonts/Ubuntu-Light.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'ubunturegular';
-  src: url("https://www.agrorural.gob.pe/cdn/?u=https://www.agrorural.gob.pe/cdn/apps-mdl/dist/fonts/Ubuntu-Regular.woff2") format("woff2"), url("https://www.agrorural.gob.pe/cdn/?u=https://www.agrorural.gob.pe/cdn/apps-mdl/dist/fonts/Ubuntu-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'ubuntumedium';
-  src: url("https://www.agrorural.gob.pe/cdn/?u=https://www.agrorural.gob.pe/cdn/apps-mdl/dist/fonts/Ubuntu-Medium.woff2") format("woff2"), url("https://www.agrorural.gob.pe/cdn/?u=https://www.agrorural.gob.pe/cdn/apps-mdl/dist/fonts/Ubuntu-Medium.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'ubuntubold';
-  src: url("https://www.agrorural.gob.pe/cdn/?u=https://www.agrorural.gob.pe/cdn/apps-mdl/dist/fonts/Ubuntu-Bold.woff2") format("woff2"), url("https://www.agrorural.gob.pe/cdn/?u=https://www.agrorural.gob.pe/cdn/apps-mdl/dist/fonts/Ubuntu-Bold.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'ubuntumono';
-  src: url("https://www.agrorural.gob.pe/cdn/?u=https://www.agrorural.gob.pe/cdn/apps-mdl/dist/fonts/Ubuntu-Mono.woff2") format("woff2"), url("https://www.agrorural.gob.pe/cdn/?u=https://www.agrorural.gob.pe/cdn/apps-mdl/dist/fonts/Ubuntu-Mono.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'libre_franklinlight';
-  src: url("https://www.agrorural.gob.pe/cdn/?u=https://www.agrorural.gob.pe/cdn/apps-mdl/dist/fonts/Libre_Franklin-Light.woff2") format("woff2"), url("https://www.agrorural.gob.pe/cdn/?u=https://www.agrorural.gob.pe/cdn/apps-mdl/dist/fonts/Libre_Franklin-Light.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
 @media only screen and (min-width: 0) {
   html {
     font-size: 13px; } }
@@ -7424,7 +7383,7 @@ a.dt-button):hover {
     font-size: 13px; } }
 
 body {
-  font-family: "libre_franklinlightregular", sans-serif;
+  font-family: "Libre Franklin", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased; }
@@ -7448,7 +7407,7 @@ pre:hover {
   color: #212529; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "ubuntulight", sans-serif;
+  font-family: "ubuntu", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased; }
@@ -7523,20 +7482,13 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between; }
-
-.sidenav .collapsible-body span {
-  padding-left: 1rem; }
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start; }
 
 .sidenav .bold .collapsible-header svg {
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in; }
-
-.sidenav .bold.active .collapsible-header svg {
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg); }
 
 .hiddendiv.common {
   display: none; }
@@ -8286,7 +8238,11 @@ table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorti
   width: 100%; }
 
 .sidenav li > a {
-  padding: 0 16px; }
+  padding: 0 16px;
+  display: block; }
+
+.sidenav li.bold a span {
+  margin-left: 0.5rem; }
 
 .sidenav.sidenav-fixed {
   left: 0;
@@ -8455,7 +8411,7 @@ nav a.sidenav-trigger {
   padding: 0 20px; }
 
 .theme-admin .navbar-fixed .navbar .brand-logo {
-  font-family: "ubuntumedium", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
@@ -8469,7 +8425,7 @@ nav a.sidenav-trigger {
   height: 48px;
   background-color: white; }
 
-@media only screen and (min-width: 993px) {
+@media (min-width: 1200px) {
   .has-fixed-sidenav .theme-admin .navbar-fixed .nav-content {
     top: 64px;
     width: calc(100% - 300px);
@@ -8484,14 +8440,21 @@ nav a.sidenav-trigger {
   -webkit-box-shadow: none;
   box-shadow: none; }
 
-@media only screen and (min-width: 993px) {
+@media (min-width: 1200px) {
   .theme-admin .navbar-fixed.nav-extended .navbar.white {
     height: 64px; } }
 
-@media only screen and (min-width: 993px) {
+@media (min-width: 992px) {
   .theme-admin.has-fixed-sidenav .navbar-fixed .navbar {
-    width: calc(100% - 300px);
-    left: 300px; } }
+    width: calc(100% - 60px);
+    left: 60px; }
+  .theme-admin.has-fixed-sidenav .navbar-fixed .navbar .sidenav-trigger {
+    display: none; } }
+
+@media (min-width: 1200px) {
+  .theme-admin.has-fixed-sidenav .navbar-fixed .navbar {
+    width: calc(100% - 300px) !important;
+    left: 300px !important; } }
 
 .theme-default {
   /*.sidenav .collapsible-body > ul:not(.collapsible) > li.active,
@@ -8940,16 +8903,27 @@ html {
   font-size: 24px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   -webkit-box-sizing: content-box;
-  box-sizing: content-box; }
+  box-sizing: content-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start; }
+
+.theme-admin .sidenav .logo-container svg {
+  width: 100%; }
 
 .theme-admin .sidenav li.bold {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
 
 .theme-admin .sidenav li.bold > a {
-  font-family: "ubuntubold", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
+  font-weight: 700;
   text-transform: uppercase; }
 
 .theme-admin .sidenav .collapsible > li {
@@ -8957,7 +8931,7 @@ html {
   transition: background-color .2s; }
 
 .theme-admin .sidenav .collapsible-body {
-  font-family: "ubunturegular", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
@@ -8995,34 +8969,41 @@ html {
   padding: 0 10px; }
 
 .theme-admin .card .card-title {
-  font-family: "ubuntumedium", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
   font-size: 14px; }
 
-@media only screen and (min-width: 993px) {
-  .theme-admin.sidebar-expand.has-fixed-sidenav {
-    padding-left: 300px;
-    -webkit-transform: translateX(0);
-    transform: translateX(0); }
-  .theme-admin.sidebar-expand.has-fixed-sidenav .sidenav {
+@media (min-width: 992px) {
+  .theme-admin.has-fixed-sidenav {
+    padding-left: 60px; }
+  .theme-admin.has-fixed-sidenav .sidenav {
     -webkit-transform: translateX(0) !important;
-    transform: translateX(0) !important; } }
+    transform: translateX(0) !important;
+    -webkit-transition: width 0.1s ease-in;
+    transition: width 0.1s ease-in;
+    width: 60px;
+    text-align: center; }
+  .theme-admin.has-fixed-sidenav .sidenav .bold .collapsible-header {
+    display: block; }
+  .theme-admin.has-fixed-sidenav .sidenav span {
+    -webkit-transition: display 0.2s ease-in-out;
+    transition: display 0.2s ease-in-out;
+    display: none; }
+  .theme-admin.has-fixed-sidenav .sidenav:hover {
+    width: 300px;
+    text-align: left; }
+  .theme-admin.has-fixed-sidenav .sidenav:hover span {
+    display: inline-block; } }
 
-@media only screen and (max-width: 992px) {
-  .theme-admin.sidebar-collapse.has-fixed-sidenav .sidenav {
-    -webkit-transform: translateX(-105%);
-    transform: translateX(-105%); } }
-
-@media only screen and (min-width: 993px) {
-  .theme-admin.sidebar-collapse.has-fixed-sidenav {
-    padding-left: 0; }
-  .theme-admin.sidebar-collapse.has-fixed-sidenav .navbar-fixed nav {
-    width: 100%;
-    left: 0; }
-  .theme-admin.sidebar-collapse.has-fixed-sidenav .sidenav {
-    -webkit-transform: translateX(-105%) !important;
-    transform: translateX(-105%) !important; } }
+@media (min-width: 1200px) {
+  .theme-admin.has-fixed-sidenav {
+    padding-left: 300px; }
+  .theme-admin.has-fixed-sidenav .sidenav {
+    width: 300px;
+    text-align: left; }
+  .theme-admin.has-fixed-sidenav .sidenav span {
+    display: inline-block; } }
 
 /*# sourceMappingURL=app.css.map */

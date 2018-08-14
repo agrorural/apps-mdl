@@ -4,6 +4,15 @@
 
     > a {
       padding: 0 16px;
+      display: block;
+    }
+
+    &.bold {
+      a {
+        span {
+          margin-left: 0.5rem;
+        }
+      }
     }
   }
 
