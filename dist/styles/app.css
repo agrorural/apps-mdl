@@ -7542,17 +7542,26 @@ table nav a {
   color: black; }
 
 .nav-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: auto;
   line-height: 1; }
 
-.nav-actions a {
+.nav-actions a,
+.nav-actions button {
   padding: 0 8px;
   color: rgba(0, 0, 0, 0.65); }
 
-.nav-actions a.success {
+.nav-actions a.success,
+.nav-actions button.success {
   color: #4CAF50; }
 
-.nav-actions a.danger {
+.nav-actions a.danger,
+.nav-actions button.danger {
   color: #f44336; }
 
 .collapsible-body {
