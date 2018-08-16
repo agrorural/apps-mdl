@@ -8358,6 +8358,11 @@ table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_desc:a
 table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_desc_disabled:after {
   opacity: 0; }
 
+.sidenav {
+  height: 100vh;
+  bottom: 0;
+  padding-bottom: 0; }
+
 .sidenav li {
   width: 100%; }
 
@@ -8579,6 +8584,9 @@ nav a.sidenav-trigger {
   .theme-admin.has-fixed-sidenav .navbar-fixed .navbar {
     width: calc(100% - 300px) !important;
     left: 300px !important; } }
+
+.page-footer .container > .row {
+  margin-bottom: 0; }
 
 .theme-default {
   /*.sidenav .collapsible-body > ul:not(.collapsible) > li.active,
@@ -9051,8 +9059,8 @@ html {
   text-transform: uppercase; }
 
 .theme-admin .sidenav .collapsible > li {
-  -webkit-transition: background-color .2s;
-  transition: background-color .2s; }
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s; }
 
 .theme-admin .sidenav .collapsible-body {
   font-family: "Ubuntu", sans-serif;
@@ -9100,7 +9108,9 @@ html {
   font-size: 14px; }
 
 @media (min-width: 992px) {
-  .theme-admin.has-fixed-sidenav {
+  .theme-admin.has-fixed-sidenav > header,
+  .theme-admin.has-fixed-sidenav > main,
+  .theme-admin.has-fixed-sidenav > footer {
     padding-left: 60px; }
   .theme-admin.has-fixed-sidenav .sidenav {
     -webkit-transform: translateX(0) !important;
@@ -9122,7 +9132,9 @@ html {
     display: inline-block; } }
 
 @media (min-width: 1200px) {
-  .theme-admin.has-fixed-sidenav {
+  .theme-admin.has-fixed-sidenav > header,
+  .theme-admin.has-fixed-sidenav > main,
+  .theme-admin.has-fixed-sidenav > footer {
     padding-left: 300px; }
   .theme-admin.has-fixed-sidenav .sidenav {
     width: 300px;

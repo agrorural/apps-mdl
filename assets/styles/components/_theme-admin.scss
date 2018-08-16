@@ -47,7 +47,7 @@ html {
     // }
 
     .collapsible > li {
-      transition: background-color .2s;
+      transition: background-color 0.2s;
     }
 
     // .collapsible-header {
@@ -107,7 +107,11 @@ html {
 
   @media (min-width: 992px) {
     &.has-fixed-sidenav {
+      > header,
+      > main, 
+      > footer {
         padding-left: 60px;
+      }
 
         .sidenav {
           transform: translateX(0) !important;
@@ -140,7 +144,11 @@ html {
 
   @media (min-width: 1200px) {
     &.has-fixed-sidenav {
+      > header,
+      > main, 
+      > footer {
         padding-left: 300px;
+      }
 
         .sidenav {
           width: 300px;
