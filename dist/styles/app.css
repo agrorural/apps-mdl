@@ -7542,14 +7542,18 @@ table nav a {
   color: black; }
 
 .nav-actions {
-  height: 100%;
-  line-height: 100%; }
+  height: auto;
+  line-height: 1; }
 
 .nav-actions a {
-  padding: 0.5rem; }
+  padding: 0 8px;
+  color: rgba(0, 0, 0, 0.65); }
+
+.nav-actions a.success {
+  color: #4CAF50; }
 
 .nav-actions a.danger {
-  color: red; }
+  color: #f44336; }
 
 .collapsible-body {
   padding: 1.5rem; }
@@ -8148,7 +8152,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child::
   display: none;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  content: "\f067"; }
+  content: "\f107"; }
 
 table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child svg,
 table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child svg {
@@ -8163,8 +8167,8 @@ table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child s
 
 table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child svg,
 table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child svg {
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg); }
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg); }
 
 table.dataTable.dtr-inline.collapsed.compact > tbody > tr > td:first-child,
 table.dataTable.dtr-inline.collapsed.compact > tbody > tr > th:first-child {
@@ -8211,8 +8215,7 @@ table.dataTable.dtr-column > tbody > tr > th.control:before {
 
 table.dataTable.dtr-column > tbody > tr.parent td.control:before,
 table.dataTable.dtr-column > tbody > tr.parent th.control:before {
-  content: '-';
-  background-color: #d33333; }
+  content: '-'; }
 
 table.dataTable > tbody > tr.child {
   padding: 0.5em 1em; }
@@ -8626,14 +8629,6 @@ nav a.sidenav-trigger {
     background: transparent;
     color: inherit; } }
 
-.theme-default table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child svg,
-.theme-default table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child svg {
-  color: #303F9F; }
-
-.theme-default table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child svg,
-.theme-default table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child svg {
-  color: #f44336; }
-
 .theme-default input:not([type]):focus:not([readonly]), .theme-default input[type=text]:not(.browser-default):focus:not([readonly]), .theme-default input[type=password]:not(.browser-default):focus:not([readonly]), .theme-default input[type=email]:not(.browser-default):focus:not([readonly]), .theme-default input[type=url]:not(.browser-default):focus:not([readonly]), .theme-default input[type=time]:not(.browser-default):focus:not([readonly]), .theme-default input[type=date]:not(.browser-default):focus:not([readonly]), .theme-default input[type=datetime]:not(.browser-default):focus:not([readonly]), .theme-default input[type=datetime-local]:not(.browser-default):focus:not([readonly]), .theme-default input[type=tel]:not(.browser-default):focus:not([readonly]), .theme-default input[type=number]:not(.browser-default):focus:not([readonly]), .theme-default input[type=search]:not(.browser-default):focus:not([readonly]), .theme-default textarea.materialize-textarea:focus:not([readonly]) {
   border-bottom: 1px solid #FF4081;
   -webkit-box-shadow: 0 1px 0 0 #FF4081;
@@ -8666,9 +8661,9 @@ nav a.sidenav-trigger {
 .theme-default.theme-admin aside .fa-spin {
   color: #303F9F; }
 
-.theme-default.theme-admin .btn-link, .theme-default.theme-admin button.dt-button,
-.theme-default.theme-admin div.dt-button,
-.theme-default.theme-admin a.dt-button {
+.theme-default.theme-admin .btn-link:not(.nav-action-link), .theme-default.theme-admin button.dt-button:not(.nav-action-link),
+.theme-default.theme-admin div.dt-button:not(.nav-action-link),
+.theme-default.theme-admin a.dt-button:not(.nav-action-link) {
   color: #303F9F; }
 
 .theme-default.theme-admin .card-panel {
@@ -8767,14 +8762,6 @@ nav a.sidenav-trigger {
     background: transparent;
     color: inherit; } }
 
-.theme-teal table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child svg,
-.theme-teal table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child svg {
-  color: #009688; }
-
-.theme-teal table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child svg,
-.theme-teal table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child svg {
-  color: #f44336; }
-
 .theme-teal input:not([type]):focus:not([readonly]), .theme-teal input[type=text]:not(.browser-default):focus:not([readonly]), .theme-teal input[type=password]:not(.browser-default):focus:not([readonly]), .theme-teal input[type=email]:not(.browser-default):focus:not([readonly]), .theme-teal input[type=url]:not(.browser-default):focus:not([readonly]), .theme-teal input[type=time]:not(.browser-default):focus:not([readonly]), .theme-teal input[type=date]:not(.browser-default):focus:not([readonly]), .theme-teal input[type=datetime]:not(.browser-default):focus:not([readonly]), .theme-teal input[type=datetime-local]:not(.browser-default):focus:not([readonly]), .theme-teal input[type=tel]:not(.browser-default):focus:not([readonly]), .theme-teal input[type=number]:not(.browser-default):focus:not([readonly]), .theme-teal input[type=search]:not(.browser-default):focus:not([readonly]), .theme-teal textarea.materialize-textarea:focus:not([readonly]) {
   border-bottom: 1px solid #ffc107;
   -webkit-box-shadow: 0 1px 0 0 #ffc107;
@@ -8807,9 +8794,9 @@ nav a.sidenav-trigger {
 .theme-teal.theme-admin aside .fa-spin {
   color: #009688; }
 
-.theme-teal.theme-admin .btn-link, .theme-teal.theme-admin button.dt-button,
-.theme-teal.theme-admin div.dt-button,
-.theme-teal.theme-admin a.dt-button {
+.theme-teal.theme-admin .btn-link:not(.nav-action-link), .theme-teal.theme-admin button.dt-button:not(.nav-action-link),
+.theme-teal.theme-admin div.dt-button:not(.nav-action-link),
+.theme-teal.theme-admin a.dt-button:not(.nav-action-link) {
   color: #009688; }
 
 .theme-teal.theme-admin .card-panel {
@@ -8908,14 +8895,6 @@ nav a.sidenav-trigger {
     background: transparent;
     color: inherit; } }
 
-.theme-blue table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child svg,
-.theme-blue table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child svg {
-  color: #448AFF; }
-
-.theme-blue table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child svg,
-.theme-blue table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child svg {
-  color: #f44336; }
-
 .theme-blue input:not([type]):focus:not([readonly]), .theme-blue input[type=text]:not(.browser-default):focus:not([readonly]), .theme-blue input[type=password]:not(.browser-default):focus:not([readonly]), .theme-blue input[type=email]:not(.browser-default):focus:not([readonly]), .theme-blue input[type=url]:not(.browser-default):focus:not([readonly]), .theme-blue input[type=time]:not(.browser-default):focus:not([readonly]), .theme-blue input[type=date]:not(.browser-default):focus:not([readonly]), .theme-blue input[type=datetime]:not(.browser-default):focus:not([readonly]), .theme-blue input[type=datetime-local]:not(.browser-default):focus:not([readonly]), .theme-blue input[type=tel]:not(.browser-default):focus:not([readonly]), .theme-blue input[type=number]:not(.browser-default):focus:not([readonly]), .theme-blue input[type=search]:not(.browser-default):focus:not([readonly]), .theme-blue textarea.materialize-textarea:focus:not([readonly]) {
   border-bottom: 1px solid #FF4081;
   -webkit-box-shadow: 0 1px 0 0 #FF4081;
@@ -8948,9 +8927,9 @@ nav a.sidenav-trigger {
 .theme-blue.theme-admin aside .fa-spin {
   color: #448AFF; }
 
-.theme-blue.theme-admin .btn-link, .theme-blue.theme-admin button.dt-button,
-.theme-blue.theme-admin div.dt-button,
-.theme-blue.theme-admin a.dt-button {
+.theme-blue.theme-admin .btn-link:not(.nav-action-link), .theme-blue.theme-admin button.dt-button:not(.nav-action-link),
+.theme-blue.theme-admin div.dt-button:not(.nav-action-link),
+.theme-blue.theme-admin a.dt-button:not(.nav-action-link) {
   color: #448AFF; }
 
 .theme-blue.theme-admin .card-panel {

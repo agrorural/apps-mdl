@@ -21,7 +21,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child {
     display: none;
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    content: "\f067";
+    content: "\f107";
   }
 
   svg {
@@ -39,7 +39,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child {
 table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child,
 table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child {
   svg {
-    transform: rotate(45deg);
+    transform: rotate(180deg);
   }
 }
 
@@ -87,7 +87,7 @@ table.dataTable.dtr-column > tbody > tr > th.control:before {
 table.dataTable.dtr-column > tbody > tr.parent td.control:before,
 table.dataTable.dtr-column > tbody > tr.parent th.control:before {
   content: '-';
-  background-color: #d33333;
+  // background-color: #d33333;
 }
 table.dataTable > tbody > tr.child {
   padding: 0.5em 1em;

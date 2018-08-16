@@ -42,6 +42,8 @@ $button-padding: 0 16px;
 $button-small-font-size: $button-font-size - 1;
 $button-small-height: $button-height * .9;
 
+$success: #4CAF50;
+$danger: #f44336;
 
 @mixin theme($name, $primary-color: $primary-color, $secondary-color: $secondary-color) {
   $primary: (
@@ -85,19 +87,19 @@ $button-small-height: $button-height * .9;
       }
     }
 
-    table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child,
-    table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child {
-      svg {
-        color: $primary-color;
-      }
-    }
+    // table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child,
+    // table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child {
+    //   svg {
+    //     color: $primary-color;
+    //   }
+    // }
 
-    table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child,
-    table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child {
-     svg {
-       color: #f44336;
-     } 
-    }
+    // table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child,
+    // table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child {
+    //  svg {
+    //    color: #f44336;
+    //  } 
+    // }
 
     input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]){
       border-bottom: 1px solid $secondary-color;
@@ -154,7 +156,7 @@ $button-small-height: $button-height * .9;
       //   }
       // }
 
-      .btn-link {
+      .btn-link:not(.nav-action-link) {
         color: $primary-color;
       }
 
