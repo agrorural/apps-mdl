@@ -7633,7 +7633,12 @@ table nav a {
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  height: 64px; }
+
+@media only screen and (max-width: 600px) {
+  .profile-trigger {
+    height: 56px; } }
 
 .profile-trigger picture {
   height: 32px;
@@ -7642,6 +7647,10 @@ table nav a {
 
 .profile-trigger picture img {
   border-radius: 500rem; }
+
+@media only screen and (max-width: 600px) {
+  .profile-trigger span {
+    display: none; } }
 
 .profile-trigger::after {
   display: inline-block;
@@ -7780,6 +7789,12 @@ table nav a {
   stroke: #ffffff;
   stroke-width: 2;
   stroke-miterlimit: 10; }
+
+header .brand-logo {
+  position: relative;
+  left: 0;
+  -webkit-transform: translateX(0);
+  transform: translateX(0); }
 
 .login {
   background-color: #f5f5f5; }

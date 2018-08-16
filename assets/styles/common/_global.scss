@@ -378,6 +378,12 @@ table nav {
 .profile-trigger {
   display: flex;
   align-items: center;
+  height: 64px;
+
+  @media #{$small-and-down} {
+    // styles for small screens and down
+    height: 56px;
+  }
 
   picture {
     height: 32px;
@@ -386,6 +392,13 @@ table nav {
 
     img {
       border-radius: 500rem;
+    }
+  }
+
+  span {
+    @media #{$small-and-down} {
+      // styles for small screens and down
+      display: none;
     }
   }
 
@@ -543,5 +556,16 @@ table nav {
         stroke-miterlimit: 10;
       }
     }
+  }
+}
+
+//
+// Header
+//
+header {
+  .brand-logo {
+    position: relative;
+    left: 0;
+    transform: translateX(0);
   }
 }
