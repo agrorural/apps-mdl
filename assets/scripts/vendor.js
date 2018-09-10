@@ -193,7 +193,11 @@ $(function(){
 
 window.getSpinner = function(message = 'Cargando...'){
   $("body").addClass("with-spinner");
-  $("body").append('<aside class="spinner"><i class="fas fa-circle-notch fa-spin"></i><span>' + message + '<span></aside>').hide().fadeIn(300);
+  if($(".spinner").length) {
+    $("#spinnerMessage").html(message);
+  } else {
+    $("body").append('<aside class="spinner"><i class="fas fa-circle-notch fa-spin"></i><span id="spinnerMessage">' + message + '<span></aside>').hide().fadeIn(300);
+  }
 };
 
 window.deleteSpinner = function(){
