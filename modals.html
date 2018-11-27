@@ -107,6 +107,37 @@
             </div>
             <div class="col s12">
               <div class="card card-horizontal">
+                <div class="card-header"><span class="card-title">Modal Pequeño</span></div>
+                <div class="card-content">
+                  <p>Este es un Modal pequeño</p>
+                  <pre>&lt;!-- Modal Structure --&gt;
+&lt;div id="modal_s" class="modal m_small"&gt;
+&lt;div class="modal-content"&gt;
+&lt;h4&gt;Modal Header&lt;/h4&gt;
+&lt;p&gt;A bunch of text&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="modal-footer"&gt;
+&lt;a href="#!" class="modal-close waves-effect waves-green btn-flat"&gt;Agree&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;</pre><br><br><a class="waves-effect waves-light btn modal-trigger" href="#modal_s">Lanzar Modal Pequeño</a>
+                  <div class="modal m_small" id="modal_s">
+                    <div class="modal-header">
+                      <h4>Modal Pequeño</h4>
+                    </div>
+                    <div class="modal-content">
+                      <div class="row">
+                        <div class="col s12">
+                          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem, labore animi ut quam iusto esse delectus, blanditiis harum est quo beatae doloremque qui ipsum praesentium veritatis deserunt repellat, in error?Dolorem corporis ea dolor laborum. Velit nemo dolores iusto quia quae nisi voluptate cupiditate earum debitis et. </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer"><a class="modal-close waves-effect waves-green btn-flat" href="#!">Agree</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col s12">
+              <div class="card card-horizontal">
                 <div class="card-header"><span class="card-title">Modal fixed header (sin footer)</span></div>
                 <div class="card-content">
                   <p>Modal que tiene header fijado sin footer.</p>
@@ -812,6 +843,7 @@
         $('#modal3').modal();
         $('#modal4').modal();
         $('#modal5').modal();
+        $('#modal_s').modal();
         $('select').formSelect();
         $('.datepicker').datepicker({
           container: 'body'

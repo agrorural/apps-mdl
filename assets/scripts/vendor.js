@@ -1,6 +1,7 @@
 window.$ = window.jQuery = require('jquery');
 
 require('materialize-css');
+console.log(1);
 
 import SimpleBar from 'simplebar';
 

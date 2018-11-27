@@ -1,6 +1,11 @@
 .modal {
   width: 90%;
 
+  &.m_small {
+    max-width: 90%;
+    width: 600px;
+  }
+
   @media #{$medium-and-down} {
     width: 85%;
    }

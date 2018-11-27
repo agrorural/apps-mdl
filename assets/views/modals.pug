@@ -48,6 +48,36 @@ block content
       .col.s12
         .card.card-horizontal
           .card-header
+            span.card-title Modal Pequeño
+          .card-content
+            p Este es un Modal pequeño
+            pre.
+              &lt;!-- Modal Structure --&gt;
+              &lt;div id="modal_s" class="modal m_small"&gt;
+              &lt;div class="modal-content"&gt;
+              &lt;h4&gt;Modal Header&lt;/h4&gt;
+              &lt;p&gt;A bunch of text&lt;/p&gt;
+              &lt;/div&gt;
+              &lt;div class="modal-footer"&gt;
+              &lt;a href="#!" class="modal-close waves-effect waves-green btn-flat"&gt;Agree&lt;/a&gt;
+              &lt;/div&gt;
+              &lt;/div&gt;
+            br
+            br
+            a.waves-effect.waves-light.btn.modal-trigger(href="#modal_s") Lanzar Modal Pequeño
+            #modal_s.modal.m_small
+              .modal-header
+                h4 Modal Pequeño
+              .modal-content
+                .row
+                    .col.s12
+                      p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem, labore animi ut quam iusto esse delectus, blanditiis harum est quo beatae doloremque qui ipsum praesentium veritatis deserunt repellat, in error?Dolorem corporis ea dolor laborum. Velit nemo dolores iusto quia quae nisi voluptate cupiditate earum debitis et. 
+              .modal-footer
+                a.modal-close.waves-effect.waves-green.btn-flat(href="#!") Agree
+
+      .col.s12
+        .card.card-horizontal
+          .card-header
             span.card-title Modal fixed header (sin footer)
           .card-content
             p Modal que tiene header fijado sin footer.
@@ -631,6 +661,7 @@ block append scripts
         $('#modal3').modal();
         $('#modal4').modal();
         $('#modal5').modal();
+        $('#modal_s').modal();
         $('select').formSelect();
         $('.datepicker').datepicker({
           container: 'body'
