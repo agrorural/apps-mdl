@@ -8467,6 +8467,10 @@ nav a.sidenav-trigger {
   border-radius: 0 0 2px 2px;
   width: 100%; }
 
+.dataTables_scrollHeadInner,
+.dataTable {
+  width: 100% !important; }
+
 /*!
  * 
  *         SimpleBar.js - v2.6.1
